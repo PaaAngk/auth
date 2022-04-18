@@ -2,9 +2,8 @@
 
 установить angular - npm install -g @angular/cli
 
-npm i @taiga-ui/{cdk,core,kit,icons}
-
-ng-serve
+npm install
+npm start
 
 Страница авторизации : 
 login: testUser

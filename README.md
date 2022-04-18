@@ -1,7 +1,16 @@
 # Запуск
 
+установить angular - npm install -g @angular/cli
 
+npm i @taiga-ui/{cdk,core,kit,icons}
 
+ng-serve
+
+Страница авторизации : 
+login: testUser
+pass: testPass
+
+будет ошибка по CORS
 
 # Auth
 

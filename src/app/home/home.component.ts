@@ -1,19 +1,19 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { Router } from '@angular/router';
-
-import { UserService } from '../core/services';
+import { UserService, ApiService } from '../core/services';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./home.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush 
 })
 export class HomeComponent implements OnInit {
   constructor(
     private router: Router,
     private userService: UserService,
     private cd: ChangeDetectorRef,
+    private api: ApiService,
   ) {}
 
   isAuthenticated: boolean | undefined;
@@ -22,6 +22,8 @@ export class HomeComponent implements OnInit {
   tagsLoaded = false;
 
   ngOnInit() {
+    //this.api.get('/operation').subscribe((data) => console.log(data))
+
     this.userService.isAuthenticated.subscribe(
       (authenticated) => {
         this.isAuthenticated = authenticated;

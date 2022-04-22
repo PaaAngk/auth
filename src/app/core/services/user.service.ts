@@ -1,3 +1,4 @@
+import { AuthUser } from '@core/models/User';
 import { Injectable } from '@angular/core';
 import { Observable ,  BehaviorSubject ,  ReplaySubject } from 'rxjs';
 
@@ -27,24 +28,32 @@ export class UserService {
   populate() {
     // If JWT detected, attempt to get & store user's info
     if (this.jwtService.getToken()) {
-      this.apiService.get('/user')
-      .subscribe(
-        data => this.setAuth(data.user),
-        err => this.purgeAuth()
-      );
+      this.apiService.get('/user/me')
+      .subscribe({
+        next : (data) => {this.setAuth(this.jwtService.getToken(), data.user)},
+        error: (e)  => {this.purgeAuth()}
+      }); 
     } else {
       // Remove any potential remnants of previous auth states
       this.purgeAuth();
     }
   }
 
-  setAuth(user: User) {
+  setAuth(access_token: String, user: AuthUser) {
     // Save JWT sent from server in localstorage
-    this.jwtService.saveToken(user.token);
-    // Set current user data into observable
-    this.currentUserSubject.next(user);
-    // Set isAuthenticated to true
-    this.isAuthenticatedSubject.next(true);
+    this.jwtService.saveToken(access_token);
+    
+    this.apiService.get('/user/me')
+    .subscribe({
+      next : (data) => {
+        const userSub = data as User
+        // Set current user data into observable
+        this.currentUserSubject.next(userSub);
+        // Set isAuthenticated to true
+        this.isAuthenticatedSubject.next(true);
+      }
+    });
+    
   }
 
   purgeAuth() {
@@ -57,7 +66,16 @@ export class UserService {
   }
 
   getCurrentUser(): User {
-    return this.currentUserSubject.value;
+    return this.currentUserSubject.getValue();
+  }
+
+  getUser(){
+    var user : User = {} as User;
+    this.apiService.get('/user/me')
+    .subscribe({
+      next : (data) => {user = data as User, console.log(data)}
+    });
+    return user;
   }
 
   // Update the user on the server (email, pass, etc)
@@ -72,12 +90,16 @@ export class UserService {
 
   }
 
-  attemptAuth(type: string, credentials: string): Observable<User> {
+  attemptAuth(type: string, user: AuthUser): Observable<User> {
     //const route = (type === 'login') ? '/login' : '';
-    return this.apiService.post(`/auth/sign-in`, {user: credentials})
-      .pipe(map(
+    var formData = new FormData();
+    formData.append("username", user.username);
+    formData.append("password", user.password);
+
+    return this.apiService.post(`/auth/sign-in`, formData)
+    .pipe(map(
       data => {
-        this.setAuth(data.user);
+        this.setAuth(data.access_token, user);
         return data;
       }
     ));

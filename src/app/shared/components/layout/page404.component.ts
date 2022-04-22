@@ -1,4 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-layout-page404',
@@ -8,5 +9,9 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Page404Component {
-  today: number = Date.now();
+  constructor(private location: Location){
+  }
+  goBack(): void {
+    this.location.back();
+  }
 }

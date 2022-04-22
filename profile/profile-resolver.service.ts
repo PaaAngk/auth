@@ -2,7 +2,8 @@ import { Injectable, } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, Router, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import { Profile, ProfilesService } from '../core';
+import { Profile } from '@core/models';
+import { ProfilesService } from '@core/services';
 import { catchError } from 'rxjs/operators';
 
 @Injectable({

@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { User } from '@core/models';
 import { UserService } from '@core/services'
@@ -11,6 +12,7 @@ import { UserService } from '@core/services'
 })  
 export class HeaderComponent implements OnInit {
   constructor(
+    private router: Router,
     private userService: UserService,
     private cd: ChangeDetectorRef
   ) {}
@@ -33,7 +35,7 @@ export class HeaderComponent implements OnInit {
  
   readonly tabs = [
       ['Главная', '/'],
-      // ['link2', '/f'],
+      ['link2', '/123'],
       // ['link3', '/f'],
       // ['links', [['subLink1',  '/'], ['subLink2',  '/']]],
       // ['link4', '/f'],
@@ -41,7 +43,6 @@ export class HeaderComponent implements OnInit {
       // ['link6', '/f'],
   ];
  
-  activeElement = String(this.tabs[0]);
 
   open = false;
  
@@ -60,5 +61,10 @@ export class HeaderComponent implements OnInit {
 
   isString(tab: Array<any>): Boolean {
       return typeof tab[1] === 'string';
+  }
+
+  logout() {
+    this.userService.purgeAuth();
+    this.router.navigateByUrl('/');
   }
 }

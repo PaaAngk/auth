@@ -13,10 +13,10 @@ export class ApiService {
     private http: HttpClient
   ) {}
 
-  get<T>(path: string, params: HttpParams = new HttpParams()): Observable<any> {
+  get<T>(path: string): Observable<any> {
     return this.http
-      .get<T>(`${environment.api_url}${path}`, { params })
-      .pipe(catchError(this.handleError<any[]>(`get to ${path}, params: ${params}`, [])));
+      .get<T>(`${environment.api_url}${path}`)
+      .pipe(catchError(this.handleError<any[]>(`get to ${path}`, [])));
   }
 
   put<T, D>(path: string, body: D): Observable<any> {
@@ -26,10 +26,10 @@ export class ApiService {
     ).pipe(catchError(this.handleError<any[]>(`put to ${path}, data: ${body}`)));
   }
 
-  post(path: string, body: Object = {}): Observable<any> {
+  post(path: string, body: Object): Observable<any> {
     return this.http.post(
       `${environment.api_url}${path}`,
-      JSON.stringify(body)
+      body
     ).pipe(catchError(this.handleError<any[]>(`post to ${path}, data: ${body}`, [])));
   }
 

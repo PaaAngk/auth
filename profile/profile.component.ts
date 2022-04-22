@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@
 import { ActivatedRoute } from '@angular/router';
 
 import { User, Profile } from '@core/models';
-import { UserService } from '@core/services';
+import { UserService } from '@core/services/user.service';
 import { concatMap ,  tap } from 'rxjs/operators';
 
 @Component({
@@ -23,9 +23,8 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     // this.route.data.pipe(
-    //   concatMap(data  => d.profile ;
-    //     this.profile => {  
-    //      = data.profile;
+    //   concatMap((data: { profile: Profile }) => {
+    //     this.profile = data.profile;
     //     // Load the current user's data.
     //     return this.userService.currentUser.pipe(tap(
     //       (userData: User) => {
@@ -37,21 +36,6 @@ export class ProfileComponent implements OnInit {
     // ).subscribe((() => {
     //   this.cd.markForCheck();
     // }));
-    const id = this.route.snapshot.paramMap.get('profile');
-    
-    this.userService.currentUser.pipe(tap(
-      (userData: User) => {
-        this.currentUser = userData;
-        this.isUser = (this.currentUser.username === this.profile.username);
-      }
-    )).subscribe((() => {
-        this.cd.markForCheck();
-      }));
-  
-  }
-
-  onToggleFollowing(following: boolean) {
-    this.profile.following = following;
   }
 
 }

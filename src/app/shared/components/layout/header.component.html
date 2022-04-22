@@ -1,48 +1,46 @@
 
 
 <nav class="navbar">
-  <div class="tui-container">
-    <tui-tabs-with-more class="tabs">
-        <ng-container *ngFor="let tab of tabs">
-            <ng-container *ngIf="isString(tab); else submenu">
-                <a
-                    [routerLink]="[tab[1]]"
-                    routerLinkActive="active"
-                    [routerLinkActiveOptions]="{exact:true}"
-                    *tuiTab
-                    tuiTab      
-                >
-                    {{tab[0]}}
-                </a>
-            </ng-container>
-            <ng-template #submenu>
-                <tui-hosted-dropdown *tuiTab [content]="dropdown"  [(open)]="open">
-                  
-                    <button tuiTab (tui-tab-activate)="stop($event)">
-                        {{tab[0]}}
-                        <tui-svg src="tuiIconChevronDown" class="icon" [class.icon_rotated]="open"></tui-svg>
-                    </button>
-                </tui-hosted-dropdown>
-                <ng-template #dropdown>
-                  <tui-data-list *ngFor="let tabEl of tab">                 
-                      <a [routerLink]="[tabEl]" tuiOption>
-                          {{tabEl}}
-                      </a>
-                  </tui-data-list>
-                </ng-template>
-              
-            </ng-template>          
-        </ng-container>
-    </tui-tabs-with-more>
-    <ng-container *appShowAuthed="false">
-      <tui-tabs class="tabs-user">
-        <a tuiTab routerLink="/login" routerLinkActive="active">
-          Авторизоваться
+  <tui-tabs class="tui-container">
+      <div class="nav-link">
+        <a class="tabs" tuiTab routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            Главная
         </a>
+      </div>
+      <div class="nav-link_user">
+        <ng-container *appShowAuthed="false">
+          <a tuiTab routerLink="/login" routerLinkActive="active">
+            Авторизоваться
+          </a>
+        </ng-container>
+
+        <ng-container *appShowAuthed="true">        
+          <a  
+            tuiTab
+            [routerLink]="['/user']"
+            routerLinkActive="active">
+            {{ currentUser.full_name }}
+            
+          </a>
+          <a tuiTab (click)="logout()">
+              Выйти
+          </a>
+        </ng-container>
+      </div>
+  </tui-tabs>
+</nav>
+<!-- 
+  [routerLink]="['/profile', currentUser.username]"
+
+
+    <ng-container *appShowAuthed="false">
+      <tui-tabs class="tabs-user" [underline] ='false'>
+        
       </tui-tabs>
     </ng-container>
+
     <ng-container *appShowAuthed="true">
-      <tui-tabs class="tabs-user" >
+      <tui-tabs class="tabs-user" > 
         <a routerLink="/login" routerLinkActive="active" tuiTab>
             Настройки
         </a>
@@ -52,14 +50,48 @@
             {{ currentUser.username }}
         </a>
       </tui-tabs>
-    </ng-container>
-  </div>
-</nav>
+    </ng-container> -->
+
+
+<!-- 
 <ng-template #more>
   <tui-svg src="tuiIconMoreHorLarge"></tui-svg>
 </ng-template>
 
-<!-- 
+<ng-container *ngFor="let tab of tabs">
+  <ng-container *ngIf="isString(tab); else submenu">
+      <a
+          [routerLink]="[tab[1]]"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{exact:true}"
+          *tuiTab
+          tuiTab      
+      >
+          {{tab[0]}}
+      </a>
+  </ng-container>
+  <ng-template #submenu>
+      <tui-hosted-dropdown *tuiTab [content]="dropdown"  [(open)]="open">
+        
+          <button tuiTab (tui-tab-activate)="stop($event)">
+              {{tab[0]}}
+              <tui-svg src="tuiIconChevronDown" class="icon" [class.icon_rotated]="open"></tui-svg>
+          </button>
+      </tui-hosted-dropdown>
+      <ng-template #dropdown>
+        <tui-data-list *ngFor="let tabEl of tab">                 
+            <a [routerLink]="[tabEl]" tuiOption>
+                {{tabEl}}
+            </a>
+        </tui-data-list>
+      </ng-template>
+    
+  </ng-template>          
+</ng-container>
+
+
+
+        
 <nav class="tui-container_fullwidth">
   <div class="wrapper">
     <a class="navbar-brand" routerLink="/">Главная</a>

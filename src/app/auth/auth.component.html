@@ -1,54 +1,51 @@
-<div class="auth-page">
-  <div class="tui-container page">
-    <div class="tui-row">
-      <div class="tui-col_md-6 tui-offset_md-3 tui-col_xs-12">
-        <h3 class="tui-form__header">Авторизоваться</h3>
-        <!-- <app-list-errors [errors]="errors"></app-list-errors>-->
-        <form class="b-form" [formGroup]="authForm" (ngSubmit)="submitForm()"> 
-          
-          <div class="tui-form__row" >
-            <p>
-              <tui-input
-                  class="tui-space_bottom-5"
-                  formControlName="login"
-                  [tuiTextfieldCleaner]="true"
-              >
-                  Введите логин&nbsp;
-                  <span class="tui-required"></span>
-                  <input
-                      tuiTextfield
-                      placeholder="Введите ваш логин"
-                  />
-              </tui-input>
-            </p>
-            <tui-input-password
+<div class="auth-page tui-space_bottom-4 tui-container">
+  <div class="tui-row">
+    <div class="tui-col_md-6 tui-offset_md-3 tui-col_xs-12">
+      <h3 class="tui-form__header">Авторизоваться</h3>
+      <form class="b-form" [formGroup]="authForm" (ngSubmit)="submitForm()"> 
+        
+        <div class="tui-form__row" >
+          <p>
+            <tui-input
+              class="tui-space_bottom-5"
+              formControlName="username"
+              [tuiTextfieldCleaner]="true"
+            >
+                Введите логин&nbsp;
+                <span class="tui-required"></span>
+                <input
+                  tuiTextfield
+                  placeholder="Введите ваш логин"
+                />
+            </tui-input>
+          </p>
+          <tui-input-password
             ngDefaultControl
             formControlName="password"
-                [disabled]="isSubmitting"
-                tuiTextfieldExampleText="Введите ваш пароль"      
-                [tuiTextfieldCleaner]="true"
+            [disabled]="isSubmitting"
+            tuiTextfieldExampleText="Введите ваш пароль"      
+            [tuiTextfieldCleaner]="true"
+          >
+              Введите пароль
+              <span class="tui-required"></span>
+          </tui-input-password>
+
+          <div class="tui-form__buttons">
+            <button
+              tuiButton
+              size="l"
+              type="submit"
+              class="tui-form__button"
             >
-                Введите пароль
-                <span class="tui-required"></span>
-            </tui-input-password>
+            Авторизоваться
+            </button>
 
-            <div class="tui-form__buttons">
-              <button
-                  tuiButton
-                  size="l"
-                  type="submit"
-                  class="tui-form__button"
-              >
-              Авторизоваться
-              </button>
-
-            </div>
-          
           </div>
-        </form>
-      </div>
-
+        
+        </div>
+      </form>
     </div>
+
   </div>
 </div>
 

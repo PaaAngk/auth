@@ -10,11 +10,10 @@ import { Errors, UserService } from '../core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AuthComponent implements OnInit {
-  errors: Errors = {errors: {}};
   isSubmitting = false;
 
   authForm = new FormGroup({  
-    "login": new FormControl("", [Validators.required, Validators.minLength(5) ]),
+    "username": new FormControl("", [Validators.required, Validators.minLength(5) ]),
     "password": new FormControl("", [Validators.required]),
   });
 
@@ -25,7 +24,6 @@ export class AuthComponent implements OnInit {
   ) {
     
   }
-  
 
   ngOnInit() {
   }
@@ -37,7 +35,7 @@ export class AuthComponent implements OnInit {
     this.userService
     .attemptAuth("login", credentials)
     .subscribe(
-      () => this.router.navigateByUrl('/'),
+      () => this.router.navigateByUrl('/user'),
     );
   }
 }

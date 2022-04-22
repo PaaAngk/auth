@@ -1,7 +1,9 @@
 export interface User {
-  email: string;
-  token: string;
   username: string;
+  email: string;
+  access_token: string;
+  is_active: boolean;
   is_superuser: boolean;
-  full_name: string; 
+  full_name: string;
+  id: number;
 }

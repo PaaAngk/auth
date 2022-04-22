@@ -9,15 +9,15 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
 import { AuthModule } from './auth/auth.module';
-import { ProfileModule } from './profile/profile.module';
-import { SettingsModule } from './settings/settings.module';
+import { UserModule } from './user/user.module';
 import { HeaderComponent, FooterComponent, SharedModule } from './shared'
 import { HttpTokenInterceptor } from './core/interceptors'
 
 //TaigaUI
 import {TUI_LANGUAGE, TUI_RUSSIAN_LANGUAGE} from '@taiga-ui/i18n';
 import {TuiTabsModule } from '@taiga-ui/kit';
-import {TuiHostedDropdownModule, TuiSvgModule, TuiDataListModule} from '@taiga-ui/core';
+import {TuiHostedDropdownModule, TuiSvgModule, TuiDataListModule, TuiNotificationModule} from '@taiga-ui/core';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -34,13 +34,14 @@ import {TuiHostedDropdownModule, TuiSvgModule, TuiDataListModule} from '@taiga-u
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
 
     //Page module
     HomeModule,
     AuthModule,
-    ProfileModule,
+    UserModule,
     SharedModule,
-    SettingsModule,
 
 
     //UI
@@ -48,6 +49,7 @@ import {TuiHostedDropdownModule, TuiSvgModule, TuiDataListModule} from '@taiga-u
     TuiHostedDropdownModule,
     TuiSvgModule,
     TuiDataListModule,
+    TuiNotificationModule,
     
   ],
   providers: [

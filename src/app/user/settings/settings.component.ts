@@ -1,9 +1,9 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-
-import {  UserService } from '@core/services';
 import { User } from '@core/models';
+import { UserService } from '@core/services';
+
 
 @Component({
   selector: 'app-settings-page',
@@ -12,24 +12,21 @@ import { User } from '@core/models';
 })
 export class SettingsComponent implements OnInit {
   user: User = {} as User;
-  settingsForm: FormGroup;
-  errors: Object = {};
   isSubmitting = false;
+
+  settingsForm = new FormGroup({
+    "image": new FormControl("", [Validators.required, Validators.minLength(5) ]),
+    "username": new FormControl("", [Validators.required, Validators.minLength(5) ]),
+    "email": new FormControl("", [Validators.required, Validators.minLength(5) ]),
+    "full_name": new FormControl("", [Validators.required, Validators.minLength(5) ]),
+  });
 
   constructor(
     private router: Router,
     private userService: UserService,
-    private fb: FormBuilder,
     private cd: ChangeDetectorRef
   ) {
     // create form group using the form builder
-    this.settingsForm = this.fb.group({
-      image: '',
-      username: '',
-      bio: '',
-      email: '',
-      password: ''
-    });
     // Optional: subscribe to changes on the form
     // this.settingsForm.valueChanges.subscribe(values => this.updateUser(values));
   }
@@ -57,7 +54,6 @@ export class SettingsComponent implements OnInit {
     .subscribe(
       updatedUser => this.router.navigateByUrl('/profile/' + updatedUser.username),
       err => {
-        this.errors = err;
         this.isSubmitting = false;
         this.cd.markForCheck();
       }

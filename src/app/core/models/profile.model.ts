@@ -1,6 +1,7 @@
 export interface Profile {
   username: string;
-  bio: string;
   image: string;
-  following: boolean;
+  is_active: boolean;
+  is_superuser: boolean;
+  full_name: string;
 }

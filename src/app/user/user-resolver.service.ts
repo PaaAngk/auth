@@ -1,14 +1,15 @@
+import { User } from '@core/models';
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, Router, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import { UserService } from '../core/services';
+import { UserService } from '@core/services';
 import { take } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
-export class HomeAuthResolver implements Resolve<boolean> {
+export class UserResolver implements Resolve<User> {
   constructor(
     private router: Router,
     private userService: UserService
@@ -17,9 +18,12 @@ export class HomeAuthResolver implements Resolve<boolean> {
   resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
-  ): Observable<boolean> {
+  ): User {
+    const active = this.userService.getCurrentUser();
+    if(!this.userService.currentUser.pipe(take(1))){
+      this.router.navigateByUrl('/')
+    }
 
-    return this.userService.isAuthenticated.pipe(take(1));
-
+    return active;
   }
 }

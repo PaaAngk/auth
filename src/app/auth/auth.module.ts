@@ -5,8 +5,8 @@ import { AuthComponent } from './auth.component';
 import { NoAuthGuard } from './no-auth-guard.service';
 import { SharedModule } from '../shared';
 import { AuthRoutingModule } from './auth-routing.module';
-import { TuiInputModule, TuiInputPasswordModule } from '@taiga-ui/kit';
-import { TuiButtonModule, TuiTextfieldControllerModule } from '@taiga-ui/core';
+import { TuiInputModule, TuiInputPasswordModule, TuiFilterByInputPipeModule, TuiFieldErrorModule} from '@taiga-ui/kit';
+import { TuiButtonModule, TuiTextfieldControllerModule, TuiErrorModule } from '@taiga-ui/core';
 
 @NgModule({
   imports: [
@@ -19,6 +19,9 @@ import { TuiButtonModule, TuiTextfieldControllerModule } from '@taiga-ui/core';
     TuiInputModule,
     TuiButtonModule,
     TuiTextfieldControllerModule,
+    TuiFilterByInputPipeModule,
+    TuiErrorModule,
+    TuiFieldErrorModule,
     
   ],
   declarations: [

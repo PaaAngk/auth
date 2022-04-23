@@ -1,8 +1,25 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, AbstractControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Errors, UserService } from '../core';
+import { UserService } from '@core/services';
+const latinChars = /^[a-zA-Z]+$/;
+ 
+export function passwordValidator(field: AbstractControl): Validators | null {
+    return field.value && latinChars.test(field.value)
+        ? null
+        : {
+              other: 'Only latin letters are allowed',
+          };
+}
+ 
+export function superComputerValidator(field: AbstractControl): Validators | null {
+    return field.value === '42'
+        ? null
+        : {
+              other: 'Wrong',
+          };
+}
 
 @Component({
   selector: 'app-auth-page',
@@ -12,9 +29,10 @@ import { Errors, UserService } from '../core';
 export class AuthComponent implements OnInit {
   isSubmitting = false;
 
+  
   authForm = new FormGroup({  
-    "username": new FormControl("", [Validators.required, Validators.minLength(5) ]),
-    "password": new FormControl("", [Validators.required]),
+    "username": new FormControl("", [Validators.required, Validators.minLength(5), passwordValidator]),
+    "password": new FormControl("", [Validators.required, superComputerValidator]),
   });
 
   constructor(
@@ -22,7 +40,9 @@ export class AuthComponent implements OnInit {
     private userService: UserService,
     private cd: ChangeDetectorRef
   ) {
-    
+    this.authForm.valueChanges.subscribe(() => {
+      this.authForm.markAsTouched();
+    });
   }
 
   ngOnInit() {
@@ -35,7 +55,15 @@ export class AuthComponent implements OnInit {
     this.userService
     .attemptAuth("login", credentials)
     .subscribe(
-      () => this.router.navigateByUrl('/user'),
+      (data) => {
+        if(data.length == 0){
+          console.log(data)
+        }
+        else{
+          this.router.navigateByUrl('/')
+        }
+        
+      },
     );
   }
 }

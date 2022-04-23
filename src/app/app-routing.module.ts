@@ -1,10 +1,9 @@
 import { ErrorAccessComponent } from './shared/components/layout/error-access/error-access.component';
-import { AuthGuard } from '@core/services/auth-guard.service';
+import { AuthGuard } from 'src/app/auth/auth.guard';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { Page404Component } from '@shared/*';
 import { Title } from '@angular/platform-browser';
-
 
 const routes: Routes = [
     {

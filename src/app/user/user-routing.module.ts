@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { UserComponent } from './user.component';
 import { UserResolver } from './user-resolver.service';
 import { ProfileComponent } from './profile/profile.component';
-import { AuthGuard } from '@core/services/auth-guard.service';
+import { AuthGuard } from 'src/app/auth/auth.guard';
 import { Page404Component } from '@shared/*';
 
 

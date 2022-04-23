@@ -15,15 +15,16 @@ export class UserResolver implements Resolve<User> {
     private userService: UserService
   ) {}
 
+
+  //загрузка пользователя при входе на страницу user
   resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): User {
-    const active = this.userService.getCurrentUser();
-    if(!this.userService.currentUser.pipe(take(1))){
-      this.router.navigateByUrl('/')
-    }
+    // if(!this.userService.currentUser.pipe(take(1))){
+    //   this.router.navigateByUrl('/')
+    // }
 
-    return active;
+    return this.userService.getCurrentUser();
   }
 }

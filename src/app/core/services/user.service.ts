@@ -5,7 +5,7 @@ import { Observable ,  BehaviorSubject ,  ReplaySubject } from 'rxjs';
 import { ApiService } from './api.service';
 import { JwtService } from './jwt.service';
 import { User } from '../models';
-import { map ,  distinctUntilChanged } from 'rxjs/operators';
+import { map ,  distinctUntilChanged, take } from 'rxjs/operators';
 
 
 @Injectable({
@@ -90,18 +90,29 @@ export class UserService {
 
   }
 
-  attemptAuth(type: string, user: AuthUser): Observable<User> {
-    //const route = (type === 'login') ? '/login' : '';
+  attemptAuth(type: string, user: AuthUser): Observable<any> {
     var formData = new FormData();
     formData.append("username", user.username);
     formData.append("password", user.password);
 
     return this.apiService.post(`/auth/sign-in`, formData)
-    .pipe(map(
-      data => {
-        this.setAuth(data.access_token, user);
-        return data;
-      }
-    ));
+    .pipe(
+      map((token) => {
+        if (token.length == 0) {
+          return token;
+        }
+        this.setAuth(token.access_token, user);
+        return token;
+      }),
+      take(1)
+    );
+    
+    // return this.apiService.post(`/auth/sign-in`, formData)
+    // .pipe(map(
+    //   data => {
+    //     this.setAuth(data.access_token, user);
+    //     return data;
+    //   }
+    // ));
   }
 }

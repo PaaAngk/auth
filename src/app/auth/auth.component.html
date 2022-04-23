@@ -18,6 +18,11 @@
                   placeholder="Введите ваш логин"
                 />
             </tui-input>
+            
+            <tui-error
+              formControlName="username"
+              [error]="[] | tuiFieldError | async"
+            ></tui-error>
           </p>
           <tui-input-password
             ngDefaultControl

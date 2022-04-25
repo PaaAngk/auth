@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 import { AuthComponent } from './auth.component';
 import { NoAuthGuard } from './no-auth-guard.service';
 import { SharedModule } from '../shared';
 import { AuthRoutingModule } from './auth-routing.module';
-import { TuiInputModule, TuiInputPasswordModule, TuiFilterByInputPipeModule, TuiFieldErrorModule} from '@taiga-ui/kit';
-import { TuiButtonModule, TuiTextfieldControllerModule, TuiErrorModule } from '@taiga-ui/core';
+import { TuiInputModule, TuiInputPasswordModule, TuiFilterByInputPipeModule, TuiFieldErrorModule, TuiFieldErrorPipeModule } from '@taiga-ui/kit';
+import { TuiButtonModule, TuiTextfieldControllerModule, TuiErrorModule, TuiLoaderModule, TuiNotificationModule } from '@taiga-ui/core';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { TuiButtonModule, TuiTextfieldControllerModule, TuiErrorModule } from '@
     FormsModule,
     ReactiveFormsModule,
     TuiInputPasswordModule,
+    CommonModule,
 
     TuiInputModule,
     TuiButtonModule,
@@ -22,7 +24,9 @@ import { TuiButtonModule, TuiTextfieldControllerModule, TuiErrorModule } from '@
     TuiFilterByInputPipeModule,
     TuiErrorModule,
     TuiFieldErrorModule,
-    
+    TuiFieldErrorPipeModule,
+    TuiLoaderModule,
+    TuiNotificationModule,
   ],
   declarations: [
     AuthComponent

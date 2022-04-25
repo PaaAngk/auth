@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { of } from 'rxjs'
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
@@ -36,6 +37,7 @@ import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform
     ReactiveFormsModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
+    CommonModule,
 
     //Page module
     HomeModule,

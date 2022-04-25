@@ -101,18 +101,12 @@ export class UserService {
         if (token.length == 0) {
           return token;
         }
-        this.setAuth(token.access_token, user);
+        else{
+          this.setAuth(token.access_token, user);
+        }
         return token;
       }),
       take(1)
     );
-    
-    // return this.apiService.post(`/auth/sign-in`, formData)
-    // .pipe(map(
-    //   data => {
-    //     this.setAuth(data.access_token, user);
-    //     return data;
-    //   }
-    // ));
   }
 }

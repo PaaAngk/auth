@@ -2,52 +2,65 @@
   <div class="tui-row">
     <div class="tui-col_md-6 tui-offset_md-3 tui-col_xs-12">
       <h3 class="tui-form__header">Авторизоваться</h3>
+      <tui-notification
+        class="tui-space_bottom-2"
+        *ngIf="errorSubmitting"
+        status="error"
+        [hasIcon]="false"
+      >
+        Введен некорректный логин или пароль. 
+      </tui-notification>
       <form class="b-form" [formGroup]="authForm" (ngSubmit)="submitForm()"> 
-        
-        <div class="tui-form__row" >
-          <p>
-            <tui-input
-              class="tui-space_bottom-5"
-              formControlName="username"
+        <!-- <tui-loader [showLoader]="false" [overlay]="true"> -->
+          <div class="tui-form__row" >
+            <div class="tui-space_bottom-5">
+              <tui-input
+                class=""
+                formControlName="username"
+                [tuiTextfieldCleaner]="true"
+              >
+                  Введите логин&nbsp;
+                  <span class="tui-required"></span>
+                  <input
+                    tuiTextfield
+                    placeholder="Введите ваш логин"
+                  />
+              </tui-input>
+              <tui-error
+                class="error-message"
+                formControlName="username"
+                [error]="[] | tuiFieldError | async"
+              ></tui-error>
+            </div>
+            <tui-input-password
+              ngDefaultControl
+              formControlName="password"
+              [disabled]="isSubmitting"
+              tuiTextfieldExampleText="Введите ваш пароль"      
               [tuiTextfieldCleaner]="true"
             >
-                Введите логин&nbsp;
+                Введите пароль
                 <span class="tui-required"></span>
-                <input
-                  tuiTextfield
-                  placeholder="Введите ваш логин"
-                />
-            </tui-input>
-            
+            </tui-input-password>
             <tui-error
-              formControlName="username"
+              class="error-message"
+              formControlName="password"
               [error]="[] | tuiFieldError | async"
             ></tui-error>
-          </p>
-          <tui-input-password
-            ngDefaultControl
-            formControlName="password"
-            [disabled]="isSubmitting"
-            tuiTextfieldExampleText="Введите ваш пароль"      
-            [tuiTextfieldCleaner]="true"
-          >
-              Введите пароль
-              <span class="tui-required"></span>
-          </tui-input-password>
 
-          <div class="tui-form__buttons">
-            <button
-              tuiButton
-              size="l"
-              type="submit"
-              class="tui-form__button"
-            >
-            Авторизоваться
-            </button>
-
+            <div class="tui-form__buttons">
+              <button
+                [disabled]="isSubmitting"
+                tuiButton
+                size="l"
+                type="submit"
+                class="tui-form__button"
+              >
+              Авторизоваться
+              </button>
+            </div>
           </div>
-        
-        </div>
+        <!-- </tui-loader> -->
       </form>
     </div>
 

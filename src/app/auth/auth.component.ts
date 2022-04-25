@@ -9,30 +9,24 @@ export function passwordValidator(field: AbstractControl): Validators | null {
     return field.value && latinChars.test(field.value)
         ? null
         : {
-              other: 'Only latin letters are allowed',
+              other: 'Разрешены только цифры и латинские буквы',
           };
 }
- 
-export function superComputerValidator(field: AbstractControl): Validators | null {
-    return field.value === '42'
-        ? null
-        : {
-              other: 'Wrong',
-          };
-}
+
 
 @Component({
   selector: 'app-auth-page',
   templateUrl: './auth.component.html',
+  //styleUrls: ['./auth.component.less'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AuthComponent implements OnInit {
   isSubmitting = false;
-
+  errorSubmitting = false;
   
   authForm = new FormGroup({  
-    "username": new FormControl("", [Validators.required, Validators.minLength(5), passwordValidator]),
-    "password": new FormControl("", [Validators.required, superComputerValidator]),
+    "username": new FormControl("", [Validators.required, Validators.minLength(5)]),
+    "password": new FormControl("", [Validators.required, passwordValidator]),
   });
 
   constructor(
@@ -42,6 +36,7 @@ export class AuthComponent implements OnInit {
   ) {
     this.authForm.valueChanges.subscribe(() => {
       this.authForm.markAsTouched();
+      this.errorSubmitting = false;
     });
   }
 
@@ -50,17 +45,19 @@ export class AuthComponent implements OnInit {
 
   submitForm() {
     this.isSubmitting = true;
-
+    
     const credentials = this.authForm.value;
     this.userService
     .attemptAuth("login", credentials)
     .subscribe(
       (data) => {
         if(data.length == 0){
-          console.log(data)
+          console.log(data);
+          this.isSubmitting = false;
+          this.errorSubmitting = true;
         }
         else{
-          this.router.navigateByUrl('/')
+          this.router.navigateByUrl('/');
         }
         
       },

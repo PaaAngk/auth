@@ -19,8 +19,8 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: 'profile1',
-    title: 'Card',
+    path: 'user-add',
+    title: 'Пользователь',
     icon: 'mdi mdi-blur-radial',
     class: '',
     extralink: false,

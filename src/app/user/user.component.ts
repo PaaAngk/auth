@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { RouteInfo, User } from '@core/models';
 import { ROUTES } from './menu-items';
 
@@ -11,9 +11,10 @@ import { ROUTES } from './menu-items';
 export class UserComponent implements OnInit {
   ROUTES : RouteInfo[] = ROUTES;
   currentUser!:User;
-  constructor(private route: ActivatedRoute) { }
+  constructor(private router: Router,private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.router.navigate(['profile']);
     this.currentUser = this.route.snapshot.data as User;
   }
 }

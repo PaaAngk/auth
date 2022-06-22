@@ -1,17 +1,17 @@
+import { AuthService } from '@core/auth/auth.service';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { UserService } from "@core/services";
 import { filter, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less'],
+  styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
-  constructor(private userService: UserService, private router: Router, private activatedRoute: ActivatedRoute, private titleService: Title ) {
+  constructor(private authService: AuthService, private router: Router, private activatedRoute: ActivatedRoute, private titleService: Title ) {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
         map(() => {
@@ -35,6 +35,6 @@ export class AppComponent implements OnInit {
   }
   title = 'App';
   ngOnInit() {
-    this.userService.populate();
+    this.authService.populate();
   }
 }

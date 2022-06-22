@@ -1,28 +1,29 @@
+import { UserService } from '@core/services';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { User } from '@core/services/user/user.types';
 import { AuthService } from '@core/auth/auth.service';
-import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
-import { Router } from '@angular/router';
-
-import { User } from '@core/models';
-import { UserService } from '@core/services'
 
 @Component({
-  selector: 'app-layout-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.less'],
-  changeDetection: ChangeDetectionStrategy.OnPush
-})  
-export class HeaderComponent implements OnInit {
+  selector: 'app-layout',
+  templateUrl: './layout.component.html',
+  styleUrls: ['./layout.component.less']
+})
+export class LayoutComponent implements OnInit {
+  
+  currentUser!: User;
+  today: number = Date.now();
+
   constructor(
+    private activatedRoute: ActivatedRoute,
     private router: Router,
     private userService: UserService,
+    private cd: ChangeDetectorRef,
     private authService: AuthService,
-    private cd: ChangeDetectorRef
-  ) {}
-
-  currentUser!: User;
+  ) { }
 
   ngOnInit() {
-    this.getUser();
+    this.getUser()
   }
 
   getUser(){
@@ -69,4 +70,6 @@ export class HeaderComponent implements OnInit {
     this.authService.purgeAuth();
     this.router.navigateByUrl('/');
   }
+
+
 }

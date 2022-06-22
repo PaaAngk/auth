@@ -1,0 +1,75 @@
+<div class="flex flex-col flex-auto h-full items-center sm:justify-center min-w-0 sign-in ">
+    <div class="w-full sm:w-auto sm:shadow-2xl py-8 px-4 sm:p-12 sm:rounded-2xl sm:bg-white">
+        <div class="w-full max-w-80 sm:w-80 mx-auto sm:mx-0 ">
+
+            <!-- Title -->
+            <div class="mb-2 text-4xl font-extrabold tracking-tight leading-tight">Вход</div>
+            <!-- <div class="flex items-baseline mt-0.5 font-medium">
+                <div>У вас есть аккаунт?</div>
+                <a
+                    class="ml-1 text-primary-500 hover:underline"
+                    [routerLink]="['/sign-up']">Sign up
+                </a>
+            </div> -->
+
+            <tui-notification
+                class="tui-space_bottom-2"
+                *ngIf="errorAlertSubmitting"
+                status="error"
+                [hasIcon]="false"
+            >
+                Введен некорректный логин или пароль. 
+            </tui-notification>
+
+            <form class="b-form" [formGroup]="signInForm" (ngSubmit)="signIn()"> 
+                <div class="tui-form__row" >
+                    <div class="tui-space_bottom-5">
+                      <tui-input
+                        class=""
+                        formControlName="username"
+                        [tuiTextfieldCleaner]="true"
+                      >
+                          Введите логин&nbsp;
+                          <span class="tui-required"></span>
+                          <input
+                            tuiTextfield
+                            placeholder="Введите ваш логин"
+                          />
+                      </tui-input>
+                      <tui-error
+                        class="error-message"
+                        formControlName="username"
+                        [error]="[] | tuiFieldError | async"
+                      ></tui-error>
+                    </div>
+                    <tui-input-password
+                      ngDefaultControl
+                      formControlName="password"
+                      tuiTextfieldExampleText="Введите ваш пароль"      
+                      [tuiTextfieldCleaner]="true"
+                    >
+                        Введите пароль
+                        <span class="tui-required"></span>
+                    </tui-input-password>
+                    <tui-error
+                      class="error-message"
+                      formControlName="password"
+                      [error]="[] | tuiFieldError | async"
+                    ></tui-error>
+        
+                    <div class="tui-form__buttons">
+                        <button
+                            tuiButton
+                            [disabled]="isSubmitting"
+                            size="l"
+                            type="submit"
+                            class="tui-form__button"
+                        >
+                            Войти
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

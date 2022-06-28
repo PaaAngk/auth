@@ -6,7 +6,6 @@ import { ROUTES } from './menu-items';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  //styleUrls: ['./user.component.less']
 })
 export class UserComponent implements OnInit {
   ROUTES : RouteInfo[] = ROUTES;
@@ -14,7 +13,7 @@ export class UserComponent implements OnInit {
   constructor(private router: Router,private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.router.navigate(['profile']);
+    //this.router.navigate(['profile']);
     this.currentUser = this.route.snapshot.data as User;
   }
 }

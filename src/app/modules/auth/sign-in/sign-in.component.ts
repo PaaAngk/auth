@@ -16,8 +16,7 @@ export function passwordValidator(field: AbstractControl): Validators | null {
 @Component({
     selector     : 'sign-in',
     templateUrl  : './sign-in.component.html',
-    styleUrls: ['./sign-in.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush
+    styleUrls: ['./sign-in.component.less']
 })
 export class SignInComponent implements OnInit
 {
@@ -38,7 +37,8 @@ export class SignInComponent implements OnInit
             password  : ['', [Validators.required, passwordValidator]],
             rememberMe: ['']
         });
-
+        
+        //
         this.signInForm.valueChanges.subscribe(() => {
             this.signInForm.markAsTouched();
             this.errorAlertSubmitting = false;
@@ -59,14 +59,12 @@ export class SignInComponent implements OnInit
         .subscribe(
         (data) => {
             if(data.length == 0){
-                console.log(data);
                 this.isSubmitting = false;
                 this.signInForm.enable();
                 this.errorAlertSubmitting = true;
             }
             else{
-                this.router.navigate(['/signed-in-redirect']);
-                console.log("login")
+                this.router.navigateByUrl('');
             }
             
         },

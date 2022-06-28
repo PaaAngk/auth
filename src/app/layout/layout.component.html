@@ -14,12 +14,7 @@
           </ng-container>
 
           <ng-container *appShowAuthed="true">
-            <button  
-              tuiTab
-              routerLink="/user"
-              routerLinkActive="active">
-              {{ currentUser.full_name }}
-            </button>
+            
             <button tuiTab (click)="logout()">
               Выйти
             </button>
@@ -44,36 +39,89 @@
 </div> -->
 
 
-<div class="layout flex flex-col flex-auto items-center w-full min-w-0 bg-gray-200 dark:bg-white">
+<div class="layout flex flex-col flex-auto items-center w-full min-w-0 bg-gray-200 dark:bg-card">
 
   <!-- Header -->
-  <div class="relative flex flex-col flex-0 justify-center w-full h-16 sm:h-20 md:h-36 overflow-hidden z-49 shadow dark:shadow-none print:hidden">
+  <div class="relative flex flex-col flex-0 justify-center w-full overflow-hidden z-49 shadow print:hidden">
       <!-- Top bar -->
-      <div class="relative dark flex flex-auto justify-center w-full px-4 md:px-8 bg-gray-800 dark:bg-gray-900">
-          <div class="flex items-center w-full max-w-360 h-16 sm:h-20">     
+      <div class="relative dark flex flex-auto justify-center w-full px-4 md:px-8 bg-gray-800">
+          <div class="flex main-menu items-center w-full max-w-360 h-16">     
             <div class="flex items-center">
-              <span>Главная</span>
+              <a class="tui-text_h6" href="/">LOGO</a>
             </div>      
-              <!-- Components -->
-              <div class="flex items-center pl-2 ml-auto space-x-1 sm:space-x-2">
-                  <!-- <languages></languages>
-                  <fuse-fullscreen class="hidden md:block"></fuse-fullscreen>
-                  <search [appearance]="'bar'"></search>
-                  <shortcuts></shortcuts>
-                  <messages></messages>
-                  <notifications></notifications>
-                  <user></user> -->fsfgsdgedf
-              </div>
+            <!-- Components -->
+            <div class="flexes></languages>
+                <fuse-fullscr items-center pl-2 ml-auto space-x-1 sm:space-x-2">
+                <!-- <languageen class="hidden md:block"></fuse-fullscreen>-->
+                <search></search>
+                <!--<shortcuts></shortcuts>
+                <messages></messages>
+                <notifications></notifications>
+                <user></user> -->
+                <tui-hosted-dropdown #dropdown [content]="topBarContent">
+                <a
+                    tuiButton
+                    type="button"
+                    routerLink="/"
+                    routerLinkActive="active">     
+                    {{ currentUser.full_name }} 
+                </a>
+                </tui-hosted-dropdown>
+                <ng-template #topBarContent>
+                  <tui-data-list (click)="onClick()">
+                    <a tuiOption routerLink="/">
+                      <tui-svg src="tuiIconUser"></tui-svg> 
+                      <span>Профиль</span> 
+                    </a>
+                    <a tuiOption routerLink="/">
+                      <tui-svg src="tuiIconSettings"></tui-svg> 
+                      <span>Настройки</span>
+                    </a>              
+                    <a tuiOption routerLink="/sign-out">
+                      <tui-svg src="tuiIconLogoutLarge"></tui-svg> 
+                      <span>Выйти</span>
+                    </a>
+                  </tui-data-list>
+                </ng-template>
+            </div>
           </div>
       </div>
       <!-- Bottom bar -->
-      <ng-container><!--  *ngIf="!isScreenSmall" -->
-          <div class="flex flex-auto justify-center px-4 md:px-8 bg-white dark:bg-gray-700">
-              <div class="relative flex items-center w-full max-w-360 h-16">
-                  <!-- <fuse-horizontal-navigation
-                      class="-mx-4"
-                      [name]="'mainNavigation'"
-                      [navigation]="navigation.horizontal"></fuse-horizontal-navigation> -->
+      <ng-container>
+          <div class="flex flex-auto justify-center px-4 md:px-8 bg-white">
+              <div class="relative flex items-center w-full max-w-360 ">
+                      <nav
+                          tuiTabs
+                          class="tabs"
+                          [(activeItemIndex)]="index"
+                      >
+                          
+                          <tui-hosted-dropdown
+                              tuiDropdownHover
+                              [content]="content"
+                              [(open)]="open"
+                          >
+                              <button
+                                  tuiTab
+                                  (tui-tab-activate.stop)="0"
+                              >
+                                  Реестр
+                              </button>
+                              
+                              <ng-template #content>
+                                  <tui-data-list (click)="onClick()">
+                                      <a routerLink="/" tuiOption>Поиск</a>
+                                      <a routerLink="/" tuiOption>Отчеты</a>
+                                      <a routerLink="/" tuiOption>Загрузка</a>
+                                      <a routerLink="/" tuiOption>Заявки</a>
+                                  </tui-data-list>
+                              </ng-template>
+                          </tui-hosted-dropdown>
+                          <button tuiTab>Сервис</button>
+                          <button tuiTab>Другое 1</button>
+                          <button tuiTab>Другое 2</button>
+                          <button tuiTab>Другое 3</button>
+                      </nav>
               </div>
           </div>
       </ng-container>
@@ -82,8 +130,6 @@
   <!-- Content -->
   <div class="flex flex-auto justify-center w-full sm:p-6 md:p-8 h-full">
       <div class="flex flex-col flex-auto w-full sm:max-w-360 sm:shadow-lg sm:rounded-lg sm:overflow-hidden bg-default">
-          <!-- *ngIf="true" hack is required here for router-outlet to work correctly.
-               Otherwise, layout changes won't be registered and the view won't be updated! -->
           <router-outlet *ngIf="true"></router-outlet>
       </div>
   </div>

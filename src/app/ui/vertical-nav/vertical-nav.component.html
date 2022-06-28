@@ -1,9 +1,9 @@
 <nav class="sidebar-nav">
   <ul id="sidebarnav">
-      <li class="sidebar-item" [class.active]="showMenu === sidebarnavItem.title" *ngFor="let sidebarnavItem of sidebarnavItems"
+      <!-- <li class="sidebar-item" [class.active]="showMenu === sidebarnavItem.title" *ngFor="let sidebarnavItem of sidebarnavItems"
           [routerLinkActive]="sidebarnavItem.submenu.length != 0 ? '' : 'active'">
 
-          <!-- <div class="" *ngIf="sidebarnavItem.extralink === true">{{sidebarnavItem.title}}</div> -->
+          <div class="" *ngIf="sidebarnavItem.extralink === true">{{sidebarnavItem.title}}</div>
 
           <a class="sidebar-link waves-effect waves-dark"
               [routerLink]="sidebarnavItem.class === '' ? [sidebarnavItem.path] : null"
@@ -14,7 +14,6 @@
               <i></i> 
               <span class="hide-menu">{{sidebarnavItem.title}}</span>
           </a>
-      </li>
-
+      </li> -->
   </ul>
 </nav>

@@ -1,0 +1,41 @@
+<!-- Bar search -->
+<ng-container>
+    <button
+        *ngIf="!opened"
+        (click)="open()">
+        <tui-svg class="text-white" src="tuiIconSearchLarge"></tui-svg>
+    </button>
+    <div
+        class="absolute inset-0 flex items-center flex-shrink-0 z-99 bg-card"
+        *ngIf="opened">
+    
+        <tui-svg class="absolute ml-6 sm:ml-8" src="tuiIconSearchLarge"></tui-svg>
+        <input
+            class="w-full h-full px-16 sm:px-18 bg-gray-800"
+            [formControl]="searchControl" 
+            placeholder="Найти нужный раздел"
+            (keydown)="onKeydown($event)"
+            #barSearchInput>
+        <button
+            class="absolute top-1/2 right-5 sm:right-7 flex-shrink-0 w-10 h-10 -mt-5"
+            mat-icon-button
+            (click)="close()">
+            <tui-svg src="tuiIconRemoveLarge"></tui-svg>
+        </button>
+    </div>
+</ng-container>
+
+
+<!-- Page result template -->
+<ng-template
+    #pageResult
+    let-result>
+    <div class="flex flex-col">
+        <div
+            class="truncate leading-normal"
+            [innerHTML]="result.title"></div>
+        <div class="truncate leading-normal text-sm text-secondary">
+            {{result.link}}
+        </div>
+    </div>
+</ng-template>

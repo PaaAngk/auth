@@ -2,7 +2,6 @@
 
 .layout {
 
-    /* Base styles for individual layouts */
     > * {
         position: relative;
         display: flex;
@@ -10,7 +9,6 @@
         width: 100%;
     }
 
-    /* Base styles for components that load as a route */
     router-outlet {
 
         + * {
@@ -20,7 +18,12 @@
             width: 100%;
         }
     }
+
+    .main-menu{
+        color: var(--tui-text-01-night)
+    }
 }
+
 
 .navbar { 
     flex: 0 0 auto;
@@ -34,9 +37,6 @@
     align-items: center;
 }
 
-.ng-star-inserted{
-    color: red;
-}
 
 .nav-link, .nav-link_user {
     display: flex;

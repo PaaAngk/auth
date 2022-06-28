@@ -21,7 +21,7 @@ export class VerticalNavComponent implements OnInit {
       this.showMenu = element;
     }
   }
-
+ 
   constructor(
     private router: Router,
     private route: ActivatedRoute

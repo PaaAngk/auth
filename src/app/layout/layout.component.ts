@@ -11,6 +11,50 @@ import { AuthService } from '@core/auth/auth.service';
 })
 export class LayoutComponent implements OnInit {
   
+ 
+  readonly groups = [
+      {
+          label: `Components`,
+          items: [
+              {
+                  label: 'Input',
+                  routerLink: '/components/input',
+              },
+              {
+                  label: 'Select',
+                  routerLink: '/components/select',
+              },
+              {
+                  label: 'DataList',
+                  routerLink: '/components/data-list',
+              },
+          ],
+      },
+      {
+          label: `Styles`,
+          items: [
+              {
+                  label: `Icons`,
+                  routerLink: '/icons',
+              },
+              {
+                  label: `Typography`,
+                  routerLink: '/typography',
+              },
+          ],
+      },
+      {
+          label: '',
+          items: [
+              {
+                  label: `Changelog`,
+                  routerLink: '/changelog',
+              },
+          ],
+      },
+  ];
+
+
   currentUser!: User;
   today: number = Date.now();
 
@@ -26,6 +70,8 @@ export class LayoutComponent implements OnInit {
     this.getUser()
   }
 
+  readonly dropdown = ['Carol Cleveland', 'Neil Innes'];
+
   getUser(){
     this.userService.currentUser.subscribe(
       (userData) => {
@@ -34,18 +80,6 @@ export class LayoutComponent implements OnInit {
       }
     );
   }
-
- 
-  readonly tabs = [
-      ['Главная', '/'],
-      ['link2', '/123'],
-      // ['link3', '/f'],
-      // ['links', [['subLink1',  '/'], ['subLink2',  '/']]],
-      // ['link4', '/f'],
-      // ['link5', '/f'],
-      // ['link6', '/f'],
-  ];
- 
 
   open = false;
  

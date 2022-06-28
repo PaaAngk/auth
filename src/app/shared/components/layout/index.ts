@@ -1,3 +1,2 @@
-export * from './footer.component';
-export * from './header.component';
+export * from './search/search.component';
 export * from './page404.component';

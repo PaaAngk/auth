@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from '@core/models';
 import { UserService } from '@core/services';
@@ -14,11 +14,11 @@ export class SettingsComponent implements OnInit {
   user: User = {} as User;
   isSubmitting = false;
 
-  settingsForm = new FormGroup({
-    "image": new FormControl("", [Validators.required, Validators.minLength(5) ]),
-    "username": new FormControl("", [Validators.required, Validators.minLength(5) ]),
-    "email": new FormControl("", [Validators.required, Validators.minLength(5) ]),
-    "full_name": new FormControl("", [Validators.required, Validators.minLength(5) ]),
+  settingsForm = new UntypedFormGroup({
+    "image": new UntypedFormControl("", [Validators.required, Validators.minLength(5) ]),
+    "username": new UntypedFormControl("", [Validators.required, Validators.minLength(5) ]),
+    "email": new UntypedFormControl("", [Validators.required, Validators.minLength(5) ]),
+    "full_name": new UntypedFormControl("", [Validators.required, Validators.minLength(5) ]),
   });
 
   constructor(

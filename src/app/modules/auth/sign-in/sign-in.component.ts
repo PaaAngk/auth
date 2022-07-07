@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { AbstractControl, UntypedFormBuilder, FormControl, UntypedFormGroup, NgForm, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { AuthService } from '@core/auth/auth.service';
@@ -20,13 +20,13 @@ export function passwordValidator(field: AbstractControl): Validators | null {
 })
 export class SignInComponent implements OnInit
 {
-    signInForm: FormGroup;
+    signInForm: UntypedFormGroup;
     isSubmitting = false;
     errorAlertSubmitting = false;
 
     constructor(
         private authService: AuthService,
-        private formBuilder: FormBuilder,
+        private formBuilder: UntypedFormBuilder,
         private activatedRoute: ActivatedRoute,
         private router: Router
     )

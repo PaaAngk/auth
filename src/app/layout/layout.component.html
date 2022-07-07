@@ -1,56 +1,14 @@
-<!-- <div class="layout ">
-  <nav class="navbar hover:bg-sky-700 ">
-    <tui-tabs class="tui-container">
-        <div class="nav-link">
-          <button class="tabs" tuiTab routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-              Главная
-          </button>
-        </div>
-        <div class="nav-link_user">
-          <ng-container *appShowAuthed="false">
-            <button tuiTab routerLink="/login" routerLinkActive="active">
-              Авторизоваться
-            </button>
-          </ng-container>
-
-          <ng-container *appShowAuthed="true">
-            
-            <button tuiTab (click)="logout()">
-              Выйти
-            </button>
-          </ng-container>
-        </div>
-    </tui-tabs>
-  </nav>
-
-  <div class="flex flex-auto justify-center w-full sm:p-6 md:p-8">
-      <div class="flex flex-col flex-auto w-full sm:max-w-360 sm:shadow-lg sm:rounded-lg sm:overflow-hidden bg-default">
-          <router-outlet *ngIf="true"></router-outlet>
-      </div>
-  </div>
-
-  <footer class="tui-container_fullwidth footer">
-    <a class="logo" routerLink="/">LOGO</a>
-    <span>
-      &copy; {{ today | date: 'yyyy' }}.
-      Copyright.
-    </span>
-  </footer>
-</div> -->
-
-
-<div class="layout flex flex-col flex-auto items-center w-full min-w-0 bg-gray-200 dark:bg-card">
-
+<div class="h-screen overflow-hidden relative items-center w-full bg-gray-200">
   <!-- Header -->
-  <div class="relative flex flex-col flex-0 justify-center w-full overflow-hidden z-49 shadow print:hidden">
+  <header class="relative flex flex-col flex-0 justify-center w-full overflow-hidden z-49 shadow">
       <!-- Top bar -->
-      <div class="relative dark flex flex-auto justify-center w-full px-4 md:px-8 bg-gray-800">
-          <div class="flex main-menu items-center w-full max-w-360 h-16">     
+      <div class="relative flex flex-auto justify-center w-full h-16 px-8 bg-gray-800">
+          <div class="flex container mx-auto main-menu items-center w-full">     
             <div class="flex items-center">
               <a class="tui-text_h6" href="/">LOGO</a>
             </div>      
             <!-- Components -->
-            <div class="flexes></languages>
+            <div class="flexes>
                 <fuse-fullscr items-center pl-2 ml-auto space-x-1 sm:space-x-2">
                 <!-- <languageen class="hidden md:block"></fuse-fullscreen>-->
                 <search></search>
@@ -59,13 +17,11 @@
                 <notifications></notifications>
                 <user></user> -->
                 <tui-hosted-dropdown #dropdown [content]="topBarContent">
-                <a
+                  <button
                     tuiButton
-                    type="button"
-                    routerLink="/"
-                    routerLinkActive="active">     
+                    type="button">     
                     {{ currentUser.full_name }} 
-                </a>
+                  </button>
                 </tui-hosted-dropdown>
                 <ng-template #topBarContent>
                   <tui-data-list (click)="onClick()">
@@ -86,59 +42,47 @@
             </div>
           </div>
       </div>
+
       <!-- Bottom bar -->
-      <ng-container>
-          <div class="flex flex-auto justify-center px-4 md:px-8 bg-white">
-              <div class="relative flex items-center w-full max-w-360 ">
-                      <nav
-                          tuiTabs
-                          class="tabs"
-                          [(activeItemIndex)]="index"
-                      >
-                          
-                          <tui-hosted-dropdown
-                              tuiDropdownHover
-                              [content]="content"
-                              [(open)]="open"
-                          >
-                              <button
-                                  tuiTab
-                                  (tui-tab-activate.stop)="0"
-                              >
-                                  Реестр
-                              </button>
-                              
-                              <ng-template #content>
-                                  <tui-data-list (click)="onClick()">
-                                      <a routerLink="/" tuiOption>Поиск</a>
-                                      <a routerLink="/" tuiOption>Отчеты</a>
-                                      <a routerLink="/" tuiOption>Загрузка</a>
-                                      <a routerLink="/" tuiOption>Заявки</a>
-                                  </tui-data-list>
-                              </ng-template>
-                          </tui-hosted-dropdown>
-                          <button tuiTab>Сервис</button>
-                          <button tuiTab>Другое 1</button>
-                          <button tuiTab>Другое 2</button>
-                          <button tuiTab>Другое 3</button>
-                      </nav>
-              </div>
+      <div class="flex flex-auto justify-center px-8 bg-white shadow-inner">
+          <div class="relative container mx-auto flex items-center w-full max-w-360 ">
+            <nav tuiTabs class="tabs">               
+                <tui-hosted-dropdown
+                    tuiDropdownHover
+                    [content]="content"
+                    [(open)]="open"
+                >
+                    <button tuiTab>Реестр</button>
+                    
+                    <ng-template #content>
+                        <tui-data-list>
+                            <a routerLink="registry/search" tuiOption>Поиск</a>
+                            <a routerLink="registry/report" tuiOption>Отчеты</a>
+                            <a routerLink="/" tuiOption>Загрузка</a>
+                            <a routerLink="/" tuiOption>Заявки</a>
+                        </tui-data-list>
+                    </ng-template>
+                </tui-hosted-dropdown>
+
+                <button tuiTab>Сервис</button>
+                <button tuiTab>Другое 1</button>
+                <button routerLink="/" tuiTab>Другое 2</button>
+                <button routerLink="/" tuiTab>Другое 3</button>
+            </nav>
           </div>
-      </ng-container>
-  </div>
+      </div>      
+  </header>
 
   <!-- Content -->
-  <div class="flex flex-auto justify-center w-full sm:p-6 md:p-8 h-full">
-      <div class="flex flex-col flex-auto w-full sm:max-w-360 sm:shadow-lg sm:rounded-lg sm:overflow-hidden bg-default">
-          <router-outlet *ngIf="true"></router-outlet>
-      </div>
-  </div>
-
+  <main class="flex w-screen p-6">   
+      <router-outlet *ngIf="true"></router-outlet> 
+  </main>
+<!-- justify-center <div class="flex flex-col flex-auto bg-white shadow-lg rounded-xl overflow-hidden"> -->
   <!-- Footer -->
-  <div class="relative flex flex-0 justify-center w-full px-6 md:px-8 z-49 border-t bg-white print:hidden">
-      <div class="flex items-center w-full max-w-360 h-14 sm:h-20">
-          <span class="font-medium text-secondary">Copyright &copy; {{ today | date: 'yyyy' }}</span>
-      </div>
-  </div>
+  <footer class="relative flex flex-0 justify-center w-full px-6 z-49 shadow-inner border-t border-t-gray-300 bg-white print:hidden">
+    <div class="flex items-center w-full max-w-360 h-10 sm:h-20">
+      <span class="font-medium text-secondary">Copyright &copy; {{ today | date: 'yyyy' }}</span>
+    </div>
+  </footer>
 
 </div>

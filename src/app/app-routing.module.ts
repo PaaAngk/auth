@@ -8,8 +8,8 @@ import { LayoutComponent } from './layout/layout.component';
 import { Page404Component } from '@shared/*';
 
 const routerConfig: ExtraOptions = {
-  preloadingStrategy       : PreloadAllModules,
-  scrollPositionRestoration: 'enabled'
+  // preloadingStrategy       : PreloadAllModules,
+  // scrollPositionRestoration: 'enabled'
 };
 
 const routes: Routes = [
@@ -40,9 +40,6 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
     component: AuthSignOutComponent,
-    data: {
-      title: 'ssss'
-    },
     children: [
       {path: 'sign-out', loadChildren: () => import('./modules/auth/sign-out/sign-out.module').then(m => m.AuthSignOutModule)},
     ]
@@ -58,10 +55,7 @@ const routes: Routes = [
         {path: 'home', loadChildren: () => import('./modules/landing/home/home.module').then(m => m.HomeModule)},
 
         // Registry
-        {path: 'registry', children: [
-          {path: 'search', loadChildren: () => import('./modules/landing/home/home.module').then(m => m.HomeModule)},
-          {path: 'report', loadChildren: () => import('./modules/landing/home/home.module').then(m => m.HomeModule)},
-        ]},
+        {path: 'registry', loadChildren: () => import('./modules/registry/registry.module').then(m => m.RegistryModule)},
 
         // User
         {path: 'user', loadChildren: () => import('./modules/user/user.module').then(m => m.UserModule)},

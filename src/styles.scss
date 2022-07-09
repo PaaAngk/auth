@@ -83,4 +83,12 @@
     }
 }
 @tailwind components;
+@layer components{
+    // Background for border 
+    .border-color {    
+        --tw-border-opacity: 1;
+        border-color: rgb(209 213 219 / var(--tw-border-opacity));  
+    }
+      
+}
 @tailwind utilities;

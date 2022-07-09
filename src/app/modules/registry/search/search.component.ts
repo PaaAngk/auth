@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {EMPTY_ARRAY, TuiHandler} from '@taiga-ui/cdk';
 import { TreeNode } from '@core/models' 
-import {FormControl} from '@angular/forms';
+import {FormControl, FormGroup} from '@angular/forms';
 import {defaultSort, TuiComparator} from '@taiga-ui/addon-table';
 import {
     isPresent,
@@ -73,8 +73,6 @@ const KEYS: Record<string, Key> = {
   templateUrl: './search.component.html'
 })
 export class RegistrySearchComponent implements OnInit {
-
-    data : any[] = [];
 
     readonly menu: TreeNode = {
         text: 'Registry',
@@ -233,6 +231,9 @@ export class RegistrySearchComponent implements OnInit {
     
     columns = ['name', 'dob', 'age'];
     
+    readonly searchForm = new FormGroup({
+        testValue: new FormControl('mail@mail.ru'),
+    });
     search = '';
     
     readonly arrow = TUI_ARROW;

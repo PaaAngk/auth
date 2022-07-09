@@ -5,7 +5,8 @@ import { RegistryRoutingModule } from './registry-routing.module'
 import { RegistrySearchComponent } from './search/search.component'
 import {ReactiveFormsModule} from '@angular/forms';
 
-import { TuiLinkModule, TuiSvgModule, TuiTextfieldControllerModule, TuiHostedDropdownModule, TuiPrimitiveTextfieldModule, TuiLoaderModule } from '@taiga-ui/core';
+import { TuiLinkModule, TuiSvgModule, TuiTextfieldControllerModule, TuiHostedDropdownModule, TuiPrimitiveTextfieldModule, TuiLoaderModule, TuiButtonModule } from '@taiga-ui/core';
+import {TuiLetModule} from '@taiga-ui/cdk';
 import { TuiTreeModule, TuiArrowModule, TuiCheckboxLabeledModule, TuiInputCountModule, TuiInputModule } from '@taiga-ui/kit';
 import { TuiTableModule, TuiReorderModule, TuiTablePaginationModule } from '@taiga-ui/addon-table';
 
@@ -15,6 +16,8 @@ import { TuiTableModule, TuiReorderModule, TuiTablePaginationModule } from '@tai
     RegistryRoutingModule,
     ReactiveFormsModule,
 
+    TuiLetModule,
+    TuiButtonModule,
     TuiArrowModule,
     TuiSvgModule,
     TuiTablePaginationModule,

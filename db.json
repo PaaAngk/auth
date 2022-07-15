@@ -1,0 +1,3814 @@
+{
+  "real-estate": [
+    {
+      "secondName": "Иванов",
+      "firstName": "Иван",
+      "lastName": "Иванович",
+      "DOB": "11.03.1964",
+      "placeBirth": "Иркутск",
+      "placeLive": "г. Иркутск, ул. Ленина, д.10, кв. 3",
+      "age": 50,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Петров",
+      "firstName": "Петр",
+      "lastName": "Петрович",
+      "DOB": "15.06.1983",
+      "placeBirth": "Ангарск",
+      "placeLive": "г. Ангарск, мкр. 10, д. 2, кв. 8",
+      "age": 58,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Туюбов",
+      "firstName": "Цигжлай",
+      "lastName": "Епдориевич",
+      "DOB": "10.09.1951",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 2, 3",
+      "age": 44,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Яапфйлова",
+      "firstName": "Мжьы",
+      "lastName": "Ядтьфовна",
+      "DOB": "24.03.1976",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 3, 4 ",
+      "age": 98,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Бцитн",
+      "firstName": "Хьюней",
+      "lastName": "Урътлаевич",
+      "DOB": "01.09.1953",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 10, 5",
+      "age": 23,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Еъбчова",
+      "firstName": "Исопила",
+      "lastName": "Йэавлаевна",
+      "DOB": "11.08.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Кановская 2, 3, 5 ",
+      "age": 38,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Лщлцина",
+      "firstName": "Чхцъ",
+      "lastName": "Зэъфльевна",
+      "DOB": "27.01.1965",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 1, 2, 45",
+      "age": 58,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Вйяхна",
+      "firstName": "Заоеарита",
+      "lastName": "Яъпэйловна",
+      "DOB": "23.05.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 5, 1",
+      "age": 46,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Кзчрсникова",
+      "firstName": "Диук",
+      "lastName": "Яангнтиновна",
+      "DOB": "19.02.1987",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 1",
+      "age": 25,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Мтыйшедворский",
+      "firstName": "Етцгн",
+      "lastName": "Змклеевич",
+      "DOB": "22.02.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 2",
+      "age": 46,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Акыъов",
+      "firstName": "Рдчйний",
+      "lastName": "Понфадьевич",
+      "DOB": "11.05.1983",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 1 ",
+      "age": 96,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Двиорзин",
+      "firstName": "Мэбя",
+      "lastName": "Грцвсандрович",
+      "DOB": "26.07.1982",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 3 3",
+      "age": 64,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Счоесникова",
+      "firstName": "Кййнира",
+      "lastName": "Эдмясандровна",
+      "DOB": "31.08.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 7 ",
+      "age": 25,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Ббкфнов",
+      "firstName": "Гюпф",
+      "lastName": "Мпзгадьевич",
+      "DOB": "06.05.1960",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Советская 4 ",
+      "age": 46,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Бузфавина",
+      "firstName": "Цхшълика",
+      "lastName": "Йянщсеевна",
+      "DOB": "22.07.1955",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 1 1",
+      "age": 80,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Щсиповников",
+      "firstName": "Зъеилай",
+      "lastName": "Сжхфвич",
+      "DOB": "01.09.1991",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 2 ",
+      "age": 53,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Щыааова",
+      "firstName": "Жумх",
+      "lastName": "Бхысновна",
+      "DOB": "07.09.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 1",
+      "age": 23,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Змркин",
+      "firstName": "Эйгйтантин",
+      "lastName": "Шжхдльевич",
+      "DOB": "23.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 2",
+      "age": 32,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Бдтгрина",
+      "firstName": "Икььа",
+      "lastName": "Внвисандровна",
+      "DOB": "16.09.1985",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 ",
+      "age": 32,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Фяедрин",
+      "firstName": "Дчяу",
+      "lastName": "Атщфимирович",
+      "DOB": "21.08.1961",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 6 2",
+      "age": 12,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Риььва",
+      "firstName": "Жтцц",
+      "lastName": "Нкамвна",
+      "DOB": "10.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 8 ",
+      "age": 56,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Лгхаецов",
+      "firstName": "Эжгйл",
+      "lastName": "Хсдшович",
+      "DOB": "20.12.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 9 ",
+      "age": 98,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Пцбцалов",
+      "firstName": "Вязъсандр",
+      "lastName": "Сщягимирович",
+      "DOB": "13.07.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село,, улица Лесная 3 ",
+      "age": 10,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Заицшина",
+      "firstName": "Вфщзния",
+      "lastName": "Чзшулаевна",
+      "DOB": "03.08.1989",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 2",
+      "age": 24,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Цбэмх",
+      "firstName": "Ебэц",
+      "lastName": "Сдяэвна",
+      "DOB": "06.02.1984",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 ",
+      "age": 17,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Сьогвиков",
+      "firstName": "Дмйпимир",
+      "lastName": "Киягльевич",
+      "DOB": "14.07.1961",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 6 2",
+      "age": 35,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Цаимбьев",
+      "firstName": "Гмвг",
+      "lastName": "Йюесвич",
+      "DOB": "02.09.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 7 1",
+      "age": 65,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Гъив",
+      "firstName": "Жпюрсандр",
+      "lastName": "Хкиънович",
+      "DOB": "21.10.1979",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 8 2",
+      "age": 14,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Тщйнтская",
+      "firstName": "Ссдщ",
+      "lastName": "Жчыаимировна",
+      "DOB": "02.04.1969",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 9 1",
+      "age": 32,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Дчглн",
+      "firstName": "Жшьщимир",
+      "lastName": "Цлнпорович",
+      "DOB": "16.10.1953",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 11 ",
+      "age": 23,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Шбффнов",
+      "firstName": "Эвзв",
+      "lastName": "Ихубйлович",
+      "DOB": "03.10.2001",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 1",
+      "age": 45,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Кцхденко",
+      "firstName": "Кеэьа",
+      "lastName": "Пмосимировна",
+      "DOB": "24.10.1959",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 ",
+      "age": 14,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Фыаллищев",
+      "firstName": "Пьльлай",
+      "lastName": "Иыъълаевич",
+      "DOB": "02.10.1972",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 8 ",
+      "age": 16,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Иванов",
+      "firstName": "Иван",
+      "lastName": "Иванович",
+      "DOB": "11.03.1964",
+      "placeBirth": "Иркутск",
+      "placeLive": "г. Иркутск, ул. Ленина, д.10, кв. 3",
+      "age": 17,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Петров",
+      "firstName": "Петр",
+      "lastName": "Петрович",
+      "DOB": "15.06.1983",
+      "placeBirth": "Ангарск",
+      "placeLive": "г. Ангарск, мкр. 10, д. 2, кв. 8",
+      "age": 22,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Туюбов",
+      "firstName": "Цигжлай",
+      "lastName": "Епдориевич",
+      "DOB": "10.09.1951",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 2, 3",
+      "age": 11,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Яапфйлова",
+      "firstName": "Мжьы",
+      "lastName": "Ядтьфовна",
+      "DOB": "24.03.1976",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 3, 4 ",
+      "age": 17,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Бцитн",
+      "firstName": "Хьюней",
+      "lastName": "Урътлаевич",
+      "DOB": "01.09.1953",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 10, 5",
+      "age": 56,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Еъбчова",
+      "firstName": "Исопила",
+      "lastName": "Йэавлаевна",
+      "DOB": "11.08.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Кановская 2, 3, 5 ",
+      "age": 97,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Лщлцина",
+      "firstName": "Чхцъ",
+      "lastName": "Зэъфльевна",
+      "DOB": "27.01.1965",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 1, 2, 45",
+      "age": 87,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Вйяхна",
+      "firstName": "Заоеарита",
+      "lastName": "Яъпэйловна",
+      "DOB": "23.05.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 5, 1",
+      "age": 25,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Кзчрсникова",
+      "firstName": "Диук",
+      "lastName": "Яангнтиновна",
+      "DOB": "19.02.1987",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 1",
+      "age": 18,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Мтыйшедворский",
+      "firstName": "Етцгн",
+      "lastName": "Змклеевич",
+      "DOB": "22.02.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 2",
+      "age": 38,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Акыъов",
+      "firstName": "Рдчйний",
+      "lastName": "Понфадьевич",
+      "DOB": "11.05.1983",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 1 ",
+      "age": 78,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Двиорзин",
+      "firstName": "Мэбя",
+      "lastName": "Грцвсандрович",
+      "DOB": "26.07.1982",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 3 3",
+      "age": 37,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Счоесникова",
+      "firstName": "Кййнира",
+      "lastName": "Эдмясандровна",
+      "DOB": "31.08.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 7 ",
+      "age": 28,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Ббкфнов",
+      "firstName": "Гюпф",
+      "lastName": "Мпзгадьевич",
+      "DOB": "06.05.1960",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Советская 4 ",
+      "age": 35,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Бузфавина",
+      "firstName": "Цхшълика",
+      "lastName": "Йянщсеевна",
+      "DOB": "22.07.1955",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 1 1",
+      "age": 45,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Щсиповников",
+      "firstName": "Зъеилай",
+      "lastName": "Сжхфвич",
+      "DOB": "01.09.1991",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 2 ",
+      "age": 56,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Щыааова",
+      "firstName": "Жумх",
+      "lastName": "Бхысновна",
+      "DOB": "07.09.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 1",
+      "age": 18,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Змркин",
+      "firstName": "Эйгйтантин",
+      "lastName": "Шжхдльевич",
+      "DOB": "23.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 2",
+      "age": 17,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Бдтгрина",
+      "firstName": "Икььа",
+      "lastName": "Внвисандровна",
+      "DOB": "16.09.1985",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 ",
+      "age": 18,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Фяедрин",
+      "firstName": "Дчяу",
+      "lastName": "Атщфимирович",
+      "DOB": "21.08.1961",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 6 2",
+      "age": 14,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Риььва",
+      "firstName": "Жтцц",
+      "lastName": "Нкамвна",
+      "DOB": "10.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 8 ",
+      "age": 13,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Лгхаецов",
+      "firstName": "Эжгйл",
+      "lastName": "Хсдшович",
+      "DOB": "20.12.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 9 ",
+      "age": 87,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Пцбцалов",
+      "firstName": "Вязъсандр",
+      "lastName": "Сщягимирович",
+      "DOB": "13.07.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село,, улица Лесная 3 ",
+      "age": 68,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Заицшина",
+      "firstName": "Вфщзния",
+      "lastName": "Чзшулаевна",
+      "DOB": "03.08.1989",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 2",
+      "age": 15,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Цбэмх",
+      "firstName": "Ебэц",
+      "lastName": "Сдяэвна",
+      "DOB": "06.02.1984",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 ",
+      "age": 78,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Сьогвиков",
+      "firstName": "Дмйпимир",
+      "lastName": "Киягльевич",
+      "DOB": "14.07.1961",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 6 2",
+      "age": 12,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Цаимбьев",
+      "firstName": "Гмвг",
+      "lastName": "Йюесвич",
+      "DOB": "02.09.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 7 1",
+      "age": 23,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Гъив",
+      "firstName": "Жпюрсандр",
+      "lastName": "Хкиънович",
+      "DOB": "21.10.1979",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 8 2",
+      "age": 99,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Тщйнтская",
+      "firstName": "Ссдщ",
+      "lastName": "Жчыаимировна",
+      "DOB": "02.04.1969",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 9 1",
+      "age": 98,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Дчглн",
+      "firstName": "Жшьщимир",
+      "lastName": "Цлнпорович",
+      "DOB": "16.10.1953",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 11 ",
+      "age": 78,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Шбффнов",
+      "firstName": "Эвзв",
+      "lastName": "Ихубйлович",
+      "DOB": "03.10.2001",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 1",
+      "age": 45,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Кцхденко",
+      "firstName": "Кеэьа",
+      "lastName": "Пмосимировна",
+      "DOB": "24.10.1959",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 ",
+      "age": 47,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Иванов",
+      "firstName": "Иван",
+      "lastName": "Иванович",
+      "DOB": "11.03.1964",
+      "placeBirth": "Иркутск",
+      "placeLive": "г. Иркутск, ул. Ленина, д.10, кв. 3",
+      "age": 50,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Петров",
+      "firstName": "Петр",
+      "lastName": "Петрович",
+      "DOB": "15.06.1983",
+      "placeBirth": "Ангарск",
+      "placeLive": "г. Ангарск, мкр. 10, д. 2, кв. 8",
+      "age": 58,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Туюбов",
+      "firstName": "Цигжлай",
+      "lastName": "Епдориевич",
+      "DOB": "10.09.1951",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 2, 3",
+      "age": 44,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Яапфйлова",
+      "firstName": "Мжьы",
+      "lastName": "Ядтьфовна",
+      "DOB": "24.03.1976",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 3, 4 ",
+      "age": 98,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Бцитн",
+      "firstName": "Хьюней",
+      "lastName": "Урътлаевич",
+      "DOB": "01.09.1953",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 10, 5",
+      "age": 23,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Еъбчова",
+      "firstName": "Исопила",
+      "lastName": "Йэавлаевна",
+      "DOB": "11.08.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Кановская 2, 3, 5 ",
+      "age": 38,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Лщлцина",
+      "firstName": "Чхцъ",
+      "lastName": "Зэъфльевна",
+      "DOB": "27.01.1965",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 1, 2, 45",
+      "age": 58,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Вйяхна",
+      "firstName": "Заоеарита",
+      "lastName": "Яъпэйловна",
+      "DOB": "23.05.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 5, 1",
+      "age": 46,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Кзчрсникова",
+      "firstName": "Диук",
+      "lastName": "Яангнтиновна",
+      "DOB": "19.02.1987",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 1",
+      "age": 25,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Мтыйшедворский",
+      "firstName": "Етцгн",
+      "lastName": "Змклеевич",
+      "DOB": "22.02.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 2",
+      "age": 46,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Акыъов",
+      "firstName": "Рдчйний",
+      "lastName": "Понфадьевич",
+      "DOB": "11.05.1983",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 1 ",
+      "age": 96,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Двиорзин",
+      "firstName": "Мэбя",
+      "lastName": "Грцвсандрович",
+      "DOB": "26.07.1982",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 3 3",
+      "age": 64,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Счоесникова",
+      "firstName": "Кййнира",
+      "lastName": "Эдмясандровна",
+      "DOB": "31.08.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 7 ",
+      "age": 25,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Ббкфнов",
+      "firstName": "Гюпф",
+      "lastName": "Мпзгадьевич",
+      "DOB": "06.05.1960",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Советская 4 ",
+      "age": 46,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Бузфавина",
+      "firstName": "Цхшълика",
+      "lastName": "Йянщсеевна",
+      "DOB": "22.07.1955",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 1 1",
+      "age": 80,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Щсиповников",
+      "firstName": "Зъеилай",
+      "lastName": "Сжхфвич",
+      "DOB": "01.09.1991",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 2 ",
+      "age": 53,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Щыааова",
+      "firstName": "Жумх",
+      "lastName": "Бхысновна",
+      "DOB": "07.09.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 1",
+      "age": 23,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Змркин",
+      "firstName": "Эйгйтантин",
+      "lastName": "Шжхдльевич",
+      "DOB": "23.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 2",
+      "age": 32,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Бдтгрина",
+      "firstName": "Икььа",
+      "lastName": "Внвисандровна",
+      "DOB": "16.09.1985",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 ",
+      "age": 32,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Фяедрин",
+      "firstName": "Дчяу",
+      "lastName": "Атщфимирович",
+      "DOB": "21.08.1961",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 6 2",
+      "age": 12,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Риььва",
+      "firstName": "Жтцц",
+      "lastName": "Нкамвна",
+      "DOB": "10.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 8 ",
+      "age": 56,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Лгхаецов",
+      "firstName": "Эжгйл",
+      "lastName": "Хсдшович",
+      "DOB": "20.12.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 9 ",
+      "age": 98,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Пцбцалов",
+      "firstName": "Вязъсандр",
+      "lastName": "Сщягимирович",
+      "DOB": "13.07.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село,, улица Лесная 3 ",
+      "age": 10,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Заицшина",
+      "firstName": "Вфщзния",
+      "lastName": "Чзшулаевна",
+      "DOB": "03.08.1989",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 2",
+      "age": 24,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Цбэмх",
+      "firstName": "Ебэц",
+      "lastName": "Сдяэвна",
+      "DOB": "06.02.1984",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 ",
+      "age": 17,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Сьогвиков",
+      "firstName": "Дмйпимир",
+      "lastName": "Киягльевич",
+      "DOB": "14.07.1961",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 6 2",
+      "age": 35,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Цаимбьев",
+      "firstName": "Гмвг",
+      "lastName": "Йюесвич",
+      "DOB": "02.09.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 7 1",
+      "age": 65,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Гъив",
+      "firstName": "Жпюрсандр",
+      "lastName": "Хкиънович",
+      "DOB": "21.10.1979",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 8 2",
+      "age": 14,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Тщйнтская",
+      "firstName": "Ссдщ",
+      "lastName": "Жчыаимировна",
+      "DOB": "02.04.1969",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 9 1",
+      "age": 32,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Дчглн",
+      "firstName": "Жшьщимир",
+      "lastName": "Цлнпорович",
+      "DOB": "16.10.1953",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 11 ",
+      "age": 23,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Шбффнов",
+      "firstName": "Эвзв",
+      "lastName": "Ихубйлович",
+      "DOB": "03.10.2001",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 1",
+      "age": 45,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Кцхденко",
+      "firstName": "Кеэьа",
+      "lastName": "Пмосимировна",
+      "DOB": "24.10.1959",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 ",
+      "age": 14,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Фыаллищев",
+      "firstName": "Пьльлай",
+      "lastName": "Иыъълаевич",
+      "DOB": "02.10.1972",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 8 ",
+      "age": 16,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Иванов",
+      "firstName": "Иван",
+      "lastName": "Иванович",
+      "DOB": "11.03.1964",
+      "placeBirth": "Иркутск",
+      "placeLive": "г. Иркутск, ул. Ленина, д.10, кв. 3",
+      "age": 17,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Петров",
+      "firstName": "Петр",
+      "lastName": "Петрович",
+      "DOB": "15.06.1983",
+      "placeBirth": "Ангарск",
+      "placeLive": "г. Ангарск, мкр. 10, д. 2, кв. 8",
+      "age": 22,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Туюбов",
+      "firstName": "Цигжлай",
+      "lastName": "Епдориевич",
+      "DOB": "10.09.1951",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 2, 3",
+      "age": 11,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Яапфйлова",
+      "firstName": "Мжьы",
+      "lastName": "Ядтьфовна",
+      "DOB": "24.03.1976",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 3, 4 ",
+      "age": 17,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Бцитн",
+      "firstName": "Хьюней",
+      "lastName": "Урътлаевич",
+      "DOB": "01.09.1953",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 10, 5",
+      "age": 56,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Еъбчова",
+      "firstName": "Исопила",
+      "lastName": "Йэавлаевна",
+      "DOB": "11.08.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Кановская 2, 3, 5 ",
+      "age": 97,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Лщлцина",
+      "firstName": "Чхцъ",
+      "lastName": "Зэъфльевна",
+      "DOB": "27.01.1965",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 1, 2, 45",
+      "age": 87,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Вйяхна",
+      "firstName": "Заоеарита",
+      "lastName": "Яъпэйловна",
+      "DOB": "23.05.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 5, 1",
+      "age": 25,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Кзчрсникова",
+      "firstName": "Диук",
+      "lastName": "Яангнтиновна",
+      "DOB": "19.02.1987",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 1",
+      "age": 18,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Мтыйшедворский",
+      "firstName": "Етцгн",
+      "lastName": "Змклеевич",
+      "DOB": "22.02.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 2",
+      "age": 38,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Акыъов",
+      "firstName": "Рдчйний",
+      "lastName": "Понфадьевич",
+      "DOB": "11.05.1983",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 1 ",
+      "age": 78,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Двиорзин",
+      "firstName": "Мэбя",
+      "lastName": "Грцвсандрович",
+      "DOB": "26.07.1982",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 3 3",
+      "age": 37,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Счоесникова",
+      "firstName": "Кййнира",
+      "lastName": "Эдмясандровна",
+      "DOB": "31.08.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 7 ",
+      "age": 28,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Ббкфнов",
+      "firstName": "Гюпф",
+      "lastName": "Мпзгадьевич",
+      "DOB": "06.05.1960",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Советская 4 ",
+      "age": 35,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Бузфавина",
+      "firstName": "Цхшълика",
+      "lastName": "Йянщсеевна",
+      "DOB": "22.07.1955",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 1 1",
+      "age": 45,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Щсиповников",
+      "firstName": "Зъеилай",
+      "lastName": "Сжхфвич",
+      "DOB": "01.09.1991",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 2 ",
+      "age": 56,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Щыааова",
+      "firstName": "Жумх",
+      "lastName": "Бхысновна",
+      "DOB": "07.09.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 1",
+      "age": 18,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Змркин",
+      "firstName": "Эйгйтантин",
+      "lastName": "Шжхдльевич",
+      "DOB": "23.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 2",
+      "age": 17,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Бдтгрина",
+      "firstName": "Икььа",
+      "lastName": "Внвисандровна",
+      "DOB": "16.09.1985",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 ",
+      "age": 18,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Фяедрин",
+      "firstName": "Дчяу",
+      "lastName": "Атщфимирович",
+      "DOB": "21.08.1961",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 6 2",
+      "age": 14,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Риььва",
+      "firstName": "Жтцц",
+      "lastName": "Нкамвна",
+      "DOB": "10.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 8 ",
+      "age": 13,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Лгхаецов",
+      "firstName": "Эжгйл",
+      "lastName": "Хсдшович",
+      "DOB": "20.12.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 9 ",
+      "age": 87,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Пцбцалов",
+      "firstName": "Вязъсандр",
+      "lastName": "Сщягимирович",
+      "DOB": "13.07.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село,, улица Лесная 3 ",
+      "age": 68,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Заицшина",
+      "firstName": "Вфщзния",
+      "lastName": "Чзшулаевна",
+      "DOB": "03.08.1989",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 2",
+      "age": 15,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Цбэмх",
+      "firstName": "Ебэц",
+      "lastName": "Сдяэвна",
+      "DOB": "06.02.1984",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 ",
+      "age": 78,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Сьогвиков",
+      "firstName": "Дмйпимир",
+      "lastName": "Киягльевич",
+      "DOB": "14.07.1961",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 6 2",
+      "age": 12,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Цаимбьев",
+      "firstName": "Гмвг",
+      "lastName": "Йюесвич",
+      "DOB": "02.09.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 7 1",
+      "age": 23,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Гъив",
+      "firstName": "Жпюрсандр",
+      "lastName": "Хкиънович",
+      "DOB": "21.10.1979",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 8 2",
+      "age": 99,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Тщйнтская",
+      "firstName": "Ссдщ",
+      "lastName": "Жчыаимировна",
+      "DOB": "02.04.1969",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 9 1",
+      "age": 98,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Дчглн",
+      "firstName": "Жшьщимир",
+      "lastName": "Цлнпорович",
+      "DOB": "16.10.1953",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 11 ",
+      "age": 78,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Шбффнов",
+      "firstName": "Эвзв",
+      "lastName": "Ихубйлович",
+      "DOB": "03.10.2001",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 1",
+      "age": 45,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Кцхденко",
+      "firstName": "Кеэьа",
+      "lastName": "Пмосимировна",
+      "DOB": "24.10.1959",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 ",
+      "age": 47,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Иванов",
+      "firstName": "Иван",
+      "lastName": "Иванович",
+      "DOB": "11.03.1964",
+      "placeBirth": "Иркутск",
+      "placeLive": "г. Иркутск, ул. Ленина, д.10, кв. 3",
+      "age": 50,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Петров",
+      "firstName": "Петр",
+      "lastName": "Петрович",
+      "DOB": "15.06.1983",
+      "placeBirth": "Ангарск",
+      "placeLive": "г. Ангарск, мкр. 10, д. 2, кв. 8",
+      "age": 58,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Туюбов",
+      "firstName": "Цигжлай",
+      "lastName": "Епдориевич",
+      "DOB": "10.09.1951",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 2, 3",
+      "age": 44,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Яапфйлова",
+      "firstName": "Мжьы",
+      "lastName": "Ядтьфовна",
+      "DOB": "24.03.1976",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 3, 4 ",
+      "age": 98,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Бцитн",
+      "firstName": "Хьюней",
+      "lastName": "Урътлаевич",
+      "DOB": "01.09.1953",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 10, 5",
+      "age": 23,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Еъбчова",
+      "firstName": "Исопила",
+      "lastName": "Йэавлаевна",
+      "DOB": "11.08.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Кановская 2, 3, 5 ",
+      "age": 38,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Лщлцина",
+      "firstName": "Чхцъ",
+      "lastName": "Зэъфльевна",
+      "DOB": "27.01.1965",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 1, 2, 45",
+      "age": 58,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Вйяхна",
+      "firstName": "Заоеарита",
+      "lastName": "Яъпэйловна",
+      "DOB": "23.05.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 5, 1",
+      "age": 46,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Кзчрсникова",
+      "firstName": "Диук",
+      "lastName": "Яангнтиновна",
+      "DOB": "19.02.1987",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 1",
+      "age": 25,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Мтыйшедворский",
+      "firstName": "Етцгн",
+      "lastName": "Змклеевич",
+      "DOB": "22.02.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 2",
+      "age": 46,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Акыъов",
+      "firstName": "Рдчйний",
+      "lastName": "Понфадьевич",
+      "DOB": "11.05.1983",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 1 ",
+      "age": 96,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Двиорзин",
+      "firstName": "Мэбя",
+      "lastName": "Грцвсандрович",
+      "DOB": "26.07.1982",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 3 3",
+      "age": 64,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Счоесникова",
+      "firstName": "Кййнира",
+      "lastName": "Эдмясандровна",
+      "DOB": "31.08.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 7 ",
+      "age": 25,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Ббкфнов",
+      "firstName": "Гюпф",
+      "lastName": "Мпзгадьевич",
+      "DOB": "06.05.1960",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Советская 4 ",
+      "age": 46,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Бузфавина",
+      "firstName": "Цхшълика",
+      "lastName": "Йянщсеевна",
+      "DOB": "22.07.1955",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 1 1",
+      "age": 80,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Щсиповников",
+      "firstName": "Зъеилай",
+      "lastName": "Сжхфвич",
+      "DOB": "01.09.1991",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 2 ",
+      "age": 53,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Щыааова",
+      "firstName": "Жумх",
+      "lastName": "Бхысновна",
+      "DOB": "07.09.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 1",
+      "age": 23,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Змркин",
+      "firstName": "Эйгйтантин",
+      "lastName": "Шжхдльевич",
+      "DOB": "23.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 2",
+      "age": 32,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Бдтгрина",
+      "firstName": "Икььа",
+      "lastName": "Внвисандровна",
+      "DOB": "16.09.1985",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 ",
+      "age": 32,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Фяедрин",
+      "firstName": "Дчяу",
+      "lastName": "Атщфимирович",
+      "DOB": "21.08.1961",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 6 2",
+      "age": 12,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Риььва",
+      "firstName": "Жтцц",
+      "lastName": "Нкамвна",
+      "DOB": "10.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 8 ",
+      "age": 56,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Лгхаецов",
+      "firstName": "Эжгйл",
+      "lastName": "Хсдшович",
+      "DOB": "20.12.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 9 ",
+      "age": 98,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Пцбцалов",
+      "firstName": "Вязъсандр",
+      "lastName": "Сщягимирович",
+      "DOB": "13.07.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село,, улица Лесная 3 ",
+      "age": 10,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Заицшина",
+      "firstName": "Вфщзния",
+      "lastName": "Чзшулаевна",
+      "DOB": "03.08.1989",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 2",
+      "age": 24,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Цбэмх",
+      "firstName": "Ебэц",
+      "lastName": "Сдяэвна",
+      "DOB": "06.02.1984",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 ",
+      "age": 17,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Сьогвиков",
+      "firstName": "Дмйпимир",
+      "lastName": "Киягльевич",
+      "DOB": "14.07.1961",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 6 2",
+      "age": 35,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Цаимбьев",
+      "firstName": "Гмвг",
+      "lastName": "Йюесвич",
+      "DOB": "02.09.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 7 1",
+      "age": 65,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Гъив",
+      "firstName": "Жпюрсандр",
+      "lastName": "Хкиънович",
+      "DOB": "21.10.1979",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 8 2",
+      "age": 14,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Тщйнтская",
+      "firstName": "Ссдщ",
+      "lastName": "Жчыаимировна",
+      "DOB": "02.04.1969",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 9 1",
+      "age": 32,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Дчглн",
+      "firstName": "Жшьщимир",
+      "lastName": "Цлнпорович",
+      "DOB": "16.10.1953",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 11 ",
+      "age": 23,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Шбффнов",
+      "firstName": "Эвзв",
+      "lastName": "Ихубйлович",
+      "DOB": "03.10.2001",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 1",
+      "age": 45,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Кцхденко",
+      "firstName": "Кеэьа",
+      "lastName": "Пмосимировна",
+      "DOB": "24.10.1959",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 ",
+      "age": 14,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Фыаллищев",
+      "firstName": "Пьльлай",
+      "lastName": "Иыъълаевич",
+      "DOB": "02.10.1972",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 8 ",
+      "age": 16,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Иванов",
+      "firstName": "Иван",
+      "lastName": "Иванович",
+      "DOB": "11.03.1964",
+      "placeBirth": "Иркутск",
+      "placeLive": "г. Иркутск, ул. Ленина, д.10, кв. 3",
+      "age": 17,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Петров",
+      "firstName": "Петр",
+      "lastName": "Петрович",
+      "DOB": "15.06.1983",
+      "placeBirth": "Ангарск",
+      "placeLive": "г. Ангарск, мкр. 10, д. 2, кв. 8",
+      "age": 22,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Туюбов",
+      "firstName": "Цигжлай",
+      "lastName": "Епдориевич",
+      "DOB": "10.09.1951",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 2, 3",
+      "age": 11,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Яапфйлова",
+      "firstName": "Мжьы",
+      "lastName": "Ядтьфовна",
+      "DOB": "24.03.1976",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 3, 4 ",
+      "age": 17,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Бцитн",
+      "firstName": "Хьюней",
+      "lastName": "Урътлаевич",
+      "DOB": "01.09.1953",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 10, 5",
+      "age": 56,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Еъбчова",
+      "firstName": "Исопила",
+      "lastName": "Йэавлаевна",
+      "DOB": "11.08.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Кановская 2, 3, 5 ",
+      "age": 97,
+      "category":"dwelling"
+    },
+    {
+      "secondName": "Лщлцина",
+      "firstName": "Чхцъ",
+      "lastName": "Зэъфльевна",
+      "DOB": "27.01.1965",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 1, 2, 45",
+      "age": 87,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Вйяхна",
+      "firstName": "Заоеарита",
+      "lastName": "Яъпэйловна",
+      "DOB": "23.05.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 5, 1",
+      "age": 25,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Кзчрсникова",
+      "firstName": "Диук",
+      "lastName": "Яангнтиновна",
+      "DOB": "19.02.1987",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 1",
+      "age": 18,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Мтыйшедворский",
+      "firstName": "Етцгн",
+      "lastName": "Змклеевич",
+      "DOB": "22.02.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 2",
+      "age": 38,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Акыъов",
+      "firstName": "Рдчйний",
+      "lastName": "Понфадьевич",
+      "DOB": "11.05.1983",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 1 ",
+      "age": 78,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Двиорзин",
+      "firstName": "Мэбя",
+      "lastName": "Грцвсандрович",
+      "DOB": "26.07.1982",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 3 3",
+      "age": 37,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Счоесникова",
+      "firstName": "Кййнира",
+      "lastName": "Эдмясандровна",
+      "DOB": "31.08.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 7 ",
+      "age": 28,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Ббкфнов",
+      "firstName": "Гюпф",
+      "lastName": "Мпзгадьевич",
+      "DOB": "06.05.1960",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Советская 4 ",
+      "age": 35,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Бузфавина",
+      "firstName": "Цхшълика",
+      "lastName": "Йянщсеевна",
+      "DOB": "22.07.1955",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 1 1",
+      "age": 45,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Щсиповников",
+      "firstName": "Зъеилай",
+      "lastName": "Сжхфвич",
+      "DOB": "01.09.1991",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 2 ",
+      "age": 56,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Щыааова",
+      "firstName": "Жумх",
+      "lastName": "Бхысновна",
+      "DOB": "07.09.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 1",
+      "age": 18,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Змркин",
+      "firstName": "Эйгйтантин",
+      "lastName": "Шжхдльевич",
+      "DOB": "23.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 2",
+      "age": 17,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Бдтгрина",
+      "firstName": "Икььа",
+      "lastName": "Внвисандровна",
+      "DOB": "16.09.1985",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 ",
+      "age": 18,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Фяедрин",
+      "firstName": "Дчяу",
+      "lastName": "Атщфимирович",
+      "DOB": "21.08.1961",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 6 2",
+      "age": 14,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Риььва",
+      "firstName": "Жтцц",
+      "lastName": "Нкамвна",
+      "DOB": "10.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 8 ",
+      "age": 13,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Лгхаецов",
+      "firstName": "Эжгйл",
+      "lastName": "Хсдшович",
+      "DOB": "20.12.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 9 ",
+      "age": 87,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Пцбцалов",
+      "firstName": "Вязъсандр",
+      "lastName": "Сщягимирович",
+      "DOB": "13.07.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село,, улица Лесная 3 ",
+      "age": 68,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Заицшина",
+      "firstName": "Вфщзния",
+      "lastName": "Чзшулаевна",
+      "DOB": "03.08.1989",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 2",
+      "age": 15,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Цбэмх",
+      "firstName": "Ебэц",
+      "lastName": "Сдяэвна",
+      "DOB": "06.02.1984",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 ",
+      "age": 78,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Сьогвиков",
+      "firstName": "Дмйпимир",
+      "lastName": "Киягльевич",
+      "DOB": "14.07.1961",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 6 2",
+      "age": 12,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Цаимбьев",
+      "firstName": "Гмвг",
+      "lastName": "Йюесвич",
+      "DOB": "02.09.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 7 1",
+      "age": 23,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Гъив",
+      "firstName": "Жпюрсандр",
+      "lastName": "Хкиънович",
+      "DOB": "21.10.1979",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 8 2",
+      "age": 99,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Тщйнтская",
+      "firstName": "Ссдщ",
+      "lastName": "Жчыаимировна",
+      "DOB": "02.04.1969",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 9 1",
+      "age": 98,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Дчглн",
+      "firstName": "Жшьщимир",
+      "lastName": "Цлнпорович",
+      "DOB": "16.10.1953",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 11 ",
+      "age": 78,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Шбффнов",
+      "firstName": "Эвзв",
+      "lastName": "Ихубйлович",
+      "DOB": "03.10.2001",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 1",
+      "age": 45,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Кцхденко",
+      "firstName": "Кеэьа",
+      "lastName": "Пмосимировна",
+      "DOB": "24.10.1959",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 ",
+      "age": 47,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Иванов",
+      "firstName": "Иван",
+      "lastName": "Иванович",
+      "DOB": "11.03.1964",
+      "placeBirth": "Иркутск",
+      "placeLive": "г. Иркутск, ул. Ленина, д.10, кв. 3",
+      "age": 50,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Петров",
+      "firstName": "Петр",
+      "lastName": "Петрович",
+      "DOB": "15.06.1983",
+      "placeBirth": "Ангарск",
+      "placeLive": "г. Ангарск, мкр. 10, д. 2, кв. 8",
+      "age": 58,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Туюбов",
+      "firstName": "Цигжлай",
+      "lastName": "Епдориевич",
+      "DOB": "10.09.1951",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 2, 3",
+      "age": 44,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Яапфйлова",
+      "firstName": "Мжьы",
+      "lastName": "Ядтьфовна",
+      "DOB": "24.03.1976",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 3, 4 ",
+      "age": 98,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Бцитн",
+      "firstName": "Хьюней",
+      "lastName": "Урътлаевич",
+      "DOB": "01.09.1953",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 10, 5",
+      "age": 23,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Еъбчова",
+      "firstName": "Исопила",
+      "lastName": "Йэавлаевна",
+      "DOB": "11.08.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Кановская 2, 3, 5 ",
+      "age": 38,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Лщлцина",
+      "firstName": "Чхцъ",
+      "lastName": "Зэъфльевна",
+      "DOB": "27.01.1965",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 1, 2, 45",
+      "age": 58,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Вйяхна",
+      "firstName": "Заоеарита",
+      "lastName": "Яъпэйловна",
+      "DOB": "23.05.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 5, 1",
+      "age": 46,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Кзчрсникова",
+      "firstName": "Диук",
+      "lastName": "Яангнтиновна",
+      "DOB": "19.02.1987",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 1",
+      "age": 25,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Мтыйшедворский",
+      "firstName": "Етцгн",
+      "lastName": "Змклеевич",
+      "DOB": "22.02.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 2",
+      "age": 46,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Акыъов",
+      "firstName": "Рдчйний",
+      "lastName": "Понфадьевич",
+      "DOB": "11.05.1983",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 1 ",
+      "age": 96,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Двиорзин",
+      "firstName": "Мэбя",
+      "lastName": "Грцвсандрович",
+      "DOB": "26.07.1982",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 3 3",
+      "age": 64,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Счоесникова",
+      "firstName": "Кййнира",
+      "lastName": "Эдмясандровна",
+      "DOB": "31.08.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 7 ",
+      "age": 25,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Ббкфнов",
+      "firstName": "Гюпф",
+      "lastName": "Мпзгадьевич",
+      "DOB": "06.05.1960",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Советская 4 ",
+      "age": 46,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Бузфавина",
+      "firstName": "Цхшълика",
+      "lastName": "Йянщсеевна",
+      "DOB": "22.07.1955",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 1 1",
+      "age": 80,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Щсиповников",
+      "firstName": "Зъеилай",
+      "lastName": "Сжхфвич",
+      "DOB": "01.09.1991",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 2 ",
+      "age": 53,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Щыааова",
+      "firstName": "Жумх",
+      "lastName": "Бхысновна",
+      "DOB": "07.09.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 1",
+      "age": 23,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Змркин",
+      "firstName": "Эйгйтантин",
+      "lastName": "Шжхдльевич",
+      "DOB": "23.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 2",
+      "age": 32,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Бдтгрина",
+      "firstName": "Икььа",
+      "lastName": "Внвисандровна",
+      "DOB": "16.09.1985",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 ",
+      "age": 32,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Фяедрин",
+      "firstName": "Дчяу",
+      "lastName": "Атщфимирович",
+      "DOB": "21.08.1961",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 6 2",
+      "age": 12,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Риььва",
+      "firstName": "Жтцц",
+      "lastName": "Нкамвна",
+      "DOB": "10.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 8 ",
+      "age": 56,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Лгхаецов",
+      "firstName": "Эжгйл",
+      "lastName": "Хсдшович",
+      "DOB": "20.12.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 9 ",
+      "age": 98,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Пцбцалов",
+      "firstName": "Вязъсандр",
+      "lastName": "Сщягимирович",
+      "DOB": "13.07.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село,, улица Лесная 3 ",
+      "age": 10,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Заицшина",
+      "firstName": "Вфщзния",
+      "lastName": "Чзшулаевна",
+      "DOB": "03.08.1989",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 2",
+      "age": 24,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Цбэмх",
+      "firstName": "Ебэц",
+      "lastName": "Сдяэвна",
+      "DOB": "06.02.1984",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 ",
+      "age": 17,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Сьогвиков",
+      "firstName": "Дмйпимир",
+      "lastName": "Киягльевич",
+      "DOB": "14.07.1961",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 6 2",
+      "age": 35,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Цаимбьев",
+      "firstName": "Гмвг",
+      "lastName": "Йюесвич",
+      "DOB": "02.09.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 7 1",
+      "age": 65,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Гъив",
+      "firstName": "Жпюрсандр",
+      "lastName": "Хкиънович",
+      "DOB": "21.10.1979",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 8 2",
+      "age": 14,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Тщйнтская",
+      "firstName": "Ссдщ",
+      "lastName": "Жчыаимировна",
+      "DOB": "02.04.1969",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 9 1",
+      "age": 32,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Дчглн",
+      "firstName": "Жшьщимир",
+      "lastName": "Цлнпорович",
+      "DOB": "16.10.1953",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 11 ",
+      "age": 23,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Шбффнов",
+      "firstName": "Эвзв",
+      "lastName": "Ихубйлович",
+      "DOB": "03.10.2001",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 1",
+      "age": 45,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Кцхденко",
+      "firstName": "Кеэьа",
+      "lastName": "Пмосимировна",
+      "DOB": "24.10.1959",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 ",
+      "age": 14,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Фыаллищев",
+      "firstName": "Пьльлай",
+      "lastName": "Иыъълаевич",
+      "DOB": "02.10.1972",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 8 ",
+      "age": 16,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Иванов",
+      "firstName": "Иван",
+      "lastName": "Иванович",
+      "DOB": "11.03.1964",
+      "placeBirth": "Иркутск",
+      "placeLive": "г. Иркутск, ул. Ленина, д.10, кв. 3",
+      "age": 17,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Петров",
+      "firstName": "Петр",
+      "lastName": "Петрович",
+      "DOB": "15.06.1983",
+      "placeBirth": "Ангарск",
+      "placeLive": "г. Ангарск, мкр. 10, д. 2, кв. 8",
+      "age": 22,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Туюбов",
+      "firstName": "Цигжлай",
+      "lastName": "Епдориевич",
+      "DOB": "10.09.1951",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 2, 3",
+      "age": 11,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Яапфйлова",
+      "firstName": "Мжьы",
+      "lastName": "Ядтьфовна",
+      "DOB": "24.03.1976",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 3, 4 ",
+      "age": 17,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Бцитн",
+      "firstName": "Хьюней",
+      "lastName": "Урътлаевич",
+      "DOB": "01.09.1953",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 10, 5",
+      "age": 56,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Еъбчова",
+      "firstName": "Исопила",
+      "lastName": "Йэавлаевна",
+      "DOB": "11.08.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Кановская 2, 3, 5 ",
+      "age": 97,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Лщлцина",
+      "firstName": "Чхцъ",
+      "lastName": "Зэъфльевна",
+      "DOB": "27.01.1965",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 1, 2, 45",
+      "age": 87,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Вйяхна",
+      "firstName": "Заоеарита",
+      "lastName": "Яъпэйловна",
+      "DOB": "23.05.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 5, 1",
+      "age": 25,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Кзчрсникова",
+      "firstName": "Диук",
+      "lastName": "Яангнтиновна",
+      "DOB": "19.02.1987",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 1",
+      "age": 18,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Мтыйшедворский",
+      "firstName": "Етцгн",
+      "lastName": "Змклеевич",
+      "DOB": "22.02.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 2",
+      "age": 38,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Акыъов",
+      "firstName": "Рдчйний",
+      "lastName": "Понфадьевич",
+      "DOB": "11.05.1983",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 1 ",
+      "age": 78,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Двиорзин",
+      "firstName": "Мэбя",
+      "lastName": "Грцвсандрович",
+      "DOB": "26.07.1982",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 3 3",
+      "age": 37,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Счоесникова",
+      "firstName": "Кййнира",
+      "lastName": "Эдмясандровна",
+      "DOB": "31.08.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 7 ",
+      "age": 28,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Ббкфнов",
+      "firstName": "Гюпф",
+      "lastName": "Мпзгадьевич",
+      "DOB": "06.05.1960",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Советская 4 ",
+      "age": 35,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Бузфавина",
+      "firstName": "Цхшълика",
+      "lastName": "Йянщсеевна",
+      "DOB": "22.07.1955",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 1 1",
+      "age": 45,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Щсиповников",
+      "firstName": "Зъеилай",
+      "lastName": "Сжхфвич",
+      "DOB": "01.09.1991",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 2 ",
+      "age": 56,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Щыааова",
+      "firstName": "Жумх",
+      "lastName": "Бхысновна",
+      "DOB": "07.09.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 1",
+      "age": 18,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Змркин",
+      "firstName": "Эйгйтантин",
+      "lastName": "Шжхдльевич",
+      "DOB": "23.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 2",
+      "age": 17,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Бдтгрина",
+      "firstName": "Икььа",
+      "lastName": "Внвисандровна",
+      "DOB": "16.09.1985",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 ",
+      "age": 18,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Фяедрин",
+      "firstName": "Дчяу",
+      "lastName": "Атщфимирович",
+      "DOB": "21.08.1961",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 6 2",
+      "age": 14,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Риььва",
+      "firstName": "Жтцц",
+      "lastName": "Нкамвна",
+      "DOB": "10.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 8 ",
+      "age": 13,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Лгхаецов",
+      "firstName": "Эжгйл",
+      "lastName": "Хсдшович",
+      "DOB": "20.12.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 9 ",
+      "age": 87,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Пцбцалов",
+      "firstName": "Вязъсандр",
+      "lastName": "Сщягимирович",
+      "DOB": "13.07.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село,, улица Лесная 3 ",
+      "age": 68,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Заицшина",
+      "firstName": "Вфщзния",
+      "lastName": "Чзшулаевна",
+      "DOB": "03.08.1989",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 2",
+      "age": 15,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Цбэмх",
+      "firstName": "Ебэц",
+      "lastName": "Сдяэвна",
+      "DOB": "06.02.1984",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 ",
+      "age": 78,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Сьогвиков",
+      "firstName": "Дмйпимир",
+      "lastName": "Киягльевич",
+      "DOB": "14.07.1961",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 6 2",
+      "age": 12,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Цаимбьев",
+      "firstName": "Гмвг",
+      "lastName": "Йюесвич",
+      "DOB": "02.09.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 7 1",
+      "age": 23,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Гъив",
+      "firstName": "Жпюрсандр",
+      "lastName": "Хкиънович",
+      "DOB": "21.10.1979",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 8 2",
+      "age": 99,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Тщйнтская",
+      "firstName": "Ссдщ",
+      "lastName": "Жчыаимировна",
+      "DOB": "02.04.1969",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 9 1",
+      "age": 98,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Дчглн",
+      "firstName": "Жшьщимир",
+      "lastName": "Цлнпорович",
+      "DOB": "16.10.1953",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 11 ",
+      "age": 78,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Шбффнов",
+      "firstName": "Эвзв",
+      "lastName": "Ихубйлович",
+      "DOB": "03.10.2001",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 1",
+      "age": 45,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Кцхденко",
+      "firstName": "Кеэьа",
+      "lastName": "Пмосимировна",
+      "DOB": "24.10.1959",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 ",
+      "age": 47,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Иванов",
+      "firstName": "Иван",
+      "lastName": "Иванович",
+      "DOB": "11.03.1964",
+      "placeBirth": "Иркутск",
+      "placeLive": "г. Иркутск, ул. Ленина, д.10, кв. 3",
+      "age": 50,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Петров",
+      "firstName": "Петр",
+      "lastName": "Петрович",
+      "DOB": "15.06.1983",
+      "placeBirth": "Ангарск",
+      "placeLive": "г. Ангарск, мкр. 10, д. 2, кв. 8",
+      "age": 58,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Туюбов",
+      "firstName": "Цигжлай",
+      "lastName": "Епдориевич",
+      "DOB": "10.09.1951",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 2, 3",
+      "age": 44,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Яапфйлова",
+      "firstName": "Мжьы",
+      "lastName": "Ядтьфовна",
+      "DOB": "24.03.1976",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 3, 4 ",
+      "age": 98,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Бцитн",
+      "firstName": "Хьюней",
+      "lastName": "Урътлаевич",
+      "DOB": "01.09.1953",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 10, 5",
+      "age": 23,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Еъбчова",
+      "firstName": "Исопила",
+      "lastName": "Йэавлаевна",
+      "DOB": "11.08.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Кановская 2, 3, 5 ",
+      "age": 38,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Лщлцина",
+      "firstName": "Чхцъ",
+      "lastName": "Зэъфльевна",
+      "DOB": "27.01.1965",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 1, 2, 45",
+      "age": 58,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Вйяхна",
+      "firstName": "Заоеарита",
+      "lastName": "Яъпэйловна",
+      "DOB": "23.05.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 5, 1",
+      "age": 46,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Кзчрсникова",
+      "firstName": "Диук",
+      "lastName": "Яангнтиновна",
+      "DOB": "19.02.1987",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 1",
+      "age": 25,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Мтыйшедворский",
+      "firstName": "Етцгн",
+      "lastName": "Змклеевич",
+      "DOB": "22.02.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 2",
+      "age": 46,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Акыъов",
+      "firstName": "Рдчйний",
+      "lastName": "Понфадьевич",
+      "DOB": "11.05.1983",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 1 ",
+      "age": 96,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Двиорзин",
+      "firstName": "Мэбя",
+      "lastName": "Грцвсандрович",
+      "DOB": "26.07.1982",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 3 3",
+      "age": 64,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Счоесникова",
+      "firstName": "Кййнира",
+      "lastName": "Эдмясандровна",
+      "DOB": "31.08.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 7 ",
+      "age": 25,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Ббкфнов",
+      "firstName": "Гюпф",
+      "lastName": "Мпзгадьевич",
+      "DOB": "06.05.1960",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Советская 4 ",
+      "age": 46,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Бузфавина",
+      "firstName": "Цхшълика",
+      "lastName": "Йянщсеевна",
+      "DOB": "22.07.1955",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 1 1",
+      "age": 80,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Щсиповников",
+      "firstName": "Зъеилай",
+      "lastName": "Сжхфвич",
+      "DOB": "01.09.1991",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 2 ",
+      "age": 53,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Щыааова",
+      "firstName": "Жумх",
+      "lastName": "Бхысновна",
+      "DOB": "07.09.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 1",
+      "age": 23,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Змркин",
+      "firstName": "Эйгйтантин",
+      "lastName": "Шжхдльевич",
+      "DOB": "23.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 2",
+      "age": 32,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Бдтгрина",
+      "firstName": "Икььа",
+      "lastName": "Внвисандровна",
+      "DOB": "16.09.1985",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 ",
+      "age": 32,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Фяедрин",
+      "firstName": "Дчяу",
+      "lastName": "Атщфимирович",
+      "DOB": "21.08.1961",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 6 2",
+      "age": 12,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Риььва",
+      "firstName": "Жтцц",
+      "lastName": "Нкамвна",
+      "DOB": "10.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 8 ",
+      "age": 56,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Лгхаецов",
+      "firstName": "Эжгйл",
+      "lastName": "Хсдшович",
+      "DOB": "20.12.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 9 ",
+      "age": 98,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Пцбцалов",
+      "firstName": "Вязъсандр",
+      "lastName": "Сщягимирович",
+      "DOB": "13.07.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село,, улица Лесная 3 ",
+      "age": 10,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Заицшина",
+      "firstName": "Вфщзния",
+      "lastName": "Чзшулаевна",
+      "DOB": "03.08.1989",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 2",
+      "age": 24,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Цбэмх",
+      "firstName": "Ебэц",
+      "lastName": "Сдяэвна",
+      "DOB": "06.02.1984",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 ",
+      "age": 17,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Сьогвиков",
+      "firstName": "Дмйпимир",
+      "lastName": "Киягльевич",
+      "DOB": "14.07.1961",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 6 2",
+      "age": 35,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Цаимбьев",
+      "firstName": "Гмвг",
+      "lastName": "Йюесвич",
+      "DOB": "02.09.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 7 1",
+      "age": 65,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Гъив",
+      "firstName": "Жпюрсандр",
+      "lastName": "Хкиънович",
+      "DOB": "21.10.1979",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 8 2",
+      "age": 14,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Тщйнтская",
+      "firstName": "Ссдщ",
+      "lastName": "Жчыаимировна",
+      "DOB": "02.04.1969",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 9 1",
+      "age": 32,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Дчглн",
+      "firstName": "Жшьщимир",
+      "lastName": "Цлнпорович",
+      "DOB": "16.10.1953",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 11 ",
+      "age": 23,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Шбффнов",
+      "firstName": "Эвзв",
+      "lastName": "Ихубйлович",
+      "DOB": "03.10.2001",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 1",
+      "age": 45,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Кцхденко",
+      "firstName": "Кеэьа",
+      "lastName": "Пмосимировна",
+      "DOB": "24.10.1959",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 ",
+      "age": 14,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Фыаллищев",
+      "firstName": "Пьльлай",
+      "lastName": "Иыъълаевич",
+      "DOB": "02.10.1972",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 8 ",
+      "age": 16,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Иванов",
+      "firstName": "Иван",
+      "lastName": "Иванович",
+      "DOB": "11.03.1964",
+      "placeBirth": "Иркутск",
+      "placeLive": "г. Иркутск, ул. Ленина, д.10, кв. 3",
+      "age": 17,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Петров",
+      "firstName": "Петр",
+      "lastName": "Петрович",
+      "DOB": "15.06.1983",
+      "placeBirth": "Ангарск",
+      "placeLive": "г. Ангарск, мкр. 10, д. 2, кв. 8",
+      "age": 22,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Туюбов",
+      "firstName": "Цигжлай",
+      "lastName": "Епдориевич",
+      "DOB": "10.09.1951",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 2, 3",
+      "age": 11,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Яапфйлова",
+      "firstName": "Мжьы",
+      "lastName": "Ядтьфовна",
+      "DOB": "24.03.1976",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 3, 4 ",
+      "age": 17,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Бцитн",
+      "firstName": "Хьюней",
+      "lastName": "Урътлаевич",
+      "DOB": "01.09.1953",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 10, 5",
+      "age": 56,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Еъбчова",
+      "firstName": "Исопила",
+      "lastName": "Йэавлаевна",
+      "DOB": "11.08.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Кановская 2, 3, 5 ",
+      "age": 97,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Лщлцина",
+      "firstName": "Чхцъ",
+      "lastName": "Зэъфльевна",
+      "DOB": "27.01.1965",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 1, 2, 45",
+      "age": 87,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Вйяхна",
+      "firstName": "Заоеарита",
+      "lastName": "Яъпэйловна",
+      "DOB": "23.05.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 5, 1",
+      "age": 25,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Кзчрсникова",
+      "firstName": "Диук",
+      "lastName": "Яангнтиновна",
+      "DOB": "19.02.1987",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 1",
+      "age": 18,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Мтыйшедворский",
+      "firstName": "Етцгн",
+      "lastName": "Змклеевич",
+      "DOB": "22.02.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 2",
+      "age": 38,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Акыъов",
+      "firstName": "Рдчйний",
+      "lastName": "Понфадьевич",
+      "DOB": "11.05.1983",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 1 ",
+      "age": 78,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Двиорзин",
+      "firstName": "Мэбя",
+      "lastName": "Грцвсандрович",
+      "DOB": "26.07.1982",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 3 3",
+      "age": 37,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Счоесникова",
+      "firstName": "Кййнира",
+      "lastName": "Эдмясандровна",
+      "DOB": "31.08.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 7 ",
+      "age": 28,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Ббкфнов",
+      "firstName": "Гюпф",
+      "lastName": "Мпзгадьевич",
+      "DOB": "06.05.1960",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Советская 4 ",
+      "age": 35,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Бузфавина",
+      "firstName": "Цхшълика",
+      "lastName": "Йянщсеевна",
+      "DOB": "22.07.1955",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 1 1",
+      "age": 45,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Щсиповников",
+      "firstName": "Зъеилай",
+      "lastName": "Сжхфвич",
+      "DOB": "01.09.1991",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 2 ",
+      "age": 56,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Щыааова",
+      "firstName": "Жумх",
+      "lastName": "Бхысновна",
+      "DOB": "07.09.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 1",
+      "age": 18,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Змркин",
+      "firstName": "Эйгйтантин",
+      "lastName": "Шжхдльевич",
+      "DOB": "23.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 2",
+      "age": 17,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Бдтгрина",
+      "firstName": "Икььа",
+      "lastName": "Внвисандровна",
+      "DOB": "16.09.1985",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 ",
+      "age": 18,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Фяедрин",
+      "firstName": "Дчяу",
+      "lastName": "Атщфимирович",
+      "DOB": "21.08.1961",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 6 2",
+      "age": 14,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Риььва",
+      "firstName": "Жтцц",
+      "lastName": "Нкамвна",
+      "DOB": "10.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 8 ",
+      "age": 13,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Лгхаецов",
+      "firstName": "Эжгйл",
+      "lastName": "Хсдшович",
+      "DOB": "20.12.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 9 ",
+      "age": 87,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Пцбцалов",
+      "firstName": "Вязъсандр",
+      "lastName": "Сщягимирович",
+      "DOB": "13.07.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село,, улица Лесная 3 ",
+      "age": 68,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Заицшина",
+      "firstName": "Вфщзния",
+      "lastName": "Чзшулаевна",
+      "DOB": "03.08.1989",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 2",
+      "age": 15,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Цбэмх",
+      "firstName": "Ебэц",
+      "lastName": "Сдяэвна",
+      "DOB": "06.02.1984",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 ",
+      "age": 78,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Сьогвиков",
+      "firstName": "Дмйпимир",
+      "lastName": "Киягльевич",
+      "DOB": "14.07.1961",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 6 2",
+      "age": 12,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Цаимбьев",
+      "firstName": "Гмвг",
+      "lastName": "Йюесвич",
+      "DOB": "02.09.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 7 1",
+      "age": 23,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Гъив",
+      "firstName": "Жпюрсандр",
+      "lastName": "Хкиънович",
+      "DOB": "21.10.1979",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 8 2",
+      "age": 99,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Тщйнтская",
+      "firstName": "Ссдщ",
+      "lastName": "Жчыаимировна",
+      "DOB": "02.04.1969",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 9 1",
+      "age": 98,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Дчглн",
+      "firstName": "Жшьщимир",
+      "lastName": "Цлнпорович",
+      "DOB": "16.10.1953",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 11 ",
+      "age": 78,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Шбффнов",
+      "firstName": "Эвзв",
+      "lastName": "Ихубйлович",
+      "DOB": "03.10.2001",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 1",
+      "age": 45,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Кцхденко",
+      "firstName": "Кеэьа",
+      "lastName": "Пмосимировна",
+      "DOB": "24.10.1959",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 ",
+      "age": 47,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Мтыйшедворский",
+      "firstName": "Етцгн",
+      "lastName": "Змклеевич",
+      "DOB": "22.02.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 2",
+      "age": 46,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Акыъов",
+      "firstName": "Рдчйний",
+      "lastName": "Понфадьевич",
+      "DOB": "11.05.1983",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 1 ",
+      "age": 96,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Двиорзин",
+      "firstName": "Мэбя",
+      "lastName": "Грцвсандрович",
+      "DOB": "26.07.1982",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 3 3",
+      "age": 64,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Счоесникова",
+      "firstName": "Кййнира",
+      "lastName": "Эдмясандровна",
+      "DOB": "31.08.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 7 ",
+      "age": 25,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Ббкфнов",
+      "firstName": "Гюпф",
+      "lastName": "Мпзгадьевич",
+      "DOB": "06.05.1960",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Советская 4 ",
+      "age": 46,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Бузфавина",
+      "firstName": "Цхшълика",
+      "lastName": "Йянщсеевна",
+      "DOB": "22.07.1955",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 1 1",
+      "age": 80,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Щсиповников",
+      "firstName": "Зъеилай",
+      "lastName": "Сжхфвич",
+      "DOB": "01.09.1991",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 2 ",
+      "age": 53,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Щыааова",
+      "firstName": "Жумх",
+      "lastName": "Бхысновна",
+      "DOB": "07.09.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 1",
+      "age": 23,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Змркин",
+      "firstName": "Эйгйтантин",
+      "lastName": "Шжхдльевич",
+      "DOB": "23.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 2",
+      "age": 32,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Бдтгрина",
+      "firstName": "Икььа",
+      "lastName": "Внвисандровна",
+      "DOB": "16.09.1985",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 ",
+      "age": 32,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Фяедрин",
+      "firstName": "Дчяу",
+      "lastName": "Атщфимирович",
+      "DOB": "21.08.1961",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 6 2",
+      "age": 12,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Риььва",
+      "firstName": "Жтцц",
+      "lastName": "Нкамвна",
+      "DOB": "10.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 8 ",
+      "age": 56,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Лгхаецов",
+      "firstName": "Эжгйл",
+      "lastName": "Хсдшович",
+      "DOB": "20.12.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 9 ",
+      "age": 98,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Пцбцалов",
+      "firstName": "Вязъсандр",
+      "lastName": "Сщягимирович",
+      "DOB": "13.07.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село,, улица Лесная 3 ",
+      "age": 10,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Заицшина",
+      "firstName": "Вфщзния",
+      "lastName": "Чзшулаевна",
+      "DOB": "03.08.1989",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 2",
+      "age": 24,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Цбэмх",
+      "firstName": "Ебэц",
+      "lastName": "Сдяэвна",
+      "DOB": "06.02.1984",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 ",
+      "age": 17,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Сьогвиков",
+      "firstName": "Дмйпимир",
+      "lastName": "Киягльевич",
+      "DOB": "14.07.1961",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 6 2",
+      "age": 35,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Цаимбьев",
+      "firstName": "Гмвг",
+      "lastName": "Йюесвич",
+      "DOB": "02.09.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 7 1",
+      "age": 65,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Гъив",
+      "firstName": "Жпюрсандр",
+      "lastName": "Хкиънович",
+      "DOB": "21.10.1979",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 8 2",
+      "age": 14,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Тщйнтская",
+      "firstName": "Ссдщ",
+      "lastName": "Жчыаимировна",
+      "DOB": "02.04.1969",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 9 1",
+      "age": 32,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Дчглн",
+      "firstName": "Жшьщимир",
+      "lastName": "Цлнпорович",
+      "DOB": "16.10.1953",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 11 ",
+      "age": 23,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Шбффнов",
+      "firstName": "Эвзв",
+      "lastName": "Ихубйлович",
+      "DOB": "03.10.2001",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 1",
+      "age": 45,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Кцхденко",
+      "firstName": "Кеэьа",
+      "lastName": "Пмосимировна",
+      "DOB": "24.10.1959",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 ",
+      "age": 14,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Фыаллищев",
+      "firstName": "Пьльлай",
+      "lastName": "Иыъълаевич",
+      "DOB": "02.10.1972",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 8 ",
+      "age": 16,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Иванов",
+      "firstName": "Иван",
+      "lastName": "Иванович",
+      "DOB": "11.03.1964",
+      "placeBirth": "Иркутск",
+      "placeLive": "г. Иркутск, ул. Ленина, д.10, кв. 3",
+      "age": 17,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Петров",
+      "firstName": "Петр",
+      "lastName": "Петрович",
+      "DOB": "15.06.1983",
+      "placeBirth": "Ангарск",
+      "placeLive": "г. Ангарск, мкр. 10, д. 2, кв. 8",
+      "age": 22,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Туюбов",
+      "firstName": "Цигжлай",
+      "lastName": "Епдориевич",
+      "DOB": "10.09.1951",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 2, 3",
+      "age": 11,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Яапфйлова",
+      "firstName": "Мжьы",
+      "lastName": "Ядтьфовна",
+      "DOB": "24.03.1976",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 3, 4 ",
+      "age": 17,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Бцитн",
+      "firstName": "Хьюней",
+      "lastName": "Урътлаевич",
+      "DOB": "01.09.1953",
+      "placeBirth": "Инаригда участок",
+      "placeLive": "Катангский район, Инаригда участок, улица Таежная, 10, 5",
+      "age": 56,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Еъбчова",
+      "firstName": "Исопила",
+      "lastName": "Йэавлаевна",
+      "DOB": "11.08.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Кановская 2, 3, 5 ",
+      "age": 97,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Лщлцина",
+      "firstName": "Чхцъ",
+      "lastName": "Зэъфльевна",
+      "DOB": "27.01.1965",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 1, 2, 45",
+      "age": 87,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Вйяхна",
+      "firstName": "Заоеарита",
+      "lastName": "Яъпэйловна",
+      "DOB": "23.05.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 5, 1",
+      "age": 25,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Кзчрсникова",
+      "firstName": "Диук",
+      "lastName": "Яангнтиновна",
+      "DOB": "19.02.1987",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 1",
+      "age": 18,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Мтыйшедворский",
+      "firstName": "Етцгн",
+      "lastName": "Змклеевич",
+      "DOB": "22.02.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Лесная 6 2",
+      "age": 38,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Акыъов",
+      "firstName": "Рдчйний",
+      "lastName": "Понфадьевич",
+      "DOB": "11.05.1983",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 1 ",
+      "age": 78,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Двиорзин",
+      "firstName": "Мэбя",
+      "lastName": "Грцвсандрович",
+      "DOB": "26.07.1982",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 3 3",
+      "age": 37,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Счоесникова",
+      "firstName": "Кййнира",
+      "lastName": "Эдмясандровна",
+      "DOB": "31.08.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Молодежная 7 ",
+      "age": 28,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Ббкфнов",
+      "firstName": "Гюпф",
+      "lastName": "Мпзгадьевич",
+      "DOB": "06.05.1960",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Советская 4 ",
+      "age": 35,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Бузфавина",
+      "firstName": "Цхшълика",
+      "lastName": "Йянщсеевна",
+      "DOB": "22.07.1955",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 1 1",
+      "age": 45,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Щсиповников",
+      "firstName": "Зъеилай",
+      "lastName": "Сжхфвич",
+      "DOB": "01.09.1991",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 2 ",
+      "age": 56,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Щыааова",
+      "firstName": "Жумх",
+      "lastName": "Бхысновна",
+      "DOB": "07.09.1978",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 1",
+      "age": 18,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Змркин",
+      "firstName": "Эйгйтантин",
+      "lastName": "Шжхдльевич",
+      "DOB": "23.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 2",
+      "age": 17,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Бдтгрина",
+      "firstName": "Икььа",
+      "lastName": "Внвисандровна",
+      "DOB": "16.09.1985",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 4 ",
+      "age": 18,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Фяедрин",
+      "firstName": "Дчяу",
+      "lastName": "Атщфимирович",
+      "DOB": "21.08.1961",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 6 2",
+      "age": 14,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Риььва",
+      "firstName": "Жтцц",
+      "lastName": "Нкамвна",
+      "DOB": "10.05.1959",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 8 ",
+      "age": 13,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Лгхаецов",
+      "firstName": "Эжгйл",
+      "lastName": "Хсдшович",
+      "DOB": "20.12.1996",
+      "placeBirth": "Наканно село",
+      "placeLive": "Катангский район, Наканно село, улица Центральная 9 ",
+      "age": 87,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Пцбцалов",
+      "firstName": "Вязъсандр",
+      "lastName": "Сщягимирович",
+      "DOB": "13.07.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село,, улица Лесная 3 ",
+      "age": 68,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Заицшина",
+      "firstName": "Вфщзния",
+      "lastName": "Чзшулаевна",
+      "DOB": "03.08.1989",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 2",
+      "age": 15,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Цбэмх",
+      "firstName": "Ебэц",
+      "lastName": "Сдяэвна",
+      "DOB": "06.02.1984",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 4 ",
+      "age": 78,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Сьогвиков",
+      "firstName": "Дмйпимир",
+      "lastName": "Киягльевич",
+      "DOB": "14.07.1961",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 6 2",
+      "age": 12,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Цаимбьев",
+      "firstName": "Гмвг",
+      "lastName": "Йюесвич",
+      "DOB": "02.09.1993",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 7 1",
+      "age": 23,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Гъив",
+      "firstName": "Жпюрсандр",
+      "lastName": "Хкиънович",
+      "DOB": "21.10.1979",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 8 2",
+      "age": 99,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Тщйнтская",
+      "firstName": "Ссдщ",
+      "lastName": "Жчыаимировна",
+      "DOB": "02.04.1969",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 9 1",
+      "age": 98,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Дчглн",
+      "firstName": "Жшьщимир",
+      "lastName": "Цлнпорович",
+      "DOB": "16.10.1953",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Лесная 11 ",
+      "age": 78,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Шбффнов",
+      "firstName": "Эвзв",
+      "lastName": "Ихубйлович",
+      "DOB": "03.10.2001",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 1",
+      "age": 45,
+      "category":"uninhabited"
+    },
+    {
+      "secondName": "Кцхденко",
+      "firstName": "Кеэьа",
+      "lastName": "Пмосимировна",
+      "DOB": "24.10.1959",
+      "placeBirth": "Хамакар село",
+      "placeLive": "Катангский район, Хамакар село, улица Набережная 2 ",
+      "age": 47,
+      "category":"uninhabited"
+    }
+  ]
+}

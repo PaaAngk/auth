@@ -1,17 +1,17 @@
 <div class="flex h-full w-full bg-white shadow-xl rounded-xl ">
     <!-- tree menu -->
-    <div class="w-60 h-full border-r border-color">
-
+    <div class="flex flex-col w-60 h-full">
         <!-- Header -->
-        <div class="py-3 px-10  bg-gray-50 border-b border-color">
+        <div class="py-3 px-5 bg-gray-100 border-b border-color">
             <h3>Разделы реестра</h3>
         </div>
-        
+
         <!-- Tree view -->
-        <div class="flex-auto h-full overflow-y-auto p-1">
+        <div class="h-full p-1">
             <tui-tree
+                class=""
                 *ngFor="let item of menu.children"
-                [tuiTreeController]="true"
+                [tuiTreeController]="false"
                 [value]="item"
                 [content]="content"
                 [childrenHandler]="handler"
@@ -21,17 +21,18 @@
             <ng-template
                 #content
                 let-item
+                let-node="node"
             >
                 <button
                     tuiLink
-                    class="py-1 hover:bg-gray-100" 
-                    [routerLink]="item.category"
+                    class="py-1 hover:bg-gray-100 rounded-md" 
+                    (click)="setParamsInURLQuery(item.query)"
                 >
                     {{item.text}}
+                    <!-- node.level -->
                 </button>
             </ng-template>
         </div>
-
     </div>
 
     <!-- No chats template #noChats -->
@@ -42,32 +43,44 @@
     </ng-template> -->
 
     <!-- Conversation *ngIf="data && data.length = 0" -->
-    <div class="w-full h-full p-2">
-        <div tuiTextfieldSize="m" class="flex ">
+    <div class="w-full shadow-inner h-full p-2 border-r border-l border-color">
+        <div tuiTextfieldSize="m" class="flex">
             <tui-input
-                class="input w-full mr-4"
+                class="input w-full mr-2"
                 [tuiTextfieldCleaner]="true"
+                icon="tuiIconSearchLarge"
+                iconAlign="left"
+                [formControl]="searchFormControl"
             >
             <!-- [(ngModel)]="search" -->
-                Find on page
+                Поиск в таблице
             </tui-input>
-
-            <tui-input-count
-                class="w-40 mr-4"
-                [formControl]="minAge"
+            <button
+                tuiButton
+                class="mr-2"
+                icon="tuiIconUploadLarge"
+                size="m"
             >
-                Minimum age
-            </tui-input-count>
-
-            <tui-hosted-dropdown class="w-40" [content]="dropdown">
+                Выгрузка
+            </button>
+            <button
+                tuiButton
+                class="mr-2"
+                icon="tuiIconPrintLarge"
+                size="m"
+            >
+                Печать
+            </button>
+            
+            <tui-hosted-dropdown class="w-40 mr-2" [content]="dropdown">
                 <button
                     tuiButton
                     size="m"
                     [iconRight]="arrow"    
                 >
                 <!--  -->
-                    Columns
-                </button>
+                    Колонки
+                </button> 
                 <ng-template #dropdown>
                     <tui-reorder
                         class="columns"
@@ -77,6 +90,15 @@
                     ></tui-reorder>
                 </ng-template>
             </tui-hosted-dropdown>
+            <button
+                tuiButton
+                class=""
+                icon="tuiIconFilter"
+                size="m"
+                (click)="filterSideBarBtn()"
+            >
+                Фильтры
+            </button>
         </div>
         <tui-loader
             [overlay]="true"
@@ -85,7 +107,7 @@
             <table
                 *tuiLet="data$ | async as data"
                 tuiTable
-                class="table"
+                class="table w-full h-full my-4"
                 [columns]="columns"
                 [direction]="(direction$ | async) || 1"
                 [tuiSortBy]="sorter$ | async"
@@ -94,26 +116,63 @@
             >
                 <thead>
                     <tr tuiThGroup>
+                        <!-- <ng-container *ngFor="let item of map | keyvalue"> -->
+                        <!--{{item.value}} </ng-container> -->
+
                         <th
-                            *tuiHead="'name'"
+                            *tuiHead="'actions'"
+                            tuiTh
+                            [sorter]="null"
+                        ></th>
+                        <th
+                            *tuiHead="'secondName'"
+                            tuiTh
+                            tuiSortable 
+                        >
+                            Фамилия
+                        </th>
+                        
+                        <th
+                            *tuiHead="'firstName'"
                             tuiTh
                             tuiSortable
                         >
-                            Name
+                            Имя
                         </th>
                         <th
-                            *tuiHead="'dob'"
+                            *tuiHead="'lastName'"
                             tuiTh
                             tuiSortable
                         >
-                            Date of Birth
+                            Отчество
+                        </th>
+                        <th
+                            *tuiHead="'DOB'"
+                            tuiTh
+                            tuiSortable
+                        >
+                            Дата рождения
+                        </th>
+                        <th
+                            *tuiHead="'placeBirth'"
+                            tuiTh
+                            tuiSortable
+                        >
+                            Место рождения
+                        </th>
+                        <th
+                            *tuiHead="'placeLive'"
+                            tuiTh
+                            tuiSortable
+                        >
+                            Адрес
                         </th>
                         <th
                             *tuiHead="'age'"
                             tuiTh
                             tuiSortable
                         >
-                            Age
+                            Возраст
                         </th>
                     </tr>
                 </thead>
@@ -126,25 +185,67 @@
                         tuiTr
                     >
                         <td
-                            *tuiCell="'name'"
+                            *tuiCell="'actions'"
                             tuiTd
-                            [class.match]="isMatch(item.name)"
                         >
-                            {{item.name}}
+                            <button
+                                tuiIconButton
+                                appearance="flat"
+                                size="xs"
+                                icon="tuiIconExternal"
+                                title="Перейти"
+                                shape="rounded"
+                                (click)="onDirection(1)"
+                            ></button>
                         </td>
                         <td
-                            *tuiCell="'dob'"
+                            *tuiCell="'secondName'"
                             tuiTd
-                            [class.match]="isMatch(item.dob)"
+                            [class.match]="isMatch(item.secondName)"
                         >
-                            {{item.dob}}
+                            {{item.secondName}}
+                        </td>
+                        <td
+                            *tuiCell="'firstName'"
+                            tuiTd
+                            [class.match]="isMatch(item.firstName)"
+                        >
+                            {{item.firstName}}
+                        </td>
+                        <td
+                            *tuiCell="'lastName'"
+                            tuiTd
+                            [class.match]="isMatch(item.lastName)"
+                        >
+                            {{item.lastName}}
+                        </td>
+                        <td
+                            *tuiCell="'DOB'"
+                            tuiTd
+                            [class.match]="isMatch(item.DOB)"
+                        >
+                            {{item.DOB}}
+                        </td>
+                        <td
+                            *tuiCell="'placeBirth'"
+                            tuiTd
+                            [class.match]="isMatch(item.placeBirth)"
+                        >
+                            {{item.placeBirth}}
+                        </td>
+                        <td
+                            *tuiCell="'placeLive'"
+                            tuiTd
+                            [class.match]="isMatch(item.placeLive)"
+                        >
+                            {{item.placeLive}}
                         </td>
                         <td
                             *tuiCell="'age'"
                             tuiTd
-                            [class.match]="isMatch(getAge(item))"
+                            [class.match]="isMatch(item.age)"
                         >
-                            {{getAge(item)}}
+                            {{item.age}}
                         </td>
                     </tr>
                 </tbody>
@@ -152,7 +253,7 @@
                     <tr>
                         <td [colSpan]="columns.length">
                             <tui-table-pagination
-                                class="tui-space_top-2"
+                                class="mt-2"
                                 [total]="(total$ | async) || 0"
                                 (pageChange)="onPage($event)"
                                 (sizeChange)="onSize($event)"
@@ -162,13 +263,56 @@
                 </tfoot>
             </table>
         </tui-loader>
+
     </div>
 
-    <div class="w-60 h-full border-l border-color ">
-        
+    <div [ngClass]="'flex-col w-60 h-full overflow-y-auto transition delay-1000 ease-in-out ' + (filterSideBar ? 'flex' : ' hidden')">
+
+        <div class="flex flex-row py-3 px-3 bg-gray-100 border-b border-color">
+            <tui-svg class="mr-2" src="tuiIconFilter"></tui-svg>
+            <h3>Фильтр</h3>
+            <button
+                tuiIconButton
+                size="xs"
+                type="button"
+                appearance="icon"
+                icon="tuiIconCloseLarge"
+                class="ml-12"
+                (click)="filterSideBarBtn()"
+            ></button>
+        </div>
+
+        <div tuiTextfieldSize="m" class="p-2 flex flex-col space-y-4">
+
+                <tui-input-count
+                    class="w-40 mr-4"
+                    [formControl]="minAge"
+                >
+                    Минимальный возраст
+                </tui-input-count>
+                <tui-input-count
+                    class="w-40 mr-4"
+                    [formControl]="minAge"
+                >
+                    Минимальный возраст
+                </tui-input-count>
+                <tui-input-count
+                    class="w-40 mr-4"
+                    [formControl]="minAge"
+                >
+                    Минимальный возраст
+                </tui-input-count>
+                <tui-input-count
+                    class="w-40 mr-4"
+                    [formControl]="minAge"
+                >
+                    Минимальный возраст
+                </tui-input-count>
+                
+        </div>
     </div>
 
 </div>
 
-<!-- [ngClass]="{'z-20 absolute inset-0 lg:static lg:inset-auto flex': data ,
-                              'hidden lg:flex': !data}"> -->
+  
+

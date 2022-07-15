@@ -1,5 +1,5 @@
 export interface TreeNode {
     readonly text: string;
-    readonly category: string;
+    readonly query: string;
     readonly children?: readonly TreeNode[];
 }

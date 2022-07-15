@@ -1,7 +1,7 @@
-<div class="h-screen relative items-center w-full bg-gray-200">
+<div class="h-screen block items-center w-screen">
 
   <!-- Header -->
-  <header class="flex flex-col flex-none w-full overflow-hidden z-49 shadow">
+  <header class="flex flex-col w-full overflow-hidden z-49 shadow">
       <!-- Top bar -->
       <div class="relative flex flex-auto justify-center w-full h-16 px-8 bg-gray-800">
           <div class="flex flex-row container justify-between items-center w-full">     
@@ -19,6 +19,7 @@
                 <tui-hosted-dropdown #dropdown [content]="topBarContent">
                   <button
                     tuiButton
+                    class="text-white ml-2"
                     type="button">     
                     {{ currentUser.full_name }} 
                   </button>
@@ -74,13 +75,14 @@
   </header>
 
   <!-- Content -->
-  <main class="grow w-screen p-6">   
+  <main class="relative w-screen p-6 bg-gray-200">   
       <router-outlet *ngIf="true"></router-outlet> 
   </main>
 
   <!-- Footer -->
-  <footer class="flex flex-none w-full h-16 px-6 items-center z-49 shadow-inner border-t border-color bg-white print:hidden">
+  <footer class="flex relative w-full h-16 px-6 items-center z-49 shadow-inner border-t border-color bg-white print:hidden">
       <span class="font-medium text-secondary">Copyright &copy; {{ today | date: 'yyyy' }}</span>
   </footer>
 
 </div>
+<!-- absolute bottom-0 left-0 -->

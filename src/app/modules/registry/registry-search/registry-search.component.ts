@@ -158,38 +158,6 @@ export class RegistrySearchComponent implements OnInit {
                     {text: 'Нежилое', query:'uninhabited'}
                 ],
                 query:'real-estate'
-            },
-            {
-                text: 'Категория 1',
-                children: [
-                    {
-                        text: 'Подкатегория',
-                        children: [
-                            {text: 'Подкатегория 1', query:''},
-                            {text: 'Подкатегория 2', query:''},
-                            {text: 'Подкатегория 3', query:''},
-                        ],
-                        query:'qwerty'
-                    },
-                ],
-                query:'asd'
-            },
-            {text: 'Категория 2', query:''}    
-            ,
-            {
-                text: 'Категория 3',
-                children: [
-                    {
-                        text: 'Подкатегория',
-                        children: [
-                            {text: 'Подкатегория 1', query:''},
-                            {text: 'Подкатегория 2', query:''},
-                            {text: 'Подкатегория 3', query:''},
-                        ],
-                        query:''
-                    },
-                ],
-                query:''
             }
         ],
         query:''

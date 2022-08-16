@@ -11,9 +11,9 @@ npm start
 
 ### Страница авторизации : 
 ```
-login: testUser
+Логин: testUser
 ```
 ```
-pass: testPass
+Пароль: testPass
 ```
 

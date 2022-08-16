@@ -89,6 +89,26 @@
         --tw-border-opacity: 1;
         border-color: rgb(209 213 219 / var(--tw-border-opacity));  
     }
+
+    .text-menu_grey{
+        --tw-text-opacity: 1;
+        color: rgb(107 114 128 / var(--tw-text-opacity));
+    }
+
+    .text-menu_dark{
+        --tw-text-opacity: 1;
+        color: rgb(27 31 59 / var(--tw-text-opacity));    
+    }
+
+    .border-menu_blue {
+        --tw-border-opacity: 1;
+        border-color: rgb(37 99 235 / var(--tw-border-opacity));
+    }
+
+    .table-search-select{
+        background-color: var(--tui-neutral-bg) !important;
+    }
+    
       
 }
 @tailwind utilities;

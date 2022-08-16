@@ -10,7 +10,7 @@ import {
     tuiReplayedValueChangesFrom,
 } from '@taiga-ui/cdk';
 import {TUI_ARROW} from '@taiga-ui/kit';
-import {BehaviorSubject, combineLatest, from, Observable, of, takeUntil, timer} from 'rxjs';
+import {BehaviorSubject, combineLatest, from, Observable, of, Subject, takeUntil, timer} from 'rxjs';
 import {
     debounceTime,
     catchError,
@@ -26,16 +26,8 @@ import {
 
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
-
-interface Riur {
-    readonly secondName: string;
-    readonly firstName: string;
-    readonly lastName: string;
-    readonly DOB: string;
-    readonly placeBirth: string;
-    readonly placeLive: string;
-    readonly age:number
-}
+import { Riur } from './../registry.types';
+import { RegistryService } from 'src/app/modules/registry/registry.service';
 
 type Key = 'secondName' | 'firstName' | 'lastName' | 'DOB' | 'placeBirth' | 'placeLive' | 'age';
  
@@ -51,34 +43,110 @@ const KEYS: Record<string, string> = {
 
 @Component({
   selector: 'registry-search',
-  templateUrl: './search.component.html',
+  templateUrl: './registry-search.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RegistrySearchComponent implements OnInit {
 
+    rowData: Riur[];
+    filteredData: Riur[];
+    loading$ :Observable<boolean>;
+    total$: Observable<number>;
+    data$: Observable<readonly Riur[]>;
+    request$ : Observable<readonly (Riur | null)[] | null>
+    cardOpened: boolean = false;
+    selectedItem: Riur
+    filterSideBarVisible: boolean = false;
+    menuSidebarVisible: boolean = true;
+    registrySection = ''
+
+    private _unsubscribeAll: Subject<any> = new Subject<any>();
+    
     constructor(
-        private http: HttpClient,
         private activatedRoute: ActivatedRoute,
         private router: Router,
-        private _changeDetectorRef: ChangeDetectorRef
+        private _changeDetectorRef: ChangeDetectorRef,
+        private _registryService : RegistryService,
+        private _httpClient : HttpClient
     ) { 
-        this.activatedRoute.queryParams.subscribe(params => {
-            this.getingData(
-                params['regSection']==undefined ? (
-                    ''
-                ):(
-                    params['regSection']=="real-estate" ? '': `?category=${params['regSection']}`
-                )
-            );
-        });
+        
     }
 
-    ngOnInit() {
+    // -----------------------------------------------------------------------------------------------------
+    // @ Lifecycle hooks
+    // -----------------------------------------------------------------------------------------------------
 
+    ngOnInit() {
+        
+        this.activatedRoute.queryParams.subscribe(params => {  
+            let query;
+            params['regSection']==undefined ? (
+                    this.registrySection=' '
+                ):(
+                    this.registrySection = params['regSection']=='' ? ' ': params['regSection'],
+                    query =  params['regSection'] == 'real-estate' ? '': `?category=${params['regSection']}`
+                ) 
+
+            this._httpClient.get<Riur[]>(`http://localhost:3000/real-estate${query}`)
+            .subscribe((riur: Riur[]) => {
+                this.rowData = riur;
+                console.log(this.rowData[0])
+            });
+
+            // Getting data on request in URL query params
+            // this._registryService.searchData$
+            //     .pipe(takeUntil(this._unsubscribeAll))
+            //     .subscribe((riurs: Riur[]) => {
+            //         this.rowData = this.filteredData = riurs;
+            //         this._changeDetectorRef.markForCheck();
+            //     });
+
+            this.request$ = combineLatest([
+                this.sorter$,
+                this.direction$,
+                this.page$,
+                this.size$,
+                tuiReplayedValueChangesFrom<number>(this.minAge)
+            ]).pipe(
+                debounceTime(0),
+                switchMap(query => this.getData(...query).pipe(startWith(null))),
+                share(),
+            );
+
+            this.loading$ = this.request$.pipe(map(value => !value));
+        
+            this.total$ = this.request$.pipe(
+                filter(isPresent),
+                map(({length}) => length),
+                startWith(1),
+            );
+
+            this.data$ = this.request$.pipe(
+                filter(isPresent),
+                map(riurs => riurs.filter(isPresent)),
+                startWith([])
+            );
+        });
+        
     }
 
     /**
-     * Create menu tree
+     * On destroy
+     */
+     ngOnDestroy(): void
+     {
+         // Unsubscribe from all subscriptions
+         this._unsubscribeAll.next(undefined);
+         this._unsubscribeAll.complete();
+     }
+
+
+    // -----------------------------------------------------------------------------------------------------
+    // @ Public methods
+    // -----------------------------------------------------------------------------------------------------
+
+    /**
+     * Menu tree
      */
     readonly menu: TreeNode = {
         text: 'Registry',
@@ -101,10 +169,10 @@ export class RegistrySearchComponent implements OnInit {
                             {text: 'Подкатегория 2', query:''},
                             {text: 'Подкатегория 3', query:''},
                         ],
-                        query:''
+                        query:'qwerty'
                     },
                 ],
-                query:''
+                query:'asd'
             },
             {text: 'Категория 2', query:''}    
             ,
@@ -131,25 +199,37 @@ export class RegistrySearchComponent implements OnInit {
 
 
     /**
-     * Filter in sidebar visible
+     * Visible filter in sidebar
      */
-    filterSideBar: boolean = false;
-    filterSideBarBtn() {
-        this.filterSideBar = !this.filterSideBar;
+    
+    filterSidebarVisibleBtn() {
+        this.filterSideBarVisible = !this.filterSideBarVisible;
+    }
+
+    /**
+     * Visible menu in sidebar
+     */
+    menuSidebarVisibleBtn() {
+        this.menuSidebarVisible = !this.menuSidebarVisible;
+    }
+    
+
+    // Opening card of object, when clicking on open cell in table 
+    toCard(object: Riur){
+        this.cardOpened = !this.cardOpened;
+        this.selectedItem = object;
+        
+    }
+
+    // handling click on return button in card for hidden card component
+    onReturnClick(){
+        this.cardOpened = !this.cardOpened;
     }
 
 
     /**
      * Table
      */
-    rowData: Riur[];
-
-    loading$ :Observable<boolean>;
-    
-    total$: Observable<number>;
-    
-    data$: Observable<readonly Riur[]>;
- 
     private readonly size$ = new BehaviorSubject(10);
     private readonly page$ = new BehaviorSubject(0);
     
@@ -158,68 +238,22 @@ export class RegistrySearchComponent implements OnInit {
     
     readonly minAge = new FormControl(25);
 
-    setParamsInURLQuery(query: string){
+    
+    setParamsInURL(query: string){
         this.router.navigate([], { queryParams: { regSection: query },relativeTo: this.activatedRoute });
+        this.registrySection = query
     }
 
-    getingData(query:string){
-        this.http.get<Riur[]>(`http://localhost:3000/real-estate${query}`)
-        .subscribe((riur: Riur[]) => {
-            this.rowData = riur;
-        });
-
-        this.request$ = combineLatest([
-            this.sorter$,
-            this.direction$,
-            this.page$,
-            this.size$,
-            tuiReplayedValueChangesFrom<number>(this.minAge)
-        ]).pipe(
-            debounceTime(0),
-            switchMap(query => this.getData(...query).pipe(startWith(null))),
-            share(),
-        );
-
-        this.loading$ = this.request$.pipe(map(value => !value));
-    
-        this.total$ = this.request$.pipe(
-            filter(isPresent),
-            map(({length}) => length),
-            startWith(1),
-        );
-
-        this.data$ = this.request$.pipe(
-            filter(isPresent),
-            map(riurs => riurs.filter(isPresent)),
-            startWith([]),
-        );
-        this._changeDetectorRef.markForCheck();
-    }
-
-
-    
-    request$ = combineLatest([
-        this.sorter$,
-        this.direction$,
-        this.page$,
-        this.size$,
-        tuiReplayedValueChangesFrom<number>(this.minAge)
-    ]).pipe(
-        debounceTime(0),
-        switchMap(query => this.getData(...query).pipe(startWith(null))),
-        share(),
-    );
-    
+   
     initial: readonly string[] = ['Фамилия', 'Имя', 'Отчество', 'Дата рождения', 'Место рождения', 'Адрес', 'Возраст'];
     columns = ['actions', 'secondName', 'firstName', 'lastName', 'DOB', 'placeBirth', 'placeLive', 'age'];
     
     enabled = this.initial;
     
-    searchFormControl = new FormControl('');
-    search = this.searchFormControl.value
+    search = ''
         
     readonly arrow = TUI_ARROW;
-    
+
     onEnabled(enabled: readonly string[]): void {
         this.enabled = enabled;
         this.columns = this.initial
@@ -252,16 +286,16 @@ export class RegistrySearchComponent implements OnInit {
     ): Observable<ReadonlyArray<Riur | null>> {
         const start = page * size;
         const end = start + size;
-        const result = [...this.rowData]
+        const result = this.rowData
             .sort(sortBy(key, direction))
             .filter(riur => riur.age >= minAge)
             .map((riur, index) => (index >= start && index < end ? riur : null));
 
-        return timer(200).pipe(mapTo(result));
-        //return from(result).pipe(mapTo([]));
+        return of(result);
+        //return ftimer(200).pipe(mapTo(result));
     }
 }
- 
+
 function sortBy(
     key: Key, 
     direction: -1 | 1
@@ -271,5 +305,3 @@ function sortBy(
             ? direction * defaultSort(a.age, b.age)
             : direction * defaultSort(a[key], b[key]);
 }
-    
-

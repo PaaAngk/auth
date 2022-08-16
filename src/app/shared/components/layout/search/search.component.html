@@ -6,19 +6,18 @@
         <tui-svg class="text-white" src="tuiIconSearchLarge"></tui-svg>
     </button>
     <div
-        class="absolute inset-0 flex items-center flex-shrink-0 z-99 bg-card"
+        class="absolute inset-0 flex items-center flex-shrink-0 z-99"
         *ngIf="opened">
     
-        <tui-svg class="absolute ml-6 sm:ml-8" class="text-white" src="tuiIconSearchLarge"></tui-svg>
+        <tui-svg class="left-10 w-full" class="text-white" src="tuiIconSearchLarge"></tui-svg>
         <input
-            class="w-full h-full px-16 sm:px-18 bg-gray-800"
+            class="w-full h-full px-16 bg-gray-800 text-white"
             [formControl]="searchControl" 
             placeholder="Найти нужный раздел"
             (keydown)="onKeydown($event)"
             #barSearchInput>
         <button
-            class="absolute top-1/2 right-5 sm:right-7 flex-shrink-0 w-10 h-10 -mt-5"
-            mat-icon-button
+            class="absolute top-1/2 right-11 flex-shrink-0 w-10 h-10 -mt-5"
             (click)="close()">
             <tui-svg class="text-white" src="tuiIconRemoveLarge"></tui-svg>
         </button>

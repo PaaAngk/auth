@@ -64,7 +64,7 @@ export class SignInComponent implements OnInit
                 this.errorAlertSubmitting = true;
             }
             else{
-                this.router.navigateByUrl('');
+                this.router.navigateByUrl('/');
             }
             
         },

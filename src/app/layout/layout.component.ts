@@ -11,7 +11,8 @@ import { AuthService } from '@core/auth/auth.service';
 })
 export class LayoutComponent implements OnInit {
   
- 
+  activeMenuItemIndex : number = 0;
+
   readonly groups = [
       {
           label: `Components`,

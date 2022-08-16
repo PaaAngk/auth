@@ -8,7 +8,8 @@ import { TuiButtonModule } from '@taiga-ui/core';
     CommonModule,
     TuiButtonModule,
   ],
-  declarations: [],
+  declarations: [
+  ],
   exports: []
 })
 export class SharedModule { }

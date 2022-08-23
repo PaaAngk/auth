@@ -280,7 +280,7 @@
 
     </div>
 
-    <div [ngClass]="'flex-col basis-1/4 w-60 h-full overflow-y-auto transition delay-1000 ease-in-out ' + (filterSideBarVisible ? '' : ' hidden')">
+    <div [ngClass]="'flex-col basis-1/4 w-60 h-full overflow-y-auto ' + (filterSideBarVisible ? '' : ' hidden')">
 
         <div class="flex justify-between items-center py-3 px-2 bg-gray-100 border-b border-color">                
             <p class="tui-text_body-xl"><tui-svg src="tuiIconFilter"></tui-svg> Фильтры</p>
@@ -289,13 +289,12 @@
                 size="xs"
                 type="button"
                 appearance="icon"
-                icon="tuiIconCloseLarge"
-                class=""
+                icon="tuiIconCloseLarge"                
                 (click)="filterSidebarVisibleBtn()"
             ></button>
         </div>
 
-        <div tuiTextfieldSize="m" class="p-2 flex flex-col space-y-4">
+        <div tuiTextfieldSize="m" class="p-2 flex flex-col space-y-4 ">
 
             <tui-input-count
                 class="w-full mr-4"

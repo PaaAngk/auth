@@ -1,12 +1,13 @@
 import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subject, timer } from 'rxjs';
-import { finalize, takeUntil, takeWhile, tap } from 'rxjs/operators';
+import { finalize } from 'rxjs/operators';
 import { AuthService } from '@core/auth/auth.service';
 
 @Component({
     selector     : 'auth-sign-out',
-    templateUrl  : './sign-out.component.html'
+    templateUrl  : './sign-out.component.html',
+    styleUrls: ['./sign-out.component.less']
 })
 export class AuthSignOutComponent implements OnInit
 {

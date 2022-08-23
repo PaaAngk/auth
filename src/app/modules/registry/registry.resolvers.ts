@@ -3,7 +3,7 @@ import { ActivatedRoute, ActivatedRouteSnapshot, Resolve, Router, RouterStateSna
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { RegistryService } from 'src/app/modules/registry/registry.service';
-import { Riur } from 'src/app/modules/registry/registry.types';
+import { Riur, User } from './registry.types';
 
 @Injectable({
     providedIn: 'root'
@@ -34,5 +34,35 @@ export class RegistrySearchResolver implements Resolve<any>
     {
         let query = route.paramMap.get('regSection') == null ? '': `?category=${route.paramMap.get('regSection')}`
         return this._registryService.getSearchData(query);
+    }
+}
+
+@Injectable({
+    providedIn: 'root'
+})
+export class RegistryReportResolver implements Resolve<any>
+{
+    /**
+     * Constructor
+     */
+    constructor(
+        private  _registryService : RegistryService,
+    )
+    {
+    }
+
+    // -----------------------------------------------------------------------------------------------------
+    // @ Public methods
+    // -----------------------------------------------------------------------------------------------------
+
+    /**
+     * Resolver
+     *
+     * @param route
+     * @param state
+     */
+    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<User[]>
+    {
+        return this._registryService.getUsersData();
     }
 }

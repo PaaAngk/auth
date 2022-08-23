@@ -100,7 +100,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, routerConfig)],
+  imports: [RouterModule.forRoot(routes,  routerConfig)],//routerConfig,
   exports: [RouterModule],
   providers: [AuthGuard]
 })

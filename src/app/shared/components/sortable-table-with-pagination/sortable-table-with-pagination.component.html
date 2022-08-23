@@ -2,37 +2,35 @@
     tuiTextfieldSize="m"
     class=" flex"
 >
-    <tui-input
-        class="input"
-        [tuiTextfieldCleaner]="true"
-        [(ngModel)]="search"
-    >
-        Find on page
-    </tui-input>
     <tui-input-count
         class="tui-space_horizontal-3"
         [formControl]="minAge"
     >
         Minimum age
     </tui-input-count>
+    
+      
+</p>  -->
+<ng-template #columnEditor>
     <tui-hosted-dropdown [content]="dropdown">
         <button
             tuiButton
             size="m"
             [iconRight]="arrow"
         >
-            Columns
+            Колонки
         </button>
         <ng-template #dropdown>
             <tui-reorder
                 class="columns"
                 [enabled]="enabled"
-                [(items)]="initial"
+                [(items)]="columnNames"
                 (enabledChange)="onEnabled($event)"
             ></tui-reorder>
         </ng-template>
     </tui-hosted-dropdown>
-</p> -->
+</ng-template>
+
 <tui-loader
     [overlay]="true"
     [showLoader]="!!(loading$ | async)"
@@ -41,7 +39,7 @@
         *tuiLet="data$ | async as data"
         tuiTable
         class="w-full h-full my-4"
-        [columns]="columns"
+        [columns]="columnKeys"
         [direction]="(direction$ | async) || 1"
         [tuiSortBy]="sorter$ | async"
         (tuiSortByChange)="sorter$.next($event!)"
@@ -49,13 +47,22 @@
     >
         <thead>
             <tr tuiThGroup>
+                <ng-container *ngIf="rowActionIcon?.length != 0">
+                    <th
+                        *tuiHead="'actions'"
+                        tuiTh
+                        [sorter]="null"
+                    ></th>
+                </ng-container>
+
                 <ng-container 
                     *ngFor="let key of KEYS | keyvalue"
-                >
-                <!-- {{key.value}} -- {{key.key}} -->
+                >                   
                     <th
                         *tuiHead="key.value"
                         tuiTh
+                        [resizable] = 'resizableColumn'
+                        [sticky] = 'stickyColumn'
                         tuiSortable
                     >
                         {{key.key}}
@@ -71,13 +78,29 @@
                 *tuiRow="let item of data"
                 tuiTr
             >
+                <ng-container *ngIf="rowActionIcon?.length != 0">
+                    <td
+                        *tuiCell="'actions'"
+                        tuiTd
+                    >
+                        <button
+                            tuiIconButton
+                            appearance="flat"
+                            size="xs"
+                            [icon]="rowActionIcon"
+                            title="Перейти"
+                            shape="rounded"
+                            (click)="emitRowAction(item)"
+                        ></button>
+                    </td>
+                </ng-container>
                 <ng-container 
                     *ngFor="let key of KEYS | keyvalue"
                 >
                     <td
                         *tuiCell="key.value"
                         tuiTd
-                        [class.table-search-select]="isMatch(item.name)"
+                        [class.table-search-select]="isMatch(getTableCellByKey(item, key.value ))"
                     >
                         {{ getTableCellByKey(item, key.value ) }}
                     </td>
@@ -86,7 +109,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <td [colSpan]="columns.length">
+                <td [colSpan]="columnKeys.length">
                     <tui-table-pagination
                         class="tui-space_top-2"
                         [total]="(total$ | async) || 0"

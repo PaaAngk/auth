@@ -1,8 +1,9 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { AbstractControl, UntypedFormBuilder, FormControl, UntypedFormGroup, NgForm, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { finalize } from 'rxjs/operators';
 import { AuthService } from '@core/auth/auth.service';
+import { timer } from 'rxjs';
 
 const latinChars = /^[a-zA-Z]+$/;
 export function passwordValidator(field: AbstractControl): Validators | null {
@@ -64,7 +65,15 @@ export class SignInComponent implements OnInit
                 this.errorAlertSubmitting = true;
             }
             else{
-                this.router.navigateByUrl('/');
+                timer(100)
+                .pipe(
+                    finalize(() => {
+                        this.router.navigate(['signed-in-redirect']);
+                    })
+                )
+                .subscribe();
+                // console.log("signed-in-redirect")
+                // this.router.navigateByUrl('home');
             }
             
         },

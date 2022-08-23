@@ -1,11 +1,11 @@
 <div class="flex items-start h-full w-full">
     <div [ngClass]="'basis-1/6 bg-white rounded-2xl w-32 h-full shadow-md ' + (menuSidebarVisible ? '' : ' hidden')">
         <div class="flex items-center justify-center font-bold py-3 border-b border-color">
-            <p class="tui-text_body-xl"> Отчеты </p>
+            <p class="tui-text_body-xl"> Загрузки </p>
         </div>
         <nav>
             <ng-container *ngFor="let item of menuItem">
-                <button [ngClass]="'w-full text-sm font-normal uppercase flex items-center pl-2 my-2 transition-colors duration-400 justify-start  '  + (currentMenuItem == item.item ? 'text-menu_dark bg-gradient-to-r from-white to-blue-100 border-r-2 border-blue-600' : ' text-menu_grey hover:text-menu_dark') " (click)="setCurrentMenuItem(item.item)"
+                <button [ngClass]="'w-full text-sm font-normal uppercase flex items-center pl-2 my-2 transition-colors duration-400 justify-start  '  + (currentMenuItem == item.item ? 'text-menu_dark bg-gradient-to-r from-white to-blue-100 border-r-2 border-blue-500' : ' text-menu_grey hover:text-menu_dark') " (click)="setCurrentMenuItem(item.item)"
                 >
                     {{item.item}}
                 </button>
@@ -27,22 +27,23 @@
                 ></button>
                 <div class="flex space-x-2">
                     <tui-input
-                        class="w-60"
+                        class="w-96"
                         [tuiTextfieldCleaner]="true"
                         [(ngModel)]="search"
                     >
                         Поиск в таблице
                     </tui-input>
-					<div *ngTemplateOutlet="columnEditorTemplate">
+                    <div *ngTemplateOutlet="columnEditorTemplate">
                     </div>
                     <button
                         tuiButton
-                        class="mr-2"
+                        class=""
                         icon="tuiIconUploadLarge"
                         size="m"
                     >
                         Выгрузка
                     </button>
+
                     <button
                         tuiButton
                         class=""
@@ -51,43 +52,26 @@
                     >
                         Печать
                     </button>
+
                 </div>
-                <button
-                    tuiButton
-                    class="my-auto"
-                    appearance="icon"
-                    icon="tuiIconFilterLarge"
-                    size="m"
-                    (click)="filterSidebarVisibleBtn()"
-                ></button>
+                <div>
+                </div>
             </div>
         </header>
         <div class="overflow-auto flex flex-col flex-wrap w-full h-full p-2 shadow-md rounded-2xl bg-white">
-
-            <sortable-table-with-pagination
-                [DATA]="filteredUsers"
-                [tableColumns] = "tableColumns"
+            
+            <!-- <sortable-table-with-pagination
+                [DATA]="(DATA$ | async)"
+                [tableColumns] = tableColumns
                 sortByColumnKey = 'name'
                 [resizableColumn] = true
                 [stickyColumn] = true
                 [search] = 'search'
-				(columnEditorEmiter) = 'setColumnEditorTemplate($event)'
+                
             >
-            </sortable-table-with-pagination>
+            </sortable-table-with-pagination> -->
 
         </div>
     </div>
-    <div [ngClass]="'basis-96 bg-white rounded-2xl  h-full shadow-md ml-1' + (filterSideBarVisible ? '' : ' hidden')">
-        <div class="flex items-center justify-center font-bold py-3 border-b border-color">
-            <p class="tui-text_body-xl"> Параметры </p>
-        </div>
-        <tui-input-date-range
-            class="b-form p-2"
-            size="m"
-            [formControl]="dataRange"
-			[items] = "itemsCalendarVariants"
-        >
-            Дата
-        </tui-input-date-range>
-    </div>
+
 </div>

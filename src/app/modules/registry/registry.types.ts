@@ -12,5 +12,5 @@ export interface User {
     _id: string;
     index: number;
     name: string;
-    registered: Date;
-  }
+    registered: string;
+}

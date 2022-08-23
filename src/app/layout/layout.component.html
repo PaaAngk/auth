@@ -43,20 +43,20 @@
       <div class="flex flex-auto justify-center px-8 bg-white shadow-inner">
           <div class="relative container mx-auto flex items-center w-full max-w-360 ">
               <nav tuiTabs class="tabs" [activeItemIndex]="activeMenuItemIndex">
-                  <button routerLink="/" tuiTab>Главная</button>
+                  <button routerLink="/" routerLinkActive="_active" tuiTab>Главная</button>
                   <tui-hosted-dropdown
                       tuiDropdownHover
                       [content]="content"
                       [(open)]="open"
                   >
-                      <button tuiTab>Реестр</button>
+                      <button routerLinkActive = '_active' tuiTab>Реестр</button>
                       
                       <ng-template #content>
                           <tui-data-list>
-                              <a routerLink="registry/search" tuiOption>Поиск</a>
-                              <a routerLink="registry/report" tuiOption>Отчеты</a>
-                              <a routerLink="/" tuiOption>Загрузка</a>
-                              <a routerLink="/" tuiOption>Заявки</a>
+                              <a routerLink="registry/search" routerLinkActive="selected-navigation_subItem" tuiOption>Поиск</a>
+                              <a routerLink="registry/report" routerLinkActive="selected-navigation_subItem" tuiOption>Отчеты</a>
+                              <a routerLink="registry/download" routerLinkActive="selected-navigation_subItem" tuiOption>Загрузка</a>
+                              <a routerLink="registry/requests" routerLinkActive="selected-navigation_subItem" tuiOption>Заявки</a>
                           </tui-data-list>
                       </ng-template>
                   </tui-hosted-dropdown>

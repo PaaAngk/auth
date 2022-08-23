@@ -1,5 +1,5 @@
 import { UserService } from '@core/services';
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from '@core/services/user/user.types';
 import { AuthService } from '@core/auth/auth.service';
@@ -7,54 +7,15 @@ import { AuthService } from '@core/auth/auth.service';
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.less']
+  styleUrls: ['./layout.component.less'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LayoutComponent implements OnInit {
   
   activeMenuItemIndex : number = 0;
 
-  readonly groups = [
-      {
-          label: `Components`,
-          items: [
-              {
-                  label: 'Input',
-                  routerLink: '/components/input',
-              },
-              {
-                  label: 'Select',
-                  routerLink: '/components/select',
-              },
-              {
-                  label: 'DataList',
-                  routerLink: '/components/data-list',
-              },
-          ],
-      },
-      {
-          label: `Styles`,
-          items: [
-              {
-                  label: `Icons`,
-                  routerLink: '/icons',
-              },
-              {
-                  label: `Typography`,
-                  routerLink: '/typography',
-              },
-          ],
-      },
-      {
-          label: '',
-          items: [
-              {
-                  label: `Changelog`,
-                  routerLink: '/changelog',
-              },
-          ],
-      },
-  ];
-
+  currentUrl = ''
+  currentMainMenuItem?: string;
 
   currentUser!: User;
   today: number = Date.now();
@@ -68,7 +29,9 @@ export class LayoutComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.getUser()
+    this.getUser();
+    this.currentUrl = this.router['routerState'].snapshot.url; 
+    this.currentMainMenuItem = this.currentUrl.split('/')[1]
   }
 
   readonly dropdown = ['Carol Cleveland', 'Neil Innes'];

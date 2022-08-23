@@ -12,7 +12,7 @@ import { TuiTableModule, TuiReorderModule, TuiTablePaginationModule } from '@tai
 import { RegistryObjectCardComponent } from './registry-object-card/registry-object-card.component';
 import { RegistryReportComponent } from './registry-report/registry-report.component';
 import { SortableTableWithPaginationComponent } from 'src/app/shared/components/sortable-table-with-pagination/sortable-table-with-pagination.component';
-
+import { RegistryDownloadComponent } from './registry-download/registry-download.component'
 
 @NgModule({
   imports: [
@@ -45,6 +45,13 @@ import { SortableTableWithPaginationComponent } from 'src/app/shared/components/
     TuiFilesModule,
     TuiInputDateRangeModule,
   ],
-  declarations: [RegistryComponent, RegistryReportComponent, RegistrySearchComponent, RegistryObjectCardComponent, SortableTableWithPaginationComponent]
+  declarations: [
+    RegistryComponent, 
+    RegistryReportComponent, 
+    RegistrySearchComponent, 
+    RegistryObjectCardComponent, 
+    SortableTableWithPaginationComponent,
+    RegistryDownloadComponent,
+  ]
 })
 export class RegistryModule { }

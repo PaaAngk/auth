@@ -1,23 +1,18 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, OnInit, TemplateRef, ViewChild, ViewChildren } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, TemplateRef } from '@angular/core';
 import {
-    isPresent,
-    toInt,
-    TUI_DEFAULT_MATCHER,
     TuiDay,
-    tuiReplayedValueChangesFrom,
     TUI_DATE_FORMAT, 
-    TUI_DATE_SEPARATOR, 
-    TuiDayRange
+    TuiDayRange,
+    TUI_FIRST_DAY,
 } from '@taiga-ui/cdk';
-import {  BehaviorSubject, Observable, pipe, Subject } from 'rxjs';
+import {  BehaviorSubject, Observable, pipe, Subject, timer } from 'rxjs';
 import { takeUntil, filter, map} from 'rxjs/operators';
 import { TableColumn } from '@core/models'
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { RegistryService } from 'src/app/modules/registry/registry.service';
 import { User } from '../registry.types';
 import { defaultDayRangePeriods } from 'src/app/shared/utils/default-day-range-periods';
 import { TuiDayRangePeriod } from '@taiga-ui/kit';
-import { SortableTableWithPaginationComponent } from 'src/app/shared/components/sortable-table-with-pagination/sortable-table-with-pagination.component';
 
 @Component({
   selector: 'registry-report',
@@ -28,6 +23,7 @@ import { SortableTableWithPaginationComponent } from 'src/app/shared/components/
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RegistryReportComponent implements OnInit {
+    private _unsubscribeAll: Subject<any> = new Subject<any>();
 
     readonly tableColumns: TableColumn[] = [
         {
@@ -51,18 +47,22 @@ export class RegistryReportComponent implements OnInit {
     readonly itemsCalendarVariants: readonly TuiDayRangePeriod[] = [
         defaultDayRangePeriods()
     ][0];
-    
 
+    nameList : any;
+    readonly filterForm = new FormGroup({
+        dataRange : new FormControl(
+            new TuiDayRange(TUI_FIRST_DAY, TuiDay.currentLocal())
+        ), 
+        index : new FormControl(null),
+        name : new FormControl(null)
+    });
+    
+    
     filterSideBarVisible: boolean = false;
     menuSidebarVisible: boolean = true;
-    private _unsubscribeAll: Subject<any> = new Subject<any>();
     search = '';
 
-    dataRange = new FormControl(
-        new TuiDayRange(new TuiDay(2020, 2, 10), TuiDay.currentLocal())
-    );
-    
-    // Inject column editor button in template
+    // Inject column editor button in parent template
     columnEditorTemplate:any;
     setColumnEditorTemplate(templateRef: TemplateRef<any>) {
         this.columnEditorTemplate = templateRef;
@@ -70,7 +70,8 @@ export class RegistryReportComponent implements OnInit {
     }
 
     users : User[];
-    filteredUsers : BehaviorSubject<User[]> = new BehaviorSubject<User[]>(undefined as unknown as User[]);
+    filteredUsers : BehaviorSubject<User[]> = new BehaviorSubject<User[]>([] as User[]);
+
     
     constructor(
         private _changeDetectorRef: ChangeDetectorRef,
@@ -78,26 +79,20 @@ export class RegistryReportComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        //Getting data on request in URL query params
-        // this.users = this._registryService.userData$
-        //     .pipe(takeUntil(this._unsubscribeAll))
-        
-        
-            
+        //Getting data and insert its in filteredUsers variable by filterUser method
         this._registryService.userData$
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe((users : User[]) => {
                 this.users = users;
-                //this.filteredUsers.next(users)
+                this.filterUser(null);
                 this._changeDetectorRef.markForCheck();
             });
 
-        this.filterChats(null);
-
-
-        this.dataRange.valueChanges.subscribe(value => {
-            this.filterChats(value);
-            this._changeDetectorRef.markForCheck();
+        this.filterForm.valueChanges
+        .pipe(takeUntil(this._unsubscribeAll))
+        .subscribe(value => {
+            this.filterUser(value),
+            this._changeDetectorRef.markForCheck()
         });
     }
 
@@ -107,46 +102,34 @@ export class RegistryReportComponent implements OnInit {
         this._unsubscribeAll.next(undefined);
         this._unsubscribeAll.complete();
     }
-
+    
     // -----------------------------------------------------------------------------------------------------
     // @ Public methods
     // -----------------------------------------------------------------------------------------------------
 
-
-    //@ViewChild(SortableTableWithPaginationComponent) child:SortableTableWithPaginationComponent;
-
-
     /**
-     * Filter the chats
-     * @param queryDate TuiDayRange | null
+     * Filter the users
+     * @param query any
      */
-    filterChats(queryDate: TuiDayRange | null): void
+    filterUser(query: any): void
     {
         // Reset the filter
-        if ( !queryDate )
+        if ( !query )
         {
-            console.log("null")
             this.filteredUsers.next(this.users);
+            this.nameList = [...new Set(this.users.map(item => item.name))];
             return;
         }
-        //this.filteredUsers = this.users.filter(user => user.index > 20);
-        this.filteredUsers.next(this.users.filter(user => dateCompare(user.registered, queryDate)));
-        //this.users.pipe( map((users:User[]) => users.filter(user => user.index > 20)))
-        //this.child.detectorRef();
-    }
-
-    /**
-     * Visible filter in sidebar
-     */
-    filterSidebarVisibleBtn() {
-        this.filterSideBarVisible = !this.filterSideBarVisible;
-    }
-
-    /**
-     * Visible menu in sidebar
-     */
-    menuSidebarVisibleBtn() {
-        this.menuSidebarVisible = !this.menuSidebarVisible;
+        //user.name.trim().toLowerCase()
+        let filterItems = this.users.filter(user => dateCompare(user.registered, query.dataRange));
+        if(query.index){
+            filterItems = filterItems.filter(user => user.index === query.index );
+        }
+        if(query.name){
+            filterItems = filterItems.filter(user => user.name.trim().toLowerCase().includes(query.name.trim().toLowerCase()) );
+        }
+        
+        this.filteredUsers.next(filterItems);
     }
 
     /**
@@ -177,10 +160,6 @@ export class RegistryReportComponent implements OnInit {
         this.currentMenuItem = item
     }
 
-    log(){
-        console.log('click')
-    }
-  
 }
 
 /**
@@ -200,11 +179,10 @@ function getTuiDate(date : string) : TuiDay{
 * @param day string
 * @param dataRange TuiDayRange | null
 */
-function dateCompare(day: string, dataRange: TuiDayRange | null): Boolean{
-    let check = getTuiDate(day) >= dataRange!.from && getTuiDate(day) <= dataRange!.to
+function dateCompare(day: string, dataRange: TuiDayRange | undefined): Boolean{
+    let check = getTuiDate(day) >= dataRange!.from.append({month: 1}) && getTuiDate(day) <= dataRange!.to.append({month: 1})
     // if (check) {
     //   console.log(day, "  ", dataRange, "/  ", getTuiDate(day) >= dataRange!.from && getTuiDate(day) <= dataRange!.to)
     // }
-    
     return check
 }

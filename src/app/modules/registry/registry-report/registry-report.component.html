@@ -23,7 +23,7 @@
                     appearance="icon"
                     icon="tuiIconMenuLarge"
                     class="my-auto"
-                    (click)="menuSidebarVisibleBtn()"
+                    (click)="menuSidebarVisible = !menuSidebarVisible"
                 ></button>
                 <div class="flex space-x-2">
                     <tui-input
@@ -58,16 +58,16 @@
                     appearance="icon"
                     icon="tuiIconFilterLarge"
                     size="m"
-                    (click)="filterSidebarVisibleBtn()"
+                    (click)="filterSideBarVisible = !filterSideBarVisible"
                 ></button>
             </div>
         </header>
         <div class="overflow-auto flex flex-col flex-wrap w-full h-full p-2 shadow-md rounded-2xl bg-white">
 
-            <sortable-table-with-pagination
+            <sortable-table-with-pagination  
                 [DATA]="filteredUsers"
-                [tableColumns] = "tableColumns"
-                sortByColumnKey = 'name'
+                [tableColumns] = "tableColumns "
+                [sortByColumnKey] = "'index'"
                 [resizableColumn] = true
                 [stickyColumn] = true
                 [search] = 'search'
@@ -77,17 +77,43 @@
 
         </div>
     </div>
-    <div [ngClass]="'basis-96 bg-white rounded-2xl  h-full shadow-md ml-1' + (filterSideBarVisible ? '' : ' hidden')">
+    <div [ngClass]="'basis-96 bg-white rounded-2xl overflow-hidden h-full shadow-md ml-1' + (filterSideBarVisible ? '' : ' hidden')">
         <div class="flex items-center justify-center font-bold py-3 border-b border-color">
             <p class="tui-text_body-xl"> Параметры </p>
         </div>
-        <tui-input-date-range
-            class="b-form p-2"
-            size="m"
-            [formControl]="dataRange"
-			[items] = "itemsCalendarVariants"
+        <form
+            [formGroup]="filterForm"
+            class="p-2 space-y-2"
+            tuiTextfieldSize="l"
         >
-            Дата
-        </tui-input-date-range>
+            <tui-input-date-range
+                formControlName="dataRange"
+                [items] = "itemsCalendarVariants"
+                [tuiTextfieldCleaner]="true"
+            >
+                Дата
+            </tui-input-date-range>
+
+            <tui-input-number
+                formControlName="index"
+                [tuiTextfieldCleaner]="true"
+            >
+                Search by index
+            </tui-input-number>
+
+            <tui-input 
+                formControlName="name" 
+                [tuiTextfieldCleaner]="true"
+            >
+                Search by name
+                <tui-data-list-wrapper
+                    *tuiDataList
+                    [items]="nameList | tuiFilterByInput"
+                ></tui-data-list-wrapper>
+            </tui-input>
+        </form>
+
+        
+
     </div>
 </div>

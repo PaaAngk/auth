@@ -2,17 +2,21 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RegistryComponent } from './registry.component';
 import { RegistryRoutingModule } from './registry-routing.module'
-import { RegistrySearchComponent } from './registry-search/registry-search.component'
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
-import { TuiLinkModule, TuiSvgModule, TuiTextfieldControllerModule, TuiHostedDropdownModule, TuiPrimitiveTextfieldModule, TuiLoaderModule, TuiButtonModule, TuiErrorModule } from '@taiga-ui/core';
-import {TuiLetModule} from '@taiga-ui/cdk';
-import { TuiTreeModule, TuiArrowModule, TuiCheckboxLabeledModule, TuiInputCountModule, TuiInputModule, TuiTabsModule, TuiFieldErrorPipeModule, TuiInputDateModule, TuiInputFilesModule, TuiFilesModule, TuiInputDateRangeModule } from '@taiga-ui/kit';
+import { TuiLinkModule, TuiSvgModule, TuiTextfieldControllerModule, TuiHostedDropdownModule, TuiPrimitiveTextfieldModule, TuiLoaderModule, TuiButtonModule, TuiErrorModule, TuiDataListModule, TuiGroupModule } from '@taiga-ui/core';
+import {TuiFilterPipeModule, TuiLetModule} from '@taiga-ui/cdk';
+import { TuiStepperModule, TuiComboBoxModule, TuiDataListWrapperModule, TuiInputNumberModule, TuiTreeModule, TuiArrowModule, TuiCheckboxLabeledModule, TuiInputCountModule, TuiInputModule, TuiTabsModule, TuiFieldErrorPipeModule, TuiInputDateModule, TuiInputFilesModule, TuiFilesModule, TuiInputDateRangeModule, TuiFilterByInputPipeModule } from '@taiga-ui/kit';
 import { TuiTableModule, TuiReorderModule, TuiTablePaginationModule } from '@taiga-ui/addon-table';
-import { RegistryObjectCardComponent } from './registry-object-card/registry-object-card.component';
+
 import { RegistryReportComponent } from './registry-report/registry-report.component';
 import { SortableTableWithPaginationComponent } from 'src/app/shared/components/sortable-table-with-pagination/sortable-table-with-pagination.component';
-import { RegistryDownloadComponent } from './registry-download/registry-download.component'
+import { RegistryDownloadComponent } from './registry-download/registry-download.component';
+import { RegistryDownloadFormComponent } from './registry-download/registry-download-form/registry-download-form.component';
+import { RegistryObjectCardComponent } from './registry-object-card/registry-object-card.component';
+import { RegistrySearchComponent } from './registry-search/registry-search.component'
+import { RegistryRequestComponent } from './registry-request/registry-request.component';
+
 
 @NgModule({
   imports: [
@@ -44,6 +48,14 @@ import { RegistryDownloadComponent } from './registry-download/registry-download
     TuiInputFilesModule, 
     TuiFilesModule,
     TuiInputDateRangeModule,
+    
+    TuiFilterByInputPipeModule,
+    TuiComboBoxModule,
+    TuiDataListModule,
+    TuiDataListWrapperModule,
+    TuiFilterPipeModule,
+    TuiInputNumberModule,
+    TuiStepperModule,
   ],
   declarations: [
     RegistryComponent, 
@@ -52,6 +64,8 @@ import { RegistryDownloadComponent } from './registry-download/registry-download
     RegistryObjectCardComponent, 
     SortableTableWithPaginationComponent,
     RegistryDownloadComponent,
+    RegistryDownloadFormComponent,
+    RegistryRequestComponent,
   ]
 })
 export class RegistryModule { }

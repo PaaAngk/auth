@@ -30,8 +30,14 @@
         </ng-template>
     </tui-hosted-dropdown>
 </ng-template>
+<ng-container *ngIf=" (total$ | async) == 0">
+    <div class="text-center my-auto h-full">
+        <div class="mt-4 text-2xl font-semibold my-auto h-96">Не удалось загрузить данные</div>
+    </div>
+</ng-container>
 
 <tui-loader
+    *ngIf="(total$ | async) != 0"
     [overlay]="true"
     [showLoader]="!!(loading$ | async)"
 >
@@ -47,8 +53,9 @@
     >
         <thead>
             <tr tuiThGroup>
-                <ng-container *ngIf="rowActionIcon?.length != 0">
+                <ng-container *ngIf="rowActionIcon || rowActionText">
                     <th
+                        class="w-8"
                         *tuiHead="'actions'"
                         tuiTh
                         [sorter]="null"
@@ -78,7 +85,7 @@
                 *tuiRow="let item of data"
                 tuiTr
             >
-                <ng-container *ngIf="rowActionIcon?.length != 0">
+                <ng-container *ngIf="rowActionIcon">
                     <td
                         *tuiCell="'actions'"
                         tuiTd
@@ -94,6 +101,26 @@
                         ></button>
                     </td>
                 </ng-container>
+
+                <ng-container *ngIf="rowActionText">
+                    <td
+                        *tuiCell="'actions'"
+                        tuiTd
+                    >
+                        <button
+                            tuiButton
+                            type="button"
+                            appearance="flat"
+                            size="xs"
+                            [icon]="rowActionIcon"
+                            title="Перейти"
+                            (click)="emitRowAction(item)"
+                        >
+                            {{rowActionText}}
+                        </button>
+                    </td>
+                </ng-container>
+
                 <ng-container 
                     *ngFor="let key of KEYS | keyvalue"
                 >

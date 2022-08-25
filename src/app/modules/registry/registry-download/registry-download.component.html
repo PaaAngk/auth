@@ -23,54 +23,41 @@
                     appearance="icon"
                     icon="tuiIconMenuLarge"
                     class="my-auto"
-                    (click)="menuSidebarVisibleBtn()"
+                    (click)="menuSidebarVisible = !menuSidebarVisible"
                 ></button>
+                <div class="stepper">
+                    <tui-stepper [activeItemIndex]="0">
+                        <button 
+                            *ngFor="let item of menuItem"
+                            tuiStep 
+                            [state]="item.state" 
+                            [disabled] = "item.disabled"
+                            (click)="setCurrentMenuItem(item.item)"
+                        >
+                            {{item.item}}
+                        </button>
+                    </tui-stepper>
+                </div>
                 <div class="flex space-x-2">
-                    <tui-input
-                        class="w-96"
-                        [tuiTextfieldCleaner]="true"
-                        [(ngModel)]="search"
-                    >
-                        Поиск в таблице
-                    </tui-input>
-                    <div *ngTemplateOutlet="columnEditorTemplate">
-                    </div>
-                    <button
-                        tuiButton
-                        class=""
-                        icon="tuiIconUploadLarge"
-                        size="m"
-                    >
-                        Выгрузка
-                    </button>
 
                     <button
                         tuiButton
-                        class=""
-                        icon="tuiIconPrintLarge"
+                        class="mr-2"
+                        icon="tuiIconCheckLarge"
                         size="m"
                     >
-                        Печать
+                        Выполнить
                     </button>
+                </div>
 
-                </div>
-                <div>
-                </div>
             </div>
         </header>
-        <div class="overflow-auto flex flex-col flex-wrap w-full h-full p-2 shadow-md rounded-2xl bg-white">
-            
-            <!-- <sortable-table-with-pagination
-                [DATA]="(DATA$ | async)"
-                [tableColumns] = tableColumns
-                sortByColumnKey = 'name'
-                [resizableColumn] = true
-                [stickyColumn] = true
-                [search] = 'search'
-                
+        <div class="overflow-auto items-center pb-8 flex flex-col flex-wrap w-full h-full px-2 shadow-md rounded-2xl bg-white">
+            <registry-download-form
+                [activeForm] = "currentMenuItem"
             >
-            </sortable-table-with-pagination> -->
 
+            </registry-download-form>
         </div>
     </div>
 

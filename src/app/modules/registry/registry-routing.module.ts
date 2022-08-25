@@ -1,3 +1,4 @@
+import { RegistryRequestComponent } from './registry-request/registry-request.component';
 import { RegistryDownloadComponent } from './registry-download/registry-download.component';
 import { RegistryReportComponent } from './registry-report/registry-report.component';
 import { RegistrySearchComponent } from './registry-search/registry-search.component';
@@ -5,7 +6,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RegistryComponent } from './registry.component';
 import { RegistryObjectCardComponent } from './registry-object-card/registry-object-card.component';
-import { RegistryReportResolver } from 'src/app/modules/registry/registry.resolvers';
+
+import { RegistryReportResolver, RegistrySearchResolver } from './registry.resolvers';
 
 const routes: Routes = [
   {
@@ -20,7 +22,7 @@ const routes: Routes = [
         data: {
           title: 'Реестр - Поиск'
         },
-        component: RegistrySearchComponent
+        component: RegistrySearchComponent,
       },
       {
         path: 'report', 
@@ -44,6 +46,13 @@ const routes: Routes = [
         data: {
           title: 'Реестр - Загрузки'
         },
+        // children : [{
+		// 	path: ':form', 
+		// 	data: {
+		// 	title: 'Реестр - Карточка объекта'
+		// 	},
+		// 	component: RegistryDownloadFormComponent
+        // }],
         component: RegistryDownloadComponent
       },
       {
@@ -51,7 +60,7 @@ const routes: Routes = [
         data: {
           title: 'Реестр - Заявки'
         },
-        component: RegistryObjectCardComponent
+        component: RegistryRequestComponent
       },
     ]
   },

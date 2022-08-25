@@ -32,7 +32,8 @@ export class RegistrySearchResolver implements Resolve<any>
      */
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Riur[]> | any
     {
-        let query = route.paramMap.get('regSection') == null ? '': `?category=${route.paramMap.get('regSection')}`
+        let query = route.queryParams['regSection'] == 'real-estate'  ? '': `?category=${route.queryParams['regSection']}`
+        console.log(query)
         return this._registryService.getSearchData(query);
     }
 }

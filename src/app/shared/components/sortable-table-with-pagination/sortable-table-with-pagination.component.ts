@@ -1,14 +1,7 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, ContentChild, EventEmitter, Input, OnInit, Output, TemplateRef, Type, ViewChild} from '@angular/core';
-import {FormControl} from '@angular/forms';
 import { TableColumn } from '@core/models';
-import {defaultSort, TuiComparator} from '@taiga-ui/addon-table';
-import {
-    isPresent,
-    toInt,
-    TUI_DEFAULT_MATCHER,
-    TuiDay,
-    tuiReplayedValueChangesFrom,
-} from '@taiga-ui/cdk';
+import {tuiDefaultSort, TuiComparator} from '@taiga-ui/addon-table';
+import { tuiIsPresent, TUI_DEFAULT_MATCHER } from '@taiga-ui/cdk';
 import { TUI_ARROW } from '@taiga-ui/kit';
 import { BehaviorSubject, combineLatest, Observable, of } from 'rxjs';
 import {
@@ -144,14 +137,14 @@ export class SortableTableWithPaginationComponent implements OnInit {
         this.loading$ = this.request$.pipe(map(value => !value));
     
         this.total$ = this.request$.pipe(
-            filter(isPresent),
+            filter(tuiIsPresent),
             map(({length}) => length),
             startWith(1),
         );
 
         this.data$ = this.request$.pipe(
-            filter(isPresent),
-            map(riurs => riurs.filter(isPresent)),
+            filter(tuiIsPresent),
+            map(riurs => riurs.filter(tuiIsPresent)),
             startWith([])
         );
         this._changeDetectorRef.markForCheck();
@@ -219,6 +212,6 @@ export class SortableTableWithPaginationComponent implements OnInit {
 * @param direction -1 | 1
 */
 function sortBy(key: string | number, direction: -1 | 1): TuiComparator<any> {
-    return (a, b) => direction * defaultSort(a[key], b[key]);
+    return (a, b) => direction * tuiDefaultSort(a[key], b[key]);
 }
  

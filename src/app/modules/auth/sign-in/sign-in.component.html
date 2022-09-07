@@ -38,12 +38,12 @@
                     <tui-input-password
                       ngDefaultControl
                       formControlName="password"
-                      tuiTextfieldExampleText="Введите ваш пароль"      
+                            
                       [tuiTextfieldCleaner]="true"
                     >
                         Введите пароль
                         <span class="tui-required"></span>
-                    </tui-input-password>
+                    <input tuiTextfield placeholder="Введите ваш пароль"/> </tui-input-password>
                     <tui-error
                       class="error-message"
                       formControlName="password"

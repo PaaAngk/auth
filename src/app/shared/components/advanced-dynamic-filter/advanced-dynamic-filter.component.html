@@ -4,12 +4,12 @@
 			<dynamic-filter-item [question]="question" [form]="form"></dynamic-filter-item>
 		</div>
 
-		<div class="form-row">
-			<button type="submit" [disabled]="!form.valid">Save</button>
+		<div>
+			<button tuiButton type="submit" [disabled]="!form.valid">Save</button>
 		</div>
 	</form>
 
-	<div *ngIf="payLoad" class="form-row">
+	<div *ngIf="payLoad" >
 		<strong>Saved the following values</strong><br>{{payLoad}}
 	</div>
 </div>

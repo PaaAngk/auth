@@ -1,5 +1,5 @@
 import {TUI_FIRST_DAY, TuiDay, TuiDayRange} from '@taiga-ui/cdk';
-import {TuiDayRangePeriod} from '@taiga-ui/kit/classes';
+import { TuiDayRangePeriod } from '@taiga-ui/kit';
 
 export function defaultDayRangePeriods(
     periodTitles: [string, string, string, string, string, string] = [

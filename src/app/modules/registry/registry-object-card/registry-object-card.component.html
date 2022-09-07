@@ -71,13 +71,13 @@
                         <h3 class="tui-form__header tui-form__header_margin-top_none">Основное</h3>
                         <div class="tui-form__row">
                             <tui-input
-                                tuiTextfieldExampleText="Ввести похожее значение"
+                                
                                 formControlName="nameValue"
                                 tuiHintContent="Подсказка"
                             >
                                 Поле ввода 
                                 <span class="tui-required"></span>
-                            </tui-input>
+                            <input tuiTextfield placeholder="Ввести похожее значение"/> </tui-input>
                             <tui-error
                                 formControlName="nameValue"
                                 [error]="[] | tuiFieldError | async"
@@ -85,12 +85,12 @@
                         </div>
                         <div class="tui-form__row">
                             <tui-input-date
-                                tuiTextfieldExampleText="Ввод даты"
+                                
                                 formControlName="periodValue"
                             >
                                 Ввод даты
                                 <span class="tui-required"></span>
-                            </tui-input-date>
+                            <input tuiTextfield placeholder="Ввод даты"/> </tui-input-date>
                             <tui-error
                                 formControlName="periodValue"
                                 [error]="[] | tuiFieldError | async"

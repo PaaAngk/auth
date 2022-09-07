@@ -1,5 +1,5 @@
-import { DynamicFilterBase } from './../dynamic-filter-base.class';
+import { DynamicFilterInput } from './../dynamic-filter-base.class';
 
-export class CountboxDynamicFilter extends DynamicFilterBase<number> {
+export class CountboxDynamicFilter extends DynamicFilterInput<number> {
   override controlType = 'countbox';
 }

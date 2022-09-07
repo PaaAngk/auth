@@ -7,11 +7,12 @@
 			tuiTextfield
 			[id]="question.key"
 			[type]="question.type"
+			[placeholder]="question.placeholder"
       	/>
   	</tui-input>
 
 	<!-- Countbox input -->
-	<tui-input-number *ngSwitchCase="'countbox'" [formControlName]="question.key" [id]="question.key">
+	<tui-input-number *ngSwitchCase="'countbox'" [formControlName]="question.key" [id]="question.key" >
 		<label [attr.for]="question.key">{{question.label}}</label>
 	</tui-input-number>
 
@@ -37,15 +38,38 @@
 		<label [attr.for]="question.key">{{question.label}}</label>
     </tui-input-date> -->
    
+	<!-- Combobox input -->
+	<tui-combo-box
+		*ngSwitchCase="'combobox'"
+		[formControlName]="question.key" 
+		[id]="question.key"
+	>
+		{{question.label}}		
+		<input
+			tuiTextfield
+			[placeholder]="question.placeholder"
+		/>
+		<tui-data-list-wrapper
+			*tuiDataList
+			[items]="question.options | tuiFilterByInput"
+		></tui-data-list-wrapper>
+	</tui-combo-box>
 
-	
-    <select [id]="question.key" *ngSwitchCase="'dropdown'" [formControlName]="question.key">
-      <option *ngFor="let opt of question.options" [value]="opt.key">{{opt.value}}</option>
-    </select>
+	<!-- Dropdown input -->
+	<tui-select
+		*ngSwitchCase="'dropdown'"
+		[formControlName]="question.key" 
+		[id]="question.key"
+	>
+		{{question.label}}		
+		<tui-data-list-wrapper
+			*tuiDataList
+			[items]="question.options"
+		></tui-data-list-wrapper>
+	</tui-select>
 
 	<tui-error
 		[formControlName]="question.key" 
 		[error]="[] | tuiFieldError | async"
 	></tui-error>
-  	<div class="errorMessage" *ngIf="!isValid">{{question.label}} is required</div>
 </ng-container>

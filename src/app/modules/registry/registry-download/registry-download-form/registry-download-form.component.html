@@ -7,12 +7,12 @@
 		<h3 class="tui-form__header text-center">Перечень объектов</h3>
 		<div class="tui-form__row">
 			<tui-input-date
-				tuiTextfieldExampleText="Введите дату"
+				
 				formControlName="periodValue"
 			>
 				Дата
 				<span class="tui-required"></span>
-			</tui-input-date>
+			<input tuiTextfield placeholder="Введите дату"/> </tui-input-date>
 			<tui-error
 				formControlName="periodValue"
 				[error]="[] | tuiFieldError | async"
@@ -21,13 +21,13 @@
 
 		<div class="tui-form__row">
 			<tui-input
-				tuiTextfieldExampleText="Основание для чего-то"
+				
 				formControlName="nameValue"
 				tuiHintContent="A tooltip"
 			>
 				Основание
 				<span class="tui-required"></span>
-			</tui-input>
+			<input tuiTextfield placeholder="Основание для чего-то"/> </tui-input>
 			<tui-error
 				formControlName="nameValue"
 				[error]="[] | tuiFieldError | async"
@@ -36,13 +36,13 @@
 
 		<div class="tui-form__row">
 			<tui-input
-				tuiTextfieldExampleText="Правообладатель чего-то!"
+				
 				formControlName="nameValue1"
 				tuiHintContent="A tooltip"
 			>
 				Правообладатель
 				<span class="tui-required"></span>
-			</tui-input>
+			<input tuiTextfield placeholder="Правообладатель чего-то!"/> </tui-input>
 			<tui-error
 				formControlName="nameValue1"
 				[error]="[] | tuiFieldError | async"
@@ -55,13 +55,13 @@
 		<h3 class="tui-form__header text-center">Реквизиты</h3>
 		<div class="tui-form__row">
 			<tui-input
-				tuiTextfieldExampleText="Основание для чего-то"
+				
 				formControlName="nameValue2"
 				tuiHintContent="A tooltip"
 			>
 				Основание
 				<span class="tui-required"></span>
-			</tui-input>
+			<input tuiTextfield placeholder="Основание для чего-то"/> </tui-input>
 			<tui-error
 				formControlName="nameValue2"
 				[error]="[] | tuiFieldError | async"
@@ -70,13 +70,13 @@
 
 		<div class="tui-form__row">
 			<tui-input
-				tuiTextfieldExampleText="Правообладатель чего-то!"
+				
 				formControlName="nameValue3"
 				tuiHintContent="A tooltip"
 			>
 				Правообладатель
 				<span class="tui-required"></span>
-			</tui-input>
+			<input tuiTextfield placeholder="Правообладатель чего-то!"/> </tui-input>
 			<tui-error
 				formControlName="nameValue3"
 				[error]="[] | tuiFieldError | async"

@@ -1,5 +1,5 @@
-import { DynamicFilterBase } from './../dynamic-filter-base.class';
+import { DynamicFilterInput } from './../dynamic-filter-base.class';
 
-export class DropdownDynamicFilter extends DynamicFilterBase<string> {
+export class DropdownDynamicFilter extends DynamicFilterInput<string[]> {
   override controlType = 'dropdown';
 }

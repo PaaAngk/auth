@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SignInComponent } from './sign-in.component';
 import { authSignInRoutes } from './sign-in.routing';
-import { TuiInputModule, TuiInputPasswordModule, TuiFilterByInputPipeModule, TuiFieldErrorModule, TuiFieldErrorPipeModule } from '@taiga-ui/kit';
+import { TuiInputModule, TuiInputPasswordModule, TuiFilterByInputPipeModule, TuiFieldErrorPipeModule } from '@taiga-ui/kit';
 import { TuiButtonModule, TuiTextfieldControllerModule, TuiErrorModule, TuiLoaderModule, TuiNotificationModule } from '@taiga-ui/core';
 @NgModule({
     declarations: [
@@ -22,7 +22,7 @@ import { TuiButtonModule, TuiTextfieldControllerModule, TuiErrorModule, TuiLoade
         TuiTextfieldControllerModule,
         TuiFilterByInputPipeModule,
         TuiErrorModule,
-        TuiFieldErrorModule,
+        TuiFieldErrorPipeModule,
         TuiFieldErrorPipeModule,
         TuiLoaderModule,
         TuiNotificationModule,

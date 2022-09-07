@@ -2,44 +2,11 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, Template
 import {EMPTY_ARRAY, TuiHandler} from '@taiga-ui/cdk';
 import { TableColumn, TreeNode } from '@core/models' 
 import {FormControl, FormGroup} from '@angular/forms';
-import {defaultSort, TuiComparator} from '@taiga-ui/addon-table';
-import {
-    isPresent,
-    toInt,
-    TUI_DEFAULT_MATCHER,
-    tuiReplayedValueChangesFrom,
-} from '@taiga-ui/cdk';
-import {TUI_ARROW} from '@taiga-ui/kit';
-import {BehaviorSubject, combineLatest, from, Observable, of, Subject, takeUntil, timer} from 'rxjs';
-import {
-    debounceTime,
-    catchError,
-    tap,
-    filter,
-    map,
-    mapTo,
-    share,
-    startWith,
-    switchMap,
-    delay,
-} from 'rxjs/operators';
+import {BehaviorSubject, Subject, takeUntil, timer} from 'rxjs';
 
-import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Riur } from './../registry.types';
 import { RegistryService } from 'src/app/modules/registry/registry.service';
-
-type Key = 'secondName' | 'firstName' | 'lastName' | 'DOB' | 'placeBirth' | 'placeLive' | 'age';
- 
-const KEYS: Record<string, string> = {
-    'Фамилия': 'secondName',
-    'Имя': 'firstName' ,
-    'Отчество': 'lastName',
-    'Дата рождения': 'DOB',
-    'Место рождения': 'placeBirth' ,
-    'Адрес': 'placeLive' ,
-    'Возраст':'age'
-};
 
 @Component({
   selector: 'registry-search',

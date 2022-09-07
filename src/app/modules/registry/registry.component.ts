@@ -1,5 +1,5 @@
 import { DynamicFilterService } from './../../shared/components/advanced-dynamic-filter/dynamic-filter.service';
-import { DynamicFilterBase } from './../../shared/components/advanced-dynamic-filter/dynamic-filter-base.class';
+import { DynamicFilterInput, DynamicFilterBase } from './../../shared/components/advanced-dynamic-filter/dynamic-filter-base.class';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -9,12 +9,14 @@ import { Observable } from 'rxjs';
 })
 export class RegistryComponent implements OnInit {
   
-	questions$: Observable<DynamicFilterBase<any>[]>;
+	questions$: Observable<DynamicFilterInput<any>[]>;
+	segmentForm$: Observable<DynamicFilterBase<any | any[]>>;
 
 	constructor(
 		private dynamicFilterService: DynamicFilterService
 	) {
 		this.questions$ = dynamicFilterService.getQuestions();
+		this.segmentForm$ = dynamicFilterService.getVal();
 	}
 
 	ngOnInit() {

@@ -1,3 +1,4 @@
 <div class="h-full w-full block">  
     <router-outlet></router-outlet>
 </div>
+<app-advanced-dynamic-filter class="w-full h-full"  [questions]="questions$ | async"></app-advanced-dynamic-filter>

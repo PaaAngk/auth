@@ -1,0 +1,15 @@
+<div class="m-10 rounded-lg bg-white">
+	<form (ngSubmit)="onSubmit()" [formGroup]="form" class="p-2 space-y-2" [tuiTextfieldCleaner]="true">
+		<div *ngFor="let question of questions" class="">
+			<dynamic-filter-item [question]="question" [form]="form"></dynamic-filter-item>
+		</div>
+
+		<div class="form-row">
+			<button type="submit" [disabled]="!form.valid">Save</button>
+		</div>
+	</form>
+
+	<div *ngIf="payLoad" class="form-row">
+		<strong>Saved the following values</strong><br>{{payLoad}}
+	</div>
+</div>

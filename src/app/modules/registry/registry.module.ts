@@ -1,3 +1,5 @@
+import { AdvancedDynamicFilterModule } from './../../shared/components/advanced-dynamic-filter/advanced-dynamic-filter.module';
+import { AdvancedFilterFromInterfaceComponent } from './../../shared/components/advanced-filter-from-interface/advanced-filter-from-interface.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RegistryComponent } from './registry.component';
@@ -24,6 +26,7 @@ import { RegistryRequestComponent } from './registry-request/registry-request.co
     RegistryRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    AdvancedDynamicFilterModule,
 
     TuiLetModule,
     TuiButtonModule,

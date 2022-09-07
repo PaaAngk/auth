@@ -1,0 +1,51 @@
+<ng-container [formGroup]="form" [ngSwitch]="question.controlType">
+
+	<!-- Textbox input -->
+    <tui-input *ngSwitchCase="'textbox'" [formControlName]="question.key" >
+		<label [attr.for]="question.key">{{question.label}}</label>
+      	<input
+			tuiTextfield
+			[id]="question.key"
+			[type]="question.type"
+      	/>
+  	</tui-input>
+
+	<!-- Countbox input -->
+	<tui-input-number *ngSwitchCase="'countbox'" [formControlName]="question.key" [id]="question.key">
+		<label [attr.for]="question.key">{{question.label}}</label>
+	</tui-input-number>
+
+	<!-- Date range input -->
+	<!-- <tui-input-date-range
+		ngSwitchCase="'dateRange'" 
+		[formControlName]="question.key" 
+    >
+		<label [attr.for]="question.key">{{question.label}}</label>
+        <input
+            tuiTextfield
+			[id]="question.key"
+			[type]="question.type"
+        />
+    </tui-input-date-range> -->
+
+	<!-- Date input -->
+	<!-- <tui-input-date
+        tuiUnfinishedValidator="Finish filling the field"
+        ngSwitchCase="'date'" 
+		[formControlName]="question.key" 
+    >
+		<label [attr.for]="question.key">{{question.label}}</label>
+    </tui-input-date> -->
+   
+
+	
+    <select [id]="question.key" *ngSwitchCase="'dropdown'" [formControlName]="question.key">
+      <option *ngFor="let opt of question.options" [value]="opt.key">{{opt.value}}</option>
+    </select>
+
+	<tui-error
+		[formControlName]="question.key" 
+		[error]="[] | tuiFieldError | async"
+	></tui-error>
+  	<div class="errorMessage" *ngIf="!isValid">{{question.label}} is required</div>
+</ng-container>

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 import { DynamicFilterInput, DynamicFilterBase } from './dynamic-filter-base.class';
 import { DynamicFilterControlService } from './dynamic-filter-control.service';
 
@@ -9,42 +9,27 @@ import { DynamicFilterControlService } from './dynamic-filter-control.service';
   providers: [ DynamicFilterControlService ]
 })
 export class AdvancedDynamicFilterComponent implements OnInit {
+	activeMenuItemIndex:number = 0;
 
   	@Input() questions: DynamicFilterInput<string>[] | null = [];
 
-	@Input() segmentForm: DynamicFilterBase<any | any[]> | null;
+	@Input() segmentForms: DynamicFilterBase<any | any[]>[] | null;
 	form!: FormGroup;
-	form1!: FormGroup;
+	filtersForm!: FormGroup;
 	payLoad = '';
+	filterItems ?: string[];
 
 	constructor(private dfs: DynamicFilterControlService) {}
 
 	ngOnInit() {
-	  	this.form = this.dfs.toFormGroup(this.questions as DynamicFilterInput<string>[]);
-		console.log(this.segmentForm)
-		// this.segmentForm?.dynamicFilterInputs?.reduce(function forEach(r, a) {
-		// 	if (a === null) {
-		// 		return r;
-		// 	}
-		// 	if (Array.isArray(a)) {
-		// 		return a.reduce(iter, r);
-		// 	}
-		// 	if (typeof a === 'object') {
-		// 		return Object.keys(a).map(k => a[k]).reduce(iter, r);
-		// 	}
-		// 	return r.concat(a);
-		// }, []);
-
-		// Сделать генерацию формы по структуре массива 
-		// this.form1 = this.dfs.toFormGroup(this.segmentForm?.dynamicFilterInputs as DynamicFilterInput<string>[]);
-		// this.segmentForm?.dynamicFilterInputs?.forEach({
-
-		// })
-
-		//this.form = this.dfs.toFormGroup(this.questions as DynamicFilterInput<string>[]);
+	  	this.form = this.dfs.toFormGroupFromInputs(this.questions as DynamicFilterInput<string>[]);
+		this.filtersForm = this.dfs.toFormGroupFromBase(this.segmentForms as DynamicFilterBase<any | any[]>[]);
+		this.filterItems = this.segmentForms?.map(element => element.title).concat(this.segmentForms?.map(element => element.title));
 	}
-
+	set(){
+		console.log("dsdd")
+	}
 	onSubmit() {
-	  	this.payLoad = JSON.stringify(this.form.getRawValue());
+	  	this.payLoad = JSON.stringify(this.filtersForm.getRawValue());
 	}
 }

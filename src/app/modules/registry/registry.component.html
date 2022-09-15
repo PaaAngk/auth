@@ -1,4 +1,19 @@
 <div class="h-full w-full block">  
     <router-outlet></router-outlet>
 </div>
-<app-advanced-dynamic-filter class="w-full h-full" [segmentForm]="segmentForm$ | async"  [questions]="questions$ | async"></app-advanced-dynamic-filter>
+
+<button
+    tuiButton
+    type="button"
+    (click)="toggleSidebar(true)"
+    (tuiActiveZoneChange)="toggleSidebar($event)"
+>
+    Filter
+    <div *tuiSidebar="open; direction: 'right' autoWidth:true" class="w-96" >
+        <ng-container *ngTemplateOutlet="sidebarContent"></ng-container>
+    </div>
+</button>
+
+<ng-template #sidebarContent >
+    <app-advanced-dynamic-filter class="w-full h-full" [segmentForms]="segmentForm$ | async"  [questions]="questions$ | async"></app-advanced-dynamic-filter>
+</ng-template>

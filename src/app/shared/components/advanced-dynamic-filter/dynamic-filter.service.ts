@@ -32,7 +32,7 @@ export class DynamicFilterService {
 					"Good",
 					"Unproven"
 				],
-				order: 3
+				
 			}),
 
 			new DropdownDynamicFilter({
@@ -45,7 +45,7 @@ export class DynamicFilterService {
 					"Good",
 					"Unproven"
 				],
-				order: 3
+				
 			}),
 
 			new TextboxDynamicFilter({
@@ -53,8 +53,7 @@ export class DynamicFilterService {
 				label: 'First name',
 				value: 'Bombasto',
 				placeholder:"Enter first name to input",
-				required: true,
-				order: 1
+				required: true
 			}),
 
 			new CountboxDynamicFilter({
@@ -62,7 +61,6 @@ export class DynamicFilterService {
 				label: 'Counter',
 				value: 0,
 				required: true,
-				order: 4
 			}),
 			
 			// new DateDynamicFilter({
@@ -74,72 +72,108 @@ export class DynamicFilterService {
 				key: 'emailAddress',
 				label: 'Email',
 				type: 'email',
-				order: 2,
+				
 				minLength: 5
 			})
 		];
-
-		return of(questions.sort((a, b) => a.order - b.order));
+		//of(questions.sort((a, b) => a.order - b.order));
+		return of(questions)
 	}
 
-
-	getVal() {
-
-
-		const segmentFilter: DynamicFilterBase<string|string[]|number> = {
+	getFilter() {
+		const segmentFilter: DynamicFilterBase<string|string[]|number>[] = [
+		{
 			title: "Main filter",
 
 			dynamicFilterInputs: [
-
+				new ComboboxDynamicFilter({
+					key: 'combobox',
+					label: 'Bravery Rating',
+					placeholder:"Enter value to checkbox",
+					options: [
+						"Solid",
+						"Great",
+						"Good",
+						"Unproven"
+					],
+					
+				}),
+	
+				new DropdownDynamicFilter({
+					key: 'dropdown',
+					label: 'Dropdown Exapmle',
+					placeholder:"Enter value to dropdown input",
+					options: [
+						"Solid",
+						"Great",
+						"Good",
+						"Unproven"
+					],
+					
+				}),
+	
 				new TextboxDynamicFilter({
 					key: 'firstName',
 					label: 'First name',
 					value: 'Bombasto',
 					placeholder:"Enter first name to input",
 					required: true,
-					order: 1
+									}),
+	
+				new CountboxDynamicFilter({
+					key: 'counter',
+					label: 'Counter',
+					value: 0,
+					required: true,
+									}),
+				
+				// new DateDynamicFilter({
+				//   key: 'date',
+				//   label: 'Date entering',
+				// }),
+	
+				new TextboxDynamicFilter({
+					key: 'emailAddress',
+					label: 'Email',
+					type: 'email',
+					
+					minLength: 5
 				})
 			],
+		},
+		{
+			title: "Added filter 1",
 
-			dynamicFilterBase: [
-				{
-					title: "Sub0 filter",
-		
-					dynamicFilterInputs: [
-		
-						new TextboxDynamicFilter({
-							key: 'emailAddress',
-							label: 'Email',
-							type: 'email',
-							order: 2,
-							minLength: 5
-						})
-						
-					]
-				},
+			dynamicFilterInputs: [
+				new TextboxDynamicFilter({
+					key: 'emailAddress',
+					label: 'Email',
+					type: 'email',
+					
+					minLength: 5
+				})
+			],
+		},
+		{
+			title: "sub filter1",
 
-				{
-					title: "Sub1 filter",
-		
-					dynamicFilterInputs: [
+			dynamicFilterInputs: [
+				new DropdownDynamicFilter({
+					key: 'dropdown',
+					label: 'Dropdown Exapmle',
+					placeholder:"Enter value to dropdown input",
+					options: [
+						"Solid",
+						"Great",
+						"Good",
+						"Unproven"
+					],
+					
+				}),
+			],
+		},
 
-						new DropdownDynamicFilter({
-							key: 'dropdown',
-							label: 'Dropdown Exapmle',
-							placeholder:"Enter value to dropdown input",
-							options: [
-								"Solid",
-								"Great",
-								"Good",
-								"Unproven"
-							],
-							order: 3
-						}),
-
-					]
-				}
-			]
-		};
+		];
 		return of(segmentFilter);
 	}
 

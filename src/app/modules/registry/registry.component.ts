@@ -5,21 +5,37 @@ import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-registry',
-  templateUrl: './registry.component.html'
+  templateUrl: './registry.component.html',
 })
 export class RegistryComponent implements OnInit {
+	open = false;
+ 
+    readonly webApis = [`Common`, `Audio`, `Canvas`, `Geolocation`, `MIDI`, `Workers`];
+ 
+    readonly tinkoff = [
+        `Taiga-UI`,
+        `ng-event-plugins`,
+        `ng-polymorpheus`,
+        `ng-dompurify`,
+    ];
+ 
+    toggleSidebar(open: boolean): void {
+		console.log(open)
+        this.open = open;
+    }
   
 	questions$: Observable<DynamicFilterInput<any>[]>;
-	segmentForm$: Observable<DynamicFilterBase<any | any[]>>;
+	segmentForm$: Observable<DynamicFilterBase<any | any[]>[]>;
 
 	constructor(
 		private dynamicFilterService: DynamicFilterService
 	) {
-		this.questions$ = dynamicFilterService.getQuestions();
-		this.segmentForm$ = dynamicFilterService.getVal();
+		
 	}
 
 	ngOnInit() {
+		this.questions$ = this.dynamicFilterService.getQuestions();
+		this.segmentForm$ = this.dynamicFilterService.getFilter();
 	}
 
 }

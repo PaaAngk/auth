@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { AdvancedDynamicFilterComponent } from './advanced-dynamic-filter.component';
 import { DynamicFilterItemComponent } from './dynamic-filter-item.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { TuiInputNumberModule, TuiInputModule, TuiInputDateRangeModule, TuiInputDateModule, TuiFieldErrorPipeModule, TuiComboBoxModule, TuiDataListWrapperModule, TuiFilterByInputPipeModule, TuiSelectModule } from '@taiga-ui/kit';
-import { TuiButtonModule, TuiDataListModule, TuiDropdownModule, TuiErrorModule, TuiPrimitiveTextfieldModule, TuiTextfieldControllerModule } from '@taiga-ui/core';
+import { TuiInputNumberModule, TuiInputModule, TuiInputDateRangeModule, TuiInputDateModule, TuiFieldErrorPipeModule, TuiComboBoxModule, TuiDataListWrapperModule, TuiFilterByInputPipeModule, TuiSelectModule, TuiTabsModule } from '@taiga-ui/kit';
+import { TuiButtonModule, TuiDataListModule, TuiDropdownModule, TuiErrorModule, TuiPrimitiveTextfieldModule, TuiScrollbarModule, TuiTextfieldControllerModule } from '@taiga-ui/core';
 
 
 @NgModule({
@@ -28,7 +28,9 @@ import { TuiButtonModule, TuiDataListModule, TuiDropdownModule, TuiErrorModule, 
     TuiDataListWrapperModule,
     TuiFilterByInputPipeModule,
     TuiSelectModule,
-    TuiButtonModule
+    TuiButtonModule,
+    TuiTabsModule,
+    TuiScrollbarModule,
   ],
   declarations: [
     AdvancedDynamicFilterComponent, 

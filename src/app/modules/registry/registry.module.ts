@@ -7,7 +7,7 @@ import { RegistryRoutingModule } from './registry-routing.module'
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { TuiLinkModule, TuiSvgModule, TuiTextfieldControllerModule, TuiHostedDropdownModule, TuiPrimitiveTextfieldModule, TuiLoaderModule, TuiButtonModule, TuiErrorModule, TuiDataListModule, TuiGroupModule } from '@taiga-ui/core';
-import {TuiFilterPipeModule, TuiLetModule} from '@taiga-ui/cdk';
+import {TuiActiveZoneModule, TuiFilterPipeModule, TuiLetModule} from '@taiga-ui/cdk';
 import { TuiStepperModule, TuiComboBoxModule, TuiDataListWrapperModule, TuiInputNumberModule, TuiTreeModule, TuiArrowModule, TuiCheckboxLabeledModule, TuiInputCountModule, TuiInputModule, TuiTabsModule, TuiFieldErrorPipeModule, TuiInputDateModule, TuiInputFilesModule, TuiFilesModule, TuiInputDateRangeModule, TuiFilterByInputPipeModule } from '@taiga-ui/kit';
 import { TuiTableModule, TuiReorderModule, TuiTablePaginationModule } from '@taiga-ui/addon-table';
 
@@ -18,6 +18,7 @@ import { RegistryDownloadFormComponent } from './registry-download/registry-down
 import { RegistryObjectCardComponent } from './registry-object-card/registry-object-card.component';
 import { RegistrySearchComponent } from './registry-search/registry-search.component'
 import { RegistryRequestComponent } from './registry-request/registry-request.component';
+import {TuiSidebarModule} from '@taiga-ui/addon-mobile';
 
 
 @NgModule({
@@ -28,6 +29,8 @@ import { RegistryRequestComponent } from './registry-request/registry-request.co
     FormsModule,
     AdvancedDynamicFilterModule,
 
+    TuiSidebarModule,
+    TuiActiveZoneModule,
     TuiLetModule,
     TuiButtonModule,
     TuiArrowModule,

@@ -1,14 +1,19 @@
+// export interface DynamicFilterBase<T>{
+// 	title: string;
+// 	dynamicFilterInputs?: DynamicFilterInput<T>[];
+// 	dynamicFilterBase?: DynamicFilterBase<T>[];
+// }
 export interface DynamicFilterBase<T>{
 	title: string;
-	dynamicFilterInputs?: DynamicFilterInput<T>[];
-	dynamicFilterBase?: DynamicFilterBase<T>[];
+	dynamicFilterInputs: DynamicFilterInput<T>[];
 }
+
 
 export class DynamicFilterInput<T> {
 	value: T | undefined; // Preset input value, except date and range date
 	key: string; // Key for input to define inputs
 	label: string; // Input header
-	order: number; // Order of placement in generated forms
+	match: boolean; // Define match switch under input
 	controlType: string; // Define input type in input class
 	type: string; // Special type for textbox. Ex.: email
 	required: boolean; // Definition a input is required   
@@ -23,7 +28,7 @@ export class DynamicFilterInput<T> {
 			key?: string;
 			label?: string;
 			required?: boolean;
-			order?: number;
+			match?: boolean;
 			controlType?: string;
 			type?: string;
 			minLength?: number;
@@ -36,7 +41,7 @@ export class DynamicFilterInput<T> {
 		this.key = options.key || '';
 		this.label = options.label || '';
 		this.required = !!options.required;
-		this.order = options.order === undefined ? 1 : options.order;
+		this.match = options.match || false;
 		this.controlType = options.controlType || '';
 		this.type = options.type || '';
 		this.minLength = options.minLength || 0;

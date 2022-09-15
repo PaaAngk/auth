@@ -18,6 +18,7 @@
     "@angular/platform-browser": "^14.0.5",
     "@angular/platform-browser-dynamic": "^14.0.5",
     "@angular/router": "^14.0.5",
+    "@taiga-ui/addon-mobile": "^3.2.0",
     "@taiga-ui/addon-table": "^3.0.0-rc.6",
     "@taiga-ui/cdk": "^3.0.0-rc.6",
     "@taiga-ui/core": "^3.0.0-rc.6",

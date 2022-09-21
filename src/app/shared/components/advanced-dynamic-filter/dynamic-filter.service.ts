@@ -53,14 +53,14 @@ export class DynamicFilterService {
 				label: 'First name',
 				value: 'Bombasto',
 				placeholder:"Enter first name to input",
-				required: true
+				//required: true
 			}),
 
 			new CountboxDynamicFilter({
 				key: 'counter',
 				label: 'Counter',
 				value: 0,
-				required: true,
+				//required: true,
 			}),
 			
 			// new DateDynamicFilter({
@@ -72,7 +72,6 @@ export class DynamicFilterService {
 				key: 'emailAddress',
 				label: 'Email',
 				type: 'email',
-				
 				minLength: 5
 			})
 		];
@@ -109,6 +108,7 @@ export class DynamicFilterService {
 						"Good",
 						"Unproven"
 					],
+					match: true,
 					
 				}),
 	
@@ -116,16 +116,17 @@ export class DynamicFilterService {
 					key: 'firstName',
 					label: 'First name',
 					value: 'Bombasto',
-					placeholder:"Enter first name to input",
+					placeholder:"Enter first name into input",
 					required: true,
-									}),
+					match: true,
+				}),
 	
 				new CountboxDynamicFilter({
 					key: 'counter',
 					label: 'Counter',
 					value: 0,
 					required: true,
-									}),
+				}),
 				
 				// new DateDynamicFilter({
 				//   key: 'date',
@@ -138,28 +139,69 @@ export class DynamicFilterService {
 					type: 'email',
 					
 					minLength: 5
-				})
-			],
+				}),
+
+				new ComboboxDynamicFilter({
+					key: 'combobox123',
+					label: 'Bravery Rating',
+					placeholder:"Enter value to checkbox",
+					options: [
+						"Solid",
+						"Great",
+						"Good",
+						"Unproven"
+					],
+					
+				}),
+	
+				new DropdownDynamicFilter({
+					key: 'dropdown123',
+					label: 'Dropdown Exapmle',
+					placeholder:"Enter value to dropdown input",
+					options: [
+						"Solid",
+						"Great",
+						"Good",
+						"Unproven"
+					],
+					
+				}),
+	
+				new TextboxDynamicFilter({
+					key: 'firstName213',
+					label: 'First name',
+					value: 'Bombasto',
+					placeholder:"Enter first name into input",
+					required: true,
+				}),
+	
+				new CountboxDynamicFilter({
+					key: 'counter123',
+					label: 'Counter',
+					value: 0,
+					required: true,
+				}),
+			]
 		},
 		{
 			title: "Added filter 1",
 
 			dynamicFilterInputs: [
 				new TextboxDynamicFilter({
-					key: 'emailAddress',
+					key: 'emailAddress11',
 					label: 'Email',
 					type: 'email',
-					
+					match: true,
 					minLength: 5
 				})
-			],
+			]
 		},
 		{
 			title: "sub filter1",
 
 			dynamicFilterInputs: [
 				new DropdownDynamicFilter({
-					key: 'dropdown',
+					key: 'dropdown11',
 					label: 'Dropdown Exapmle',
 					placeholder:"Enter value to dropdown input",
 					options: [

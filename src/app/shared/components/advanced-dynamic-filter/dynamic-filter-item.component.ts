@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 import { DynamicFilterInput } from './dynamic-filter-base.class';
 
@@ -8,7 +8,9 @@ import { DynamicFilterInput } from './dynamic-filter-base.class';
   templateUrl: './dynamic-filter-item.component.html'
 })
 export class DynamicFilterItemComponent {
-  @Input() question!: DynamicFilterInput<string>;
+  @Input() input!: DynamicFilterInput<string>;
+
   @Input() form!: FormGroup;
-  get isValid() { return this.form.controls[this.question.key].valid; }
+  
+  get isValid() { return this.form.controls[this.input.key].valid; }
 }

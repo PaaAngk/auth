@@ -36,16 +36,21 @@ export class DynamicFilterControlService {
 					filtersGroup[filterItem.key] = new FormControl();
 				}
 				else{
-					filtersGroup[filterItem.key] = new FormControl(filterItem.value || '');
+					filtersGroup[filterItem.key] = new FormControl(filterItem.value || null);
 				}
 				filterItem.required ? filtersGroup[filterItem.key].addValidators([ Validators.required ]) : null;
 				filterItem.minLength ? filtersGroup[filterItem.key].addValidators([Validators.minLength(filterItem.minLength)]) : null;
 				filterItem.maxLength ? filtersGroup[filterItem.key].addValidators([Validators.maxLength(filterItem.maxLength)]) : null;
 				filterItem.validationPatern ? filtersGroup[filterItem.key].addValidators([Validators.pattern(filterItem.validationPatern)]) : null;
 				filterItem.type == 'email' ? filtersGroup[filterItem.key].addValidators([Validators.email]): null;
+
+				if(filterItem.match === true){
+					filtersGroup[filterItem.key+"!!match"] = new FormControl(false);
+				}
 			});
 			//filtersGroup[filters.title] = new FormGroup(group)
 		});
+		
 		return new FormGroup(filtersGroup);
 	}
 }

@@ -1,21 +1,23 @@
 import { DynamicFilterService } from './../../shared/components/advanced-dynamic-filter/dynamic-filter.service';
-import { DynamicFilterInput, DynamicFilterBase } from './../../shared/components/advanced-dynamic-filter/dynamic-filter-base.class';
+import { DynamicFilterBase } from './../../shared/components/advanced-dynamic-filter/dynamic-filter-base.class';
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-registry',
-  templateUrl: './registry.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  templateUrl: './registry.component.html'
 })
 export class RegistryComponent implements OnInit {
-	open = false;
-	questions$: Observable<DynamicFilterInput<any>[]>;
+
+	visibilitySidebarFilter = false;
+
+	payLoad= '';
+
 	segmentForm$: Observable<DynamicFilterBase<any | any[]>[]>;
  
-    toggleSidebar(open: boolean): void {
-		console.log(open)
-        this.open = open;
+    toggleVisibilitySidebarFilter(visibilitySidebarFilter: boolean): void {
+		console.log(visibilitySidebarFilter)
+        this.visibilitySidebarFilter = visibilitySidebarFilter;
     }
 
 	constructor(
@@ -25,8 +27,10 @@ export class RegistryComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this.questions$ = this.dynamicFilterService.getQuestions();
 		this.segmentForm$ = this.dynamicFilterService.getFilter();
 	}
 
+	formValue(value : any){
+		this.payLoad = value;
+	}
 }

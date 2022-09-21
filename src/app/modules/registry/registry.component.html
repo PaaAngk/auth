@@ -1,20 +1,26 @@
-<div class="h-full w-full block" (click)="toggleSidebar(false)">  
+<div class="h-full w-full block" >  
     <router-outlet></router-outlet>
 </div>
 
 <button
     tuiButton
     type="button"
-    (click)="toggleSidebar(true)"
+    (click)="toggleVisibilitySidebarFilter(true)"
+    
 >
-
-<!--(tuiActiveZoneChange)="toggleSidebar($event)"-->
     Filter
-    <div *tuiSidebar="open; direction: 'right' autoWidth:true" class="w-96">
+    <div *tuiSidebar="visibilitySidebarFilter; direction: 'right' autoWidth:true" class="w-96 h-full">
         <ng-container *ngTemplateOutlet="sidebarContent"></ng-container>
     </div>
 </button>
 
+<div *ngIf="payLoad" >
+    <strong>Saved the following values</strong><br>{{payLoad}}
+</div>
+
 <ng-template #sidebarContent >
-    <app-advanced-dynamic-filter class="w-full h-full" [segmentForms]="segmentForm$ | async"  [questions]="questions$ | async"></app-advanced-dynamic-filter>
+    <app-advanced-dynamic-filter class="w-full h-full" [segmentForms]="segmentForm$ | async" (visibilitySidebarFilter)="toggleVisibilitySidebarFilter($event)" (formValues)="formValue($event)"></app-advanced-dynamic-filter>
 </ng-template>
+
+<!--(visibilitySidebarFilter)="toggleVisibilitySidebarFilter($event)"-->
+<!-- (tuiActiveZoneChange)="toggleVisibilitySidebarFilter($event)" -->

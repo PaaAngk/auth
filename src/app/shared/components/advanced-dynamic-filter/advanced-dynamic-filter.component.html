@@ -1,56 +1,56 @@
-<!-- <div class="m-10 rounded-lg bg-white">
-	<form (ngSubmit)="onSubmit()" [formGroup]="form" class="p-2 space-y-2" [tuiTextfieldCleaner]="true">
-		<div *ngFor="let question of questions" class="">
-			<dynamic-filter-item [question]="question" [form]="form"></dynamic-filter-item>
-		</div>
-
-		<div>
-			<button tuiButton type="submit" [disabled]="!form.valid">Save</button>
-		</div>
-	</form>
-
-	<div *ngIf="payLoad" >
-		<strong>Saved the following values</strong><br>{{payLoad}}
-	</div>
-</div> -->
-
 <div class="rounded-lg bg-white">
-	<form (ngSubmit)="onSubmit()" [formGroup]="form" class="p-2 space-y-2" [tuiTextfieldCleaner]="true">
-
-		<tui-scrollbar class="border-b border-color">
-			<nav
-				class="flex flex-row space-x-4"
-			>
-				<button *ngFor="let filterItem of filterItems" class="mb-4 text-lg" tuiTab>
-					{{filterItem}}
-				</button>
-			</nav>
-        </tui-scrollbar>
-		<!-- class="whitespace-nowrap flex py-4 px-1 border-b-2 font-medium text-sm border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-200" -->
-
-		<tui-scrollbar>
-			<tui-tabs-with-more [activeItemIndex]="activeMenuItemIndex" >
-				<ng-container *ngFor="let filterItem of filterItems">
-					<button *tuiItem tuiTab onclick="set(1)">{{filterItem}}</button>
-				</ng-container>
-			</tui-tabs-with-more>
-		</tui-scrollbar>
-
-		<div *ngFor="let segmentForm of segmentForms" >
-			<div class="overflow-x-auto ">
-				<h2 class="text-center tui-text_h4">{{segmentForm.title}}</h2>
-				<ng-container *ngFor="let filter of segmentForm.dynamicFilterInputs" >
-					<dynamic-filter-item [question]="filter" [form]="filtersForm" class="space-y-2"></dynamic-filter-item>
-				</ng-container>
-			</div>
-		</div>
-
+	<form (ngSubmit)="onSubmit()" [formGroup]="form" class="block p-2 space-y-2" [tuiTextfieldCleaner]="true">
 		<div>
 			<button tuiButton type="submit" [disabled]="!filtersForm.valid">Save</button>
 		</div>
+
+		<tui-accordion>
+			<tui-accordion-item *ngFor="let segmentForm of segmentForms">
+				{{segmentForm.title}}
+				<ng-template tuiAccordionItemContent>
+					<ng-container *ngFor="let filter of segmentForm.dynamicFilterInputs" >
+						<dynamic-filter-item [question]="filter" [form]="filtersForm" class="space-y-2"></dynamic-filter-item>
+					</ng-container>
+				</ng-template>
+			</tui-accordion-item>
+		</tui-accordion>
 	</form>
 
 	<div *ngIf="payLoad" >
 		<strong>Saved the following values</strong><br>{{payLoad}}
 	</div>
 </div>
+
+
+
+
+		<!-- filter with menu
+
+
+			<tui-scrollbar class="border-b border-color">
+			<nav class="flex flex-row space-x-4">
+				<button *ngFor="let filterItem of filterItems" class="mb-4 text-lg" tuiTab>
+					{{filterItem}}
+				</button>
+			</nav>
+        </tui-scrollbar>
+		class="whitespace-nowrap flex py-4 px-1 border-b-2 font-medium text-sm border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-200" 
+
+		<tui-scrollbar>
+			<tui-tabs-with-more [activeItemIndex]="activeMenuItemIndex" >
+				<ng-container *ngFor="let filterItem of filterItems">
+					<button *tuiItem tuiTab (click)="set()">{{filterItem}}</button>
+				</ng-container>
+			</tui-tabs-with-more>
+		</tui-scrollbar> -->
+
+				<!--<div class="overflow-y-scroll fixed h-full w-96">
+			<div *ngFor="let segmentForm of segmentForms" class="">
+				<h2 class="text-center tui-text_h4">{{segmentForm.title}}</h2>
+				<div class="w-full">
+					<ng-container *ngFor="let filter of segmentForm.dynamicFilterInputs" >
+						<dynamic-filter-item [question]="filter" [form]="filtersForm" class="space-y-2"></dynamic-filter-item>
+					</ng-container>
+				</div>
+			</div>
+		</div>-->

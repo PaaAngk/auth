@@ -1,4 +1,4 @@
-<div class="h-full w-full block">  
+<div class="h-full w-full block" (click)="toggleSidebar(false)">  
     <router-outlet></router-outlet>
 </div>
 
@@ -6,10 +6,11 @@
     tuiButton
     type="button"
     (click)="toggleSidebar(true)"
-    (tuiActiveZoneChange)="toggleSidebar($event)"
 >
+
+<!--(tuiActiveZoneChange)="toggleSidebar($event)"-->
     Filter
-    <div *tuiSidebar="open; direction: 'right' autoWidth:true" class="w-96" >
+    <div *tuiSidebar="open; direction: 'right' autoWidth:true" class="w-96">
         <ng-container *ngTemplateOutlet="sidebarContent"></ng-container>
     </div>
 </button>

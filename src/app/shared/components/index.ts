@@ -1,3 +1,3 @@
 export * from './layout';
-export * from './sortable-table-with-pagination'
+export * from './advanced-table'
 export * from './advanced-dynamic-filter'

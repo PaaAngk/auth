@@ -97,7 +97,7 @@
         </ng-container>
 
         <ng-container *ngIf="registrySection != ' '">
-            <sortable-table-with-pagination
+            <advanced-table
                     [DATA]="filteredRiurs"
                     [tableColumns] = "tableColumns"
                     rowActionIcon = "tuiIconExternal"
@@ -108,7 +108,7 @@
                     (columnEditorEmiter) = 'setColumnEditorTemplate($event)'
                     (rowAction) = "toCard($event)"
                 >
-            </sortable-table-with-pagination>
+            </advanced-table>
         </ng-container>
     </div>
 

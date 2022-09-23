@@ -1,1 +1,1 @@
-export * from './'
+export * from './advanced-dynamic-filter.module'

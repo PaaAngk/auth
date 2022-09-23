@@ -16,7 +16,6 @@ export class RegistryComponent implements OnInit {
 	segmentForm$: Observable<DynamicFilterBase<any | any[]>[]>;
  
     toggleVisibilitySidebarFilter(visibilitySidebarFilter: boolean): void {
-		console.log(visibilitySidebarFilter)
         this.visibilitySidebarFilter = visibilitySidebarFilter;
     }
 

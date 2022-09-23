@@ -7,7 +7,6 @@
 		orientation="vertical"
 		[collapsed]="true"
 	>
-
 		<!-- Textbox input -->
 		<tui-input *ngSwitchCase="'textbox'" [formControlName]="input.key" >
 			<label [attr.for]="input.key">{{input.label}}</label>
@@ -25,8 +24,8 @@
 		</tui-input-number>
 
 		<!-- Date range input -->
-		<!-- <tui-input-date-range
-			ngSwitchCase="'dateRange'" 
+		<tui-input-date-range
+			*ngSwitchCase="'dateRange'" 
 			[formControlName]="input.key" 
 		>
 			<label [attr.for]="input.key">{{input.label}}</label>
@@ -35,17 +34,16 @@
 				[id]="input.key"
 				[type]="input.type"
 			/>
-		</tui-input-date-range> -->
+		</tui-input-date-range>
 
 		<!-- Date input -->
-		<!-- <tui-input-date
-			tuiUnfinishedValidator="Finish filling the field"
-			ngSwitchCase="'date'" 
+		<tui-input-date
+			*ngSwitchCase="'date'" 
 			[formControlName]="input.key" 
 		>
 			<label [attr.for]="input.key">{{input.label}}</label>
-		</tui-input-date> -->
-	
+		</tui-input-date>
+
 		<!-- Combobox input -->
 		<tui-combo-box
 			*ngSwitchCase="'combobox'"

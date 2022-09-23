@@ -18,73 +18,24 @@ import { DateDynamicFilter } from './inputs/dynamic-filter-date';
 export class DynamicFilterService {
 
 	// TODO: get from a remote source of question metadata
-	getQuestions() {
-
-		const questions: DynamicFilterInput<string|string[]|number>[] = [
-
-			new ComboboxDynamicFilter({
-				key: 'combobox',
-				label: 'Bravery Rating',
-				placeholder:"Enter value to checkbox",
-				options: [
-					"Solid",
-					"Great",
-					"Good",
-					"Unproven"
-				],
-				
-			}),
-
-			new DropdownDynamicFilter({
-				key: 'dropdown',
-				label: 'Dropdown Exapmle',
-				placeholder:"Enter value to dropdown input",
-				options: [
-					"Solid",
-					"Great",
-					"Good",
-					"Unproven"
-				],
-				
-			}),
-
-			new TextboxDynamicFilter({
-				key: 'firstName',
-				label: 'First name',
-				value: 'Bombasto',
-				placeholder:"Enter first name to input",
-				//required: true
-			}),
-
-			new CountboxDynamicFilter({
-				key: 'counter',
-				label: 'Counter',
-				value: 0,
-				//required: true,
-			}),
-			
-			// new DateDynamicFilter({
-			//   key: 'date',
-			//   label: 'Date entering',
-			// }),
-
-			new TextboxDynamicFilter({
-				key: 'emailAddress',
-				label: 'Email',
-				type: 'email',
-				minLength: 5
-			})
-		];
-		//of(questions.sort((a, b) => a.order - b.order));
-		return of(questions)
-	}
-
 	getFilter() {
 		const segmentFilter: DynamicFilterBase<string|string[]|number>[] = [
 		{
 			title: "Main filter",
 
 			dynamicFilterInputs: [
+
+				new DateDynamicFilter({
+					key: 'dateSelector',
+					label: 'Date entering',
+					value: new Date(2011, 0, 1)
+				}),
+
+				new DateRangeDynamicFilter({
+					key: 'dateRangeSelector',
+					label: 'Date entering',
+				}),
+
 				new ComboboxDynamicFilter({
 					key: 'combobox',
 					label: 'Bravery Rating',
@@ -218,5 +169,4 @@ export class DynamicFilterService {
 		];
 		return of(segmentFilter);
 	}
-
 }

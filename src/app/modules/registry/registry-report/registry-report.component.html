@@ -64,7 +64,7 @@
         </header>
         <div class="overflow-auto flex flex-col flex-wrap w-full h-full p-2 shadow-md rounded-2xl bg-white">
 
-            <sortable-table-with-pagination  
+            <advanced-table  
                 [DATA]="filteredUsers"
                 [tableColumns] = "tableColumns "
                 [sortByColumnKey] = "'index'"
@@ -73,7 +73,7 @@
                 [search] = 'search'
 				(columnEditorEmiter) = 'setColumnEditorTemplate($event)'
             >
-            </sortable-table-with-pagination>
+            </advanced-table>
 
         </div>
     </div>

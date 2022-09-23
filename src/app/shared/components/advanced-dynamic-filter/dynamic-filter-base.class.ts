@@ -3,12 +3,31 @@
 // 	dynamicFilterInputs?: DynamicFilterInput<T>[];
 // 	dynamicFilterBase?: DynamicFilterBase<T>[];
 // }
+
+/**
+ * Interface to create section of filter, should include implemented interface DynamicFilterInput  
+ */
 export interface DynamicFilterBase<T>{
 	title: string;
 	dynamicFilterInputs: DynamicFilterInput<T>[];
 }
 
-
+/**
+ * Interface to create input
+ *  
+ * @param value Preset input value. For Date set js date format value. Not Support date range 
+ * @param key string - Key for input to define inputs
+ * @param label string - Input header
+ * @param match boolean - Define match switch under input
+ * @param controlType string - Define input type in input class
+ * @param type string - Special type for textbox. Ex.: email
+ * @param required boolean - Definition a input is required 
+ * @param minLength number - Definition a input minimum length
+ * @param maxLength number | null - Definition a input maximum length
+ * @param validationPatern string - Definition a RegExp patern
+ * @param placeholder string - Define placeholder for input
+ * @param options string[] - Array of values for combobox and dropdown
+ */
 export class DynamicFilterInput<T> {
 	value: T | undefined; // Preset input value, except date and range date
 	key: string; // Key for input to define inputs

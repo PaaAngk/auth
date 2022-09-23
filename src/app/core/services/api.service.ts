@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { HttpHeaders, HttpClient, HttpParams } from '@angular/common/http';
-import { Observable ,  throwError, of } from 'rxjs';
+import { Observable ,  throwError, of, tap } from 'rxjs';
 
 import { catchError } from 'rxjs/operators';
 
@@ -16,7 +16,7 @@ export class ApiService {
   get<T>(path: string): Observable<any> {
     return this.http
       .get<T>(`${environment.api_url}${path}`)
-      .pipe(catchError(this.handleError<any[]>(`get to ${path}`, [])));
+      .pipe( tap((e)=> catchError(this.handleError<any[]>(`get to ${path}`, [e]))) );
   }
 
   put<T, D>(path: string, body: D): Observable<any> {
@@ -41,7 +41,7 @@ export class ApiService {
 
   private handleError<T> (operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
-        console.error(error); // log to console instead
+        console.error(result); // log to console instead
         return of(result as T);
     };
   }

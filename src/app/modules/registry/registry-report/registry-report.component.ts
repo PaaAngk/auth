@@ -56,8 +56,7 @@ export class RegistryReportComponent implements OnInit {
         index : new FormControl(null),
         name : new FormControl(null)
     });
-    
-    
+
     filterSideBarVisible: boolean = false;
     menuSidebarVisible: boolean = true;
     search = '';
@@ -72,7 +71,6 @@ export class RegistryReportComponent implements OnInit {
     users : User[];
     filteredUsers : BehaviorSubject<User[]> = new BehaviorSubject<User[]>([] as User[]);
 
-    
     constructor(
         private _changeDetectorRef: ChangeDetectorRef,
         private _registryService: RegistryService
@@ -81,12 +79,12 @@ export class RegistryReportComponent implements OnInit {
     ngOnInit() {
         //Getting data and insert its in filteredUsers variable by filterUser method
         this._registryService.userData$
-            .pipe(takeUntil(this._unsubscribeAll))
-            .subscribe((users : User[]) => {
-                this.users = users;
-                this.filterUser(null);
-                this._changeDetectorRef.markForCheck();
-            });
+        .pipe(takeUntil(this._unsubscribeAll))
+        .subscribe((users : User[]) => {
+            this.users = users;
+            this.filterUser(null);
+            this._changeDetectorRef.markForCheck();
+        });
 
         this.filterForm.valueChanges
         .pipe(takeUntil(this._unsubscribeAll))
@@ -120,8 +118,11 @@ export class RegistryReportComponent implements OnInit {
             this.nameList = [...new Set(this.users.map(item => item.name))];
             return;
         }
-        //user.name.trim().toLowerCase()
-        let filterItems = this.users.filter(user => dateCompare(user.registered, query.dataRange));
+
+        let filterItems = this.users;
+        if(query.dataRange){
+            filterItems = filterItems.filter(user => dateCompare(user.registered, query.dataRange));
+        }
         if(query.index){
             filterItems = filterItems.filter(user => user.index === query.index );
         }

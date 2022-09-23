@@ -8,31 +8,26 @@ import { DynamicFilterBase, DynamicFilterInput } from './dynamic-filter-base.cla
 export class DynamicFilterControlService {
 	constructor() { }
 
-	toFormGroupFromInputs(filters: DynamicFilterInput<string>[] ) {
-		const group: any = {};
-
-		filters.forEach(question => {
-			if(question.type === 'combobox' || question.type === 'dropdown'){
-				group[question.key] = new FormControl();
-			}
-			else{
-				group[question.key] = new FormControl(question.value || '');
-			}
-			question.required ? group[question.key].addValidators([ Validators.required ]) : null;
-			question.minLength ? group[question.key].addValidators([Validators.minLength(question.minLength)]) : null;
-			question.maxLength ? group[question.key].addValidators([Validators.maxLength(question.maxLength)]) : null;
-			question.validationPatern ? group[question.key].addValidators([Validators.pattern(question.validationPatern)]) : null;
-			question.type == 'email' ? group[question.key].addValidators([Validators.email]): null;
-		});
-		return new FormGroup(group);
-	}
-
+	/** Create FormGroup. Making FormControl to each input in array segmentForm 
+	 * with passed value, validators(if include) and create match toogle to correct input  
+	*/
 	toFormGroupFromBase(segmentForm: DynamicFilterBase<any | any[]>[] ) {
 		const filtersGroup: any = {};
 		segmentForm.forEach(filters  => {
 			//const group: any = {};
 			filters.dynamicFilterInputs.forEach(filterItem  => {
-				if(filterItem.type === 'combobox' || filterItem.type === 'dropdown'){
+				if(filterItem.controlType === 'combobox' || filterItem.controlType === 'dropdown'){
+					filtersGroup[filterItem.key] = new FormControl();
+				}
+				else if(filterItem.controlType === 'date' || filterItem.controlType === 'dateRange'){
+					if (filterItem.value){
+						filtersGroup[filterItem.key] = new FormControl(TuiDay.fromLocalNativeDate(filterItem.value));
+					}
+					else{
+						filtersGroup[filterItem.key] = new FormControl();
+					}
+				}
+				else if(filterItem.controlType === 'dateRange'){
 					filtersGroup[filterItem.key] = new FormControl();
 				}
 				else{
@@ -47,6 +42,8 @@ export class DynamicFilterControlService {
 				if(filterItem.match === true){
 					filtersGroup[filterItem.key+"!!match"] = new FormControl(false);
 				}
+
+				//console.log(filtersGroup[filterItem.key])
 			});
 			//filtersGroup[filters.title] = new FormGroup(group)
 		});

@@ -16,11 +16,17 @@ import {
  
 
 @Component({
-  selector: 'sortable-table-with-pagination',
-  templateUrl: './sortable-table-with-pagination.component.html',
+  selector: 'advanced-table',
+  templateUrl: './advanced-table.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SortableTableWithPaginationComponent implements OnInit {
+export class AdvancedTableComponent implements OnInit {
+    readonly options = {updateOn: `blur`} as const;
+
+    moid = 0;
+    moid1 = 0;
+    moid2 = 0;
+    moid3 = 0;
 
     columnNames : readonly string[] = [''];
     enabled : readonly string[];

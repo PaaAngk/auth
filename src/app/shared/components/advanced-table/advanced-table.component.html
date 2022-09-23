@@ -30,7 +30,6 @@
         [overlay]="true"
         [showLoader]="!!(loading$ | async)"
     >
-    <!--*tuiLet="data$ | async as data" -->
         <table
             tuiTable
             class="w-full h-full my-4"
@@ -40,7 +39,7 @@
             (tuiSortByChange)="sorter$.next($event!)"
             (directionChange)="direction$.next($event)"
         >
-            <thead>
+            <thead tuiThead>
                 <tr tuiThGroup>
                     <ng-container *ngIf="rowActionIcon || rowActionText">
                         <th
@@ -53,17 +52,75 @@
 
                     <ng-container 
                         *ngFor="let key of KEYS | keyvalue"
-                    >                   
+                    >
                         <th
                             *tuiHead="key.value"
                             tuiTh
                             [resizable] = 'resizableColumn'
                             [sticky] = 'stickyColumn'
-                            tuiSortable
                         >
                             {{key.key}}
                         </th>
                     </ng-container>
+                </tr>
+                <tr tuiThGroup>
+                    <!-- <ng-container 
+                        *ngFor="let key of KEYS | keyvalue"
+                    > -->
+                        <th
+                            *tuiHead="'_id'"
+                            tuiTh
+                            [sorter]="null"
+                        >
+                            <!-- <tui-text-area
+                                [expandable]="true"
+                                [ngModel]="moid"
+                                [ngModelOptions]="options"
+                            ></tui-text-area> -->
+                            <tui-input-number
+                                class="number"
+                                [ngModel]="moid"
+                                [ngModelOptions]="options"
+                            ></tui-input-number>
+                        </th>
+                        <th
+                            *tuiHead="'index'"
+                            tuiTh
+                            [sorter]="null"
+                        >
+                            
+                            <tui-input-number
+                                class="number"
+                                [ngModel]="moid1"
+                                [ngModelOptions]="options"
+                            ></tui-input-number>
+                        </th>
+                        <th
+                            *tuiHead="'name'"
+                            tuiTh
+                            [sorter]="null"
+                        >
+                        
+                            <tui-input-number
+                                class="number"
+                                [ngModel]="moid2"
+                                [ngModelOptions]="options"
+                            ></tui-input-number>
+                        </th>
+
+                        <th
+                            *tuiHead="'registered'"
+                            tuiTh
+                            [sorter]="null"
+                        >
+
+                            <tui-input-number
+                                class="number"
+                                [ngModel]="moid3"
+                                [ngModelOptions]="options"
+                            ></tui-input-number>
+                        </th>
+                    <!-- </ng-container> -->
                 </tr>
             </thead>
             <tbody

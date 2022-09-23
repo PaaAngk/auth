@@ -11,11 +11,15 @@ import { DynamicFilterControlService } from './dynamic-filter-control.service';
 export class AdvancedDynamicFilterComponent implements OnInit {
 	activeMenuItemIndex:number = 0;
 
+	/** Output to close sidebar */
 	@Output() visibilitySidebarFilter = new EventEmitter<boolean>();
 
+	/**Output json value of form */
 	@Output() formValues = new EventEmitter<any>();
 
+	/** Input form */
 	@Input() segmentForms: DynamicFilterBase<any | any[]>[] | null;
+	
 	filtersForm!: FormGroup;
 
 	constructor(private dfs: DynamicFilterControlService) {}
@@ -23,8 +27,9 @@ export class AdvancedDynamicFilterComponent implements OnInit {
 	toogleVisibilitySidebarFilter(visibilitySidebarFilter: boolean) {
 		this.visibilitySidebarFilter.emit(visibilitySidebarFilter);
 	}
-
+	
 	ngOnInit() {
+		// Format gettings filter to FromGroup
 		this.filtersForm = this.dfs.toFormGroupFromBase(this.segmentForms as DynamicFilterBase<any | any[]>[]);
 	}
 
@@ -32,7 +37,6 @@ export class AdvancedDynamicFilterComponent implements OnInit {
 	 * Getting data from form with delete nullable input and formate output in JSON. Also concate match checkbox to onse array of his input.
 	 */
 	onSubmit() {
-	
 		let rowValue = this.filtersForm.getRawValue();
 		
 		let valueWithoutNull : { [index: string | number]: any } = {};
@@ -42,8 +46,11 @@ export class AdvancedDynamicFilterComponent implements OnInit {
 			if ( val !== null){
 				if (!key.includes('!!match')) {
 					if (rowValue.hasOwnProperty(nameMatchValue)) {
-						if (val){	
-							valueWithoutNull[key] = [val, rowValue[nameMatchValue]]
+						if (val){
+							valueWithoutNull[key] = {
+								'value' : val, 
+								'match' : rowValue[nameMatchValue]
+							}
 						}
 					}
 					else{
